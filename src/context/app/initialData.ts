@@ -1,7 +1,8 @@
-import { IAppContext } from "./interfaces";
+import { IAppContext, LanguageCode, LanguageKey } from "./interfaces";
 
 // Initial state
 export const initialData: IAppContext = {
   loading: false,
-  language: "vi-VN"
+  language: LanguageKey.en,
+  languageCode: LanguageCode[LanguageKey.en]
 };

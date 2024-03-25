@@ -4,6 +4,7 @@ const million = 1000000;
 
 export * from "./date";
 export * from "./constants";
+export * from "./languages";
 
 export const formatMoney = (amount: number, isShort?: boolean) => {
   // Create a number formatter instance

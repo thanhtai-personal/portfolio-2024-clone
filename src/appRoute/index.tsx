@@ -1,6 +1,11 @@
 import { RouterProvider } from 'react-router-dom';
 import { router } from './routes';
+import { AppLayout } from '@/containers/layout';
 
 export const AppRoute = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <AppLayout>
+      <RouterProvider router={router} />
+    </AppLayout>
+  );
 };

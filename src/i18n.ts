@@ -2,6 +2,7 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import vi from "./lang/vi";
 import en from "./lang/en";
+import { LanguageKey } from "./context";
 
 i18n.use(initReactI18next).init({
   lng: "en",
@@ -10,10 +11,10 @@ i18n.use(initReactI18next).init({
     escapeValue: false,
   },
   resources: {
-    en: {
+    [LanguageKey.en]: {
       translation: en,
     },
-    vi: {
+    [LanguageKey.vi]: {
       translation: vi,
     },
   },
