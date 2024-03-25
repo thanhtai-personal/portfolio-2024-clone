@@ -14,7 +14,7 @@ const CurrentLayout = ({ children }: ICurrentLayout) => {
   return (
     <div className='w-full'>
       {layoutData?.useHeader && (
-        <div className='w-full min-h-20 flex flex-row justify-between items-center'>
+        <div className='w-full fixed px-2 py-2 flex flex-row justify-between items-center'>
           <div></div>
           <MultiLanguageButton />
         </div>

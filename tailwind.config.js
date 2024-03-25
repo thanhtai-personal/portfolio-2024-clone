@@ -41,6 +41,8 @@ module.exports = {
     extend: {
       colors: {
         background: "var(--background-color)",
+        text: "var(--text-color)",
+        "text-active": "var(--text-active-color)",
         primary: {
           50: "var(--color-primary-50)", //"#F6F8FF",
           100: "var(--color-primary-100)", //"#EDF0FF",
