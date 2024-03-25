@@ -1,9 +1,12 @@
+import { useTranslate } from "@/hooks/useTranslate";
+
 export interface IHomePage {}
 
 const HomePage = ({}: IHomePage) => {
+  const { t } = useTranslate();
 
   return <div className="bg-background w-screen h-screen">
-    aaaaaaaaaaaaaaaaaaaaa
+    {t("hello")}
   </div>
 }
 
