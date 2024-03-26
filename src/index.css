@@ -9,8 +9,9 @@
     --background-color: #fff;
     --text-color: #000;
     --text-active-color: #4669fa;
-    --scrollbarBG: steelblue;
+    --scrollbarBG: #000;
     --thumbBG: #f9fcf9;
+    --bg-cover: #f9fcf9;
     --color-primary-50: #f6f8ff;
     --color-primary-100: #edf0ff;
     --color-primary-200: #d1dafe;
@@ -289,7 +290,6 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: var(--thumbBG) ;
   border-radius: 6px;
-  border: 3px solid var(--scrollbarBG);
 }
 
 
@@ -306,5 +306,4 @@ div::-webkit-scrollbar-track {
 div::-webkit-scrollbar-thumb {
   background-color: var(--thumbBG) ;
   border-radius: 6px;
-  border: 3px solid var(--scrollbarBG);
 }

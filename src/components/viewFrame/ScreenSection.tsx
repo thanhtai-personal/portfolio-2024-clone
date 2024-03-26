@@ -3,14 +3,14 @@ import { ReactNode } from "react";
 export interface IScreenSection {
   children: ReactNode;
   className?: string;
-  OverflowHidden?: boolean;
+  overflowHidden?: boolean;
 }
 
-export const ScreenSection = ({ children, className, OverflowHidden }: IScreenSection) => {
+export const ScreenSection = ({ children, className, overflowHidden }: IScreenSection) => {
 
   return (
     <div className={`w-screen h-screen bg-background ${
-        OverflowHidden ? "overflow-hidden" : "overflow-auto"
+        overflowHidden ? "overflow-hidden" : "overflow-auto"
       } ${className}`}>
       {children}
     </div>

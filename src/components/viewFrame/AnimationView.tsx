@@ -3,11 +3,18 @@ import { ReactNode } from 'react';
 export interface IAnimationView {
   children: ReactNode;
   className?: string;
-  animate?: string;
 }
 
-export const AnimationView = ({ children, className, animate = "fade_in" }: IAnimationView) => {
-  return <div className={` animate-${animate} ${className}`}>
-    {children}
-  </div>;
-};
+export namespace AnimationView {
+  export const FadeInRTL = ({ children, className }: IAnimationView) => {
+    return <div className={`animate-fade_in_rtl ${className}`}>{children}</div>;
+  };
+
+  export const FadeIn = ({ children, className }: IAnimationView) => {
+    return <div className={`animate-fade_in ${className}`}>{children}</div>;
+  };
+  
+  export const FadeInLTR = ({ children, className }: IAnimationView) => {
+    return <div className={`animate-fade_in_ltr ${className}`}>{children}</div>;
+  };
+}

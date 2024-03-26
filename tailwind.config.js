@@ -42,6 +42,7 @@ module.exports = {
       colors: {
         background: "var(--background-color)",
         text: "var(--text-color)",
+        cover: "var(--thumbBG)",
         "text-active": "var(--text-active-color)",
         primary: {
           50: "var(--color-primary-50)", //"#F6F8FF",
@@ -186,8 +187,7 @@ module.exports = {
           "100%": { width: "0%" }
         },
         fade_in_rtl: {
-          "0%": { opacity: 0.5, transform: "translateX(100%)" },
-          "30%": { opacity: 0.65, transform: "translateX(50%)" },
+          "0%": { opacity: 0.5, transform: "translateX(70%)" },
           "100%": { opacity: 1 }
         },
         fade_in: {
@@ -201,8 +201,11 @@ module.exports = {
         tada: "tada 1.5s ease-in-out infinite",
         fadeltr: "fadeltr 3s ease-in alternate infinite",
         fadertl: "fadertl 3s ease-in alternate infinite",
-        fade_in_rtl: "fade_in_rtl .8s ease-in",
-        fade_in: "fade_in .8s ease-in"
+        fade_in_rtl: "fade_in_rtl .4s ease-in",
+        fade_in: "fade_in .8s ease-in",
+        spin_2: "spin 1.2s linear infinite",
+        spin_3: "spin 1.4s linear infinite",
+        spin_4: "spin 1.6s linear infinite",
       },
     },
   },
