@@ -10,8 +10,9 @@ import { SocialIcons } from './SocialIcons';
 import { DevelopmentIcons } from './DevelopmentIcons';
 import { BannerAvartar } from './BannerAvartar';
 import { LanguageSetting } from './LanguageSetting';
-import { EczarText } from './EczarText';
+import { EczarText } from '@/components/index';
 import { UserInfo } from './UserInfo';
+import { SectionButtons } from './SectionButtons';
 import { ThemeContext } from '@/context/theme';
 import { useMemo } from 'react';
 
@@ -58,7 +59,9 @@ export const Banner = () => {
                 <div className='bg-transparent flex justify-start items-end p-2'>
                   <UserInfo />
                 </div>
-                <div className='bg-transparent col-span-2'></div>
+                <div className='bg-transparent col-span-2 flex flex-row justify-center items-end'>
+                  <SectionButtons />
+                </div>
                 <div className='bg-transparent p-2'>
                   <SocialIcons />
                 </div>

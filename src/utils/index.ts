@@ -63,3 +63,12 @@ export const isConsistText = (sourceText: string, targetText: string): boolean =
   return removeVietnameseDiacritics(sourceText).toLowerCase().includes(removeVietnameseDiacritics(targetText).toLowerCase());
 };
 
+export const goToSection = (id: string) => {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({
+      behavior: "smooth"
+    });
+  }
+}
+

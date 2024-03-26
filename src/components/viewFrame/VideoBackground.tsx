@@ -6,6 +6,9 @@ export interface IVideoBackground {
   src: string;
   type?: string;
   id?: string;
+  classes?: {
+    container?: string;
+  }
 }
 
 export const VideoBackground = ({
@@ -13,7 +16,8 @@ export const VideoBackground = ({
   className,
   src,
   type = 'video/mp4',
-  id = "source-video"
+  id = "source-video",
+  classes,
 }: IVideoBackground) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -34,13 +38,13 @@ export const VideoBackground = ({
   }, [src, id])
 
   return (
-    <div className={`w-full h-full relative`}>
+    <div className={`w-full h-full relative ${classes?.container}`}>
       <video
         id={id}
         autoPlay
         muted
         loop
-        className={`absolute right-0 bottom-0 min-w-full min-h-full object-fill ${!isLoaded && "display-none"}`}
+        className={`absolute right-0 bottom-0 w-full h-full object-cover ${!isLoaded && "display-none"}`}
       >
         <source className='w-full h-full' src={src} type={type} />
         Your browser does not support HTML5 video.

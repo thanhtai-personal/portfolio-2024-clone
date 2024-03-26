@@ -1,8 +1,8 @@
-import React from 'react';
-import { FaReact, FaPython, FaGithub, FaNodeJs } from 'react-icons/fa';
-import { TbBrandReactNative, TbBrandTypescript } from 'react-icons/tb';
+import { FaReact, FaGithub, FaNodeJs } from 'react-icons/fa';
+import { TbBrandReactNative, TbBrandTypescript, TbBrandJavascript } from 'react-icons/tb';
 import { FaGitlab } from "react-icons/fa6";
-import { SiDotnet, SiVitess, SiTailwindcss } from "react-icons/si";
+import { SiDotnet, SiVitess, SiTailwindcss  } from "react-icons/si";
+import { PiFileCssFill } from "react-icons/pi";
 
 
 export const DevelopmentIcons = () => {
@@ -34,6 +34,14 @@ export const DevelopmentIcons = () => {
       </a>
       <a
         target='_blank'
+        title="Javascript"
+        href=''
+        className='m-2 md:m-4 cursor-pointer rounded-full hover:scale-110 hover:text-text-active my-2'
+      >
+        <TbBrandJavascript color="var(--text-color)" className='w-4 h-4 md:w-8 md:h-8' />
+      </a>
+      <a
+        target='_blank'
         title="Typescript"
         href=''
         className='m-2 md:m-4 cursor-pointer rounded-full hover:scale-110 hover:text-text-active my-2'
@@ -50,11 +58,11 @@ export const DevelopmentIcons = () => {
       </a>
       <a
         target='_blank'
-        title="Python"
+        title="CSS"
         href='https://www.python.org/'
         className='m-2 md:m-4 cursor-pointer rounded-full hover:scale-110 hover:text-text-active my-2'
       >
-        <FaPython color="rgb(100, 200, 255)" className='w-4 h-4 md:w-8 md:h-8' />
+        <PiFileCssFill color="rgb(100, 200, 255)" className='w-4 h-4 md:w-8 md:h-8' />
       </a>
       <a
         target='_blank'
@@ -66,15 +74,7 @@ export const DevelopmentIcons = () => {
       </a>
       <a
         target='_blank'
-        title="GitLab"
-        href=''
-        className='m-2 md:m-4 cursor-pointer rounded-full hover:scale-110 hover:text-text-active my-2'
-      >
-        <FaGitlab color="var(--text-color)" className='w-4 h-4 md:w-8 md:h-8' />
-      </a>
-      <a
-        target='_blank'
-        title="Dotnet"
+        title="Git"
         href=''
         className='m-2 md:m-4 cursor-pointer rounded-full hover:scale-110 hover:text-text-active my-2'
       >

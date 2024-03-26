@@ -8,8 +8,10 @@ export interface IContentSection {
 export const ContentSection = ({ children, className }: IContentSection) => {
 
   return (
-    <div className={`w-screen bg-background max-w-[1550px] ${className}`}>
-      {children}
+    <div className={`w-screen flex flex-row justify-center`}>
+      <div className={`w-screen bg-background max-w-[1550px] ${className}`}>
+        {children}
+      </div>
     </div>
   );
 }

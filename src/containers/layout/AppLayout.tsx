@@ -1,7 +1,6 @@
 import { ReactNode } from 'react';
 import { AppContext, LayoutContext } from '@/context/index';
-import { MultiLanguageButton } from '@/components/languages';
-
+import { Footer } from './Footer';
 export interface IAppLayout {
   children: ReactNode;
 }
@@ -15,12 +14,10 @@ const CurrentLayout = ({ children }: ICurrentLayout) => {
     <div className='w-full'>
       {layoutData?.useHeader && (
         <div className='w-full fixed px-2 py-2 flex flex-row justify-between items-center'>
-          <div></div>
-          <MultiLanguageButton />
         </div>
       )}
       {children}
-      {layoutData?.useFooter && <div></div>}
+      {layoutData?.useFooter && <Footer />}
     </div>
   );
 };

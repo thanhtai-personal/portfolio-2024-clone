@@ -1,2 +1,2 @@
 export * from "./useReducerWithLogger";
-export * from "./useThemeMode";
+export * from "./useTranslate";
