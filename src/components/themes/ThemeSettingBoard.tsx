@@ -4,11 +4,13 @@ import { TbBrandReact } from 'react-icons/tb';
 import { AnimationView, GridView } from '..';
 import { setOfThemes } from '@/utils/constants';
 import { changeTheme } from "@/utils/theme";
+import { ThemeActionType, ThemeContext } from "@/context/theme";
 
 export interface IThemeSettingBoard {}
 
 export const ThemeSettingBoard = ({}: IThemeSettingBoard) => {
   const [isOpen, setIsOpen] = useState(false);
+  const themeDispatch = ThemeContext.useDataDispatchContext();
 
   return (
     <div className={'fixed top-1/3 right-1'}>
@@ -24,7 +26,12 @@ export const ThemeSettingBoard = ({}: IThemeSettingBoard) => {
                     key={key}
                     onClick={() => {
                       setIsOpen(false);
-                      changeTheme(theme.key)
+                      themeDispatch && themeDispatch({
+                        type: ThemeActionType.updateTheme,
+                        payload: {
+                          key
+                        }
+                      })
                     }}
                   >
                     <div style={{ background: theme.color }} className="w-4 h-4 rounded-full"></div>

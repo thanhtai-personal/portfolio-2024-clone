@@ -7,6 +7,7 @@ import {
   IThemeAction,
   IUpdateThemePayload
 } from "./interfaces";
+import { changeTheme } from "@/utils/theme";
 
 type ThemeActionPayload = IUpdateThemePayload;
 
@@ -15,6 +16,7 @@ const reducer = (state: IThemeContext, action: IThemeAction<ThemeActionType, The
 
   switch (action.type) {
     case (ThemeActionType.updateTheme): {
+      changeTheme(action.payload.key)
       return {
         ...state,
         theme: setOfThemes[Object.keys(setOfThemes).find((key: string) => setOfThemes[key].key === action.payload.key) || "light"]

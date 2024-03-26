@@ -1,10 +1,11 @@
-import { ReactNode } from 'react';
+import { ReactNode, useEffect } from 'react';
 
 export interface IVideoBackground {
   children: ReactNode;
   className?: string;
   src: string;
   type?: string;
+  id?: string;
 }
 
 export const VideoBackground = ({
@@ -12,10 +13,18 @@ export const VideoBackground = ({
   className,
   src,
   type = 'video/mp4',
+  id = "source-video"
 }: IVideoBackground) => {
+
+  useEffect(() => {
+    const videoElem = document.getElementById(id);
+    videoElem?.setAttribute("src", src);
+  }, [src, id])
+
   return (
     <div className={`w-full h-full relative`}>
       <video
+        id={id}
         autoPlay
         muted
         loop
