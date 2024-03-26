@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Cell, Pie, PieChart, ResponsiveContainer, Sector } from 'recharts';
-import { formatMoney } from 'utils/index';
+import { formatMoney } from '@/utils/index';
 
 export interface CircleChartItem {
   name: string;

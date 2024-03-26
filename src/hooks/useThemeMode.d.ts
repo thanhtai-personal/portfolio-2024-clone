@@ -1,4 +1,4 @@
-type ThemeMode = "light" | "dark" | "auto";
+import { ThemeMode } from "../utils";
 
 declare const useThemeMode: () => {
   mode: ThemeMode;
