@@ -173,11 +173,36 @@ module.exports = {
           },
           "100%": { transform: "scale3d(1, 1, 1)" },
         },
+        fadeltr: {
+          "0%": { width: "100%" },
+          "40%": { width: "0%" },
+          "60%": { width: "0%" },
+          "100%": { width: "100%" }
+        },
+        fadertl: {
+          "0%": { width: "0%" },
+          "40%": { width: "100%" },
+          "60%": { width: "100%" },
+          "100%": { width: "0%" }
+        },
+        fade_in_rtl: {
+          "0%": { opacity: 0.5, transform: "translateX(100%)" },
+          "30%": { opacity: 0.65, transform: "translateX(50%)" },
+          "100%": { opacity: 1 }
+        },
+        fade_in: {
+          "0%": { opacity: 0.3 },
+          "100%": { opacity: 1 }
+        }
       },
       animation: {
         "spin-slow": "spin 3s linear infinite",
         zoom: "zoom 1s ease-in-out infinite",
         tada: "tada 1.5s ease-in-out infinite",
+        fadeltr: "fadeltr 3s ease-in alternate infinite",
+        fadertl: "fadertl 3s ease-in alternate infinite",
+        fade_in_rtl: "fade_in_rtl .8s ease-in",
+        fade_in: "fade_in .8s ease-in"
       },
     },
   },
