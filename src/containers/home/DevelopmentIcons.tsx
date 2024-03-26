@@ -1,4 +1,5 @@
-import { FaReact, FaPython, FaGithub, FaNodeJs   } from 'react-icons/fa';
+import React from 'react';
+import { FaReact, FaPython, FaGithub, FaNodeJs } from 'react-icons/fa';
 import { TbBrandReactNative, TbBrandTypescript } from 'react-icons/tb';
 import { FaGitlab } from "react-icons/fa6";
 import { SiDotnet, SiVitess, SiTailwindcss } from "react-icons/si";
@@ -37,7 +38,7 @@ export const DevelopmentIcons = () => {
         href=''
         className='m-2 md:m-4 cursor-pointer rounded-full hover:scale-110 hover:text-text-active my-2'
       >
-        <TbBrandTypescript className='w-4 h-4 md:w-8 md:h-8' />
+        <TbBrandTypescript color="var(--text-color)" className='w-4 h-4 md:w-8 md:h-8' />
       </a>
       <a
         target='_blank'
@@ -45,7 +46,7 @@ export const DevelopmentIcons = () => {
         href=''
         className='m-2 md:m-4 cursor-pointer rounded-full hover:scale-110 hover:text-text-active my-2'
       >
-        <SiTailwindcss className='w-4 h-4 md:w-8 md:h-8' />
+        <SiTailwindcss color="var(--text-color)" className='w-4 h-4 md:w-8 md:h-8' />
       </a>
       <a
         target='_blank'
@@ -69,7 +70,7 @@ export const DevelopmentIcons = () => {
         href=''
         className='m-2 md:m-4 cursor-pointer rounded-full hover:scale-110 hover:text-text-active my-2'
       >
-        <FaGitlab className='w-4 h-4 md:w-8 md:h-8' />
+        <FaGitlab color="var(--text-color)" className='w-4 h-4 md:w-8 md:h-8' />
       </a>
       <a
         target='_blank'
@@ -77,7 +78,7 @@ export const DevelopmentIcons = () => {
         href=''
         className='m-2 md:m-4 cursor-pointer rounded-full hover:scale-110 hover:text-text-active my-2'
       >
-        <FaGithub className='w-4 h-4 md:w-8 md:h-8' />
+        <FaGithub color="var(--text-color)" className='w-4 h-4 md:w-8 md:h-8' />
       </a>
       <a
         target='_blank'
@@ -85,7 +86,7 @@ export const DevelopmentIcons = () => {
         href=''
         className='m-2 md:m-4 cursor-pointer rounded-full hover:scale-110 hover:text-text-active my-2'
       >
-        <SiVitess className='w-4 h-4 md:w-8 md:h-8' />
+        <SiVitess color="var(--text-color)" className='w-4 h-4 md:w-8 md:h-8' />
       </a>
     </div>
   );

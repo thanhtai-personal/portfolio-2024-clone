@@ -6,7 +6,7 @@ export const UserInfo = () => {
   return (
     <div className='flex flex-col'>
       <div className='flex flex-row items-center'>
-        <div className='w-12 border-r border-solid'>
+        <div className='w-14 border-r border-solid'>
           <span className=' text-text text-nowrap whitespace-nowrap font-bold'>{t('Name')}</span>&nbsp;
         </div>
         <div className='ml-2'>
@@ -14,7 +14,7 @@ export const UserInfo = () => {
         </div>
       </div>
       <div className='flex flex-row items-center'>
-        <div className='w-12 border-r border-solid'>
+        <div className='w-14 border-r border-solid'>
           <span className=' text-text text-nowrap whitespace-nowrap font-bold'>{t('Age')}</span>&nbsp;
         </div>
         <div className='ml-2'>
@@ -22,7 +22,7 @@ export const UserInfo = () => {
         </div>
       </div>
       <div className='flex flex-row items-center'>
-        <div className=' w-12 border-r border-solid'>
+        <div className=' w-14 border-r border-solid'>
           <span className=' text-text text-nowrap whitespace-nowrap font-bold'>{t('From')}</span>&nbsp;
         </div>
         <div className='ml-2'>
@@ -30,7 +30,7 @@ export const UserInfo = () => {
         </div>
       </div>
       <div className='flex flex-row items-center'>
-        <div className=' w-12 border-r border-solid'>
+        <div className=' w-14 border-r border-solid'>
           <span className=' text-text text-nowrap whitespace-nowrap font-bold'>{t('Title')}</span>&nbsp;
         </div>
         <div className='ml-2'>

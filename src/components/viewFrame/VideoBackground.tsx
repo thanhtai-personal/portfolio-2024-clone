@@ -1,4 +1,4 @@
-import { ReactNode, useEffect } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 
 export interface IVideoBackground {
   children: ReactNode;
@@ -15,10 +15,22 @@ export const VideoBackground = ({
   type = 'video/mp4',
   id = "source-video"
 }: IVideoBackground) => {
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     const videoElem = document.getElementById(id);
-    videoElem?.setAttribute("src", src);
+    if (videoElem) {
+      videoElem.setAttribute("src", src);
+
+      videoElem.onloadstart = () => {
+        setIsLoaded(false);
+      }
+
+      videoElem.onloadeddata = () => {
+        setIsLoaded(true);
+      }
+    }
+
   }, [src, id])
 
   return (
@@ -28,7 +40,7 @@ export const VideoBackground = ({
         autoPlay
         muted
         loop
-        className='absolute right-0 bottom-0 min-w-full min-h-full object-fill'
+        className={`absolute right-0 bottom-0 min-w-full min-h-full object-fill ${!isLoaded && "display-none"}`}
       >
         <source className='w-full h-full' src={src} type={type} />
         Your browser does not support HTML5 video.

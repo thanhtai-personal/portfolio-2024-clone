@@ -1,4 +1,5 @@
-import avartarImage from '@/assets/images/default_profile_image.jpg';
+import avartarImage from '@/assets/images/avt.jpg';
+import { LazyLoadImage } from '@/components/LazyImage';
 import { AnimationView } from '@/components/viewFrame';
 import { useTranslate } from '@/hooks/useTranslate';
 import { Button } from 'flowbite-react';
@@ -44,7 +45,7 @@ export const BannerAvartar = () => {
               </div>
             </div>
           )}
-          <img
+          <LazyLoadImage
             className='w-16 h-16 md:w-36 md:h-36 lg:w-48 lg:h-48 rounded-full shadow-xl'
             src={avartarImage}
             alt='avatar'
