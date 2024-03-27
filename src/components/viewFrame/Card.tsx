@@ -26,7 +26,7 @@ export const Card = ({
     <FlowBiteCard {...nestedProps}>
       <div className='flex flex-col w-full h-full justify-items-start'>
         <h5 className='text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
-          {typeof title === 'string' ? t(title) : title}
+          <span className=" whitespace-nowrap">{typeof title === 'string' ? t(title) : title}</span>
           {rating && <span className="text-sm whitespace-nowrap font-mono ml-2 underline text-text-active italic">{`${t("Rate")}: ${rating.point}/100`}</span>}
         </h5>
         {rating?.baseOn && <p className="text-sm font-mono mb-4 text-text">{t(rating.baseOn)}</p>}
