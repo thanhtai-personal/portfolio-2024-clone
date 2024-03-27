@@ -1,9 +1,9 @@
 import { Button } from 'flowbite-react';
 import { useState } from 'react';
-import { TbBrandReact } from 'react-icons/tb';
 import { AnimationView, GridView } from '..';
 import { setOfThemes } from '@/utils/constants';
 import { ThemeActionType, ThemeContext } from "@/context/theme";
+import { FaGear } from 'react-icons/fa6';
 
 export interface IThemeSettingBoard {}
 
@@ -47,7 +47,7 @@ export const ThemeSettingBoard = ({}: IThemeSettingBoard) => {
           onClick={() => setIsOpen(true)}
           className='p-0 m-0 bg-transparent hover:border-none enabled:bg-transparent enabled:hover:bg-transparent enabled:hover:border-none enabled:border-none text-color-text-active'
         >
-          <TbBrandReact className='w-10 h-10 animate-spin text-text' />
+          <FaGear className='w-6 h-6 hover:animate-spin opacity-55 text-text' />
         </Button>
       )}
     </div>

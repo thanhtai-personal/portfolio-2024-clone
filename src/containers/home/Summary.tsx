@@ -7,6 +7,8 @@ export const Summary = () => {
   return <div className="w-full min-h-7 px-2 py-4">
     
     <TitleText content="SUMMARY" />
-    <div className="w-full italic text-text mt-3 p-4 bg-black-100 rounded-lg">{t("Experienced Frontend/Full-stack Web Developer with a strong background in ReactJS, NodeJS, TS. Skilled in project management, deployment, and problem-solving.")}</div>
+    <div className="w-full italic text-text mt-3 p-4 bg-black-100 rounded-lg pr-6">
+      {t("Experienced Frontend/Full-stack Web Developer with a strong background in ReactJS, NodeJS, TS. Skilled in project management, deployment, and problem-solving.")}
+    </div>
   </div>
 }

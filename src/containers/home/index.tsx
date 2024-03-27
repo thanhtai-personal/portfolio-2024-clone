@@ -18,35 +18,35 @@ const HomePage = ({}: IHomePage) => {
   return (
     <AnimationView.FadeIn className='bg-background w-screen h-screen m-0 p-0 overflow-x-hidden'>
       <Banner />
-      <IntersectionObserverView id='section-summary' className=' min-h-2'>
+      <IntersectionObserverView id='section-summary'>
         <AnimationView.FadeIn>
           <ContentSection>
             <Summary />
           </ContentSection>
         </AnimationView.FadeIn>
       </IntersectionObserverView>
-      <IntersectionObserverView id='section-skills' className='min-h-20'>
+      <IntersectionObserverView id='section-skills'>
         <AnimationView.FadeIn>
           <ContentSection>
             <Skills />
           </ContentSection>
         </AnimationView.FadeIn>
       </IntersectionObserverView>
-      <IntersectionObserverView id='section-experience' className='min-h-20'>
+      <IntersectionObserverView id='section-experience'>
         <AnimationView.FadeIn>
           <ContentSection>
             <Experience />
           </ContentSection>
         </AnimationView.FadeIn>
       </IntersectionObserverView>
-      <IntersectionObserverView id='section-education' className='min-h-20'>
+      <IntersectionObserverView id='section-education'>
         <AnimationView.FadeIn>
           <ContentSection>
             <Education />
           </ContentSection>
         </AnimationView.FadeIn>
       </IntersectionObserverView>
-      <IntersectionObserverView id='section-side-projects' className='min-h-20'>
+      <IntersectionObserverView id='section-side-projects'>
         <AnimationView.FadeIn>
           <ContentSection>
             <SideProjects />

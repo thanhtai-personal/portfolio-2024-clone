@@ -1,5 +1,3 @@
-
-
 export const getStartOfDay = (date: Date): Date => {
   const startOfDay = new Date(date);
   startOfDay.setHours(0, 0, 0, 0);

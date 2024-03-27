@@ -323,3 +323,8 @@ select::-webkit-scrollbar-thumb {
   width: 11px;
   border-radius: 11px;
 }
+
+div, button, a, img {
+  animation-duration: 300ms;
+  transition-duration: 300ms;
+}
