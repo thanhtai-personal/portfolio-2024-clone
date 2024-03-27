@@ -46,7 +46,7 @@ export const BannerAvartar = () => {
             </div>
           )}
           <LazyLoadImage
-            className='w-16 h-16 md:w-36 md:h-36 lg:w-48 lg:h-48 rounded-full shadow-xl'
+            imageClass='w-16 h-16 md:w-36 md:h-36 lg:w-48 lg:h-48 rounded-full shadow-xl'
             src={avartarImage}
             alt='avatar'
           />

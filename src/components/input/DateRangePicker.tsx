@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { memo, useState } from 'react';
 import { DatePicker } from '.';
 
 export interface IDateRangePicker {
@@ -10,7 +10,7 @@ export interface IDateState {
   end?: Date;
 }
 
-export const DateRangePicker = ({ onChange }: IDateRangePicker) => {
+export const DateRangePicker = memo(({ onChange }: IDateRangePicker) => {
   const [date, setDate] = useState<IDateState>({
     start: new Date(),
     end: new Date(),
@@ -51,4 +51,4 @@ export const DateRangePicker = ({ onChange }: IDateRangePicker) => {
       </div>
     </div>
   );
-};
+});

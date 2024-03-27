@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { TbBrandReact } from 'react-icons/tb';
 import { AnimationView, GridView } from '..';
 import { setOfThemes } from '@/utils/constants';
-import { changeTheme } from "@/utils/theme";
 import { ThemeActionType, ThemeContext } from "@/context/theme";
 
 export interface IThemeSettingBoard {}
@@ -13,7 +12,7 @@ export const ThemeSettingBoard = ({}: IThemeSettingBoard) => {
   const themeDispatch = ThemeContext.useDataDispatchContext();
 
   return (
-    <div className={'fixed top-1/3 right-1'}>
+    <div className={'fixed top-1/3 right-1 z-50'}>
       {isOpen ? (
         <AnimationView.FadeInRTL>
           <div className='flex flex-row justify-center items-start p-2 bg-black-200 opacity-80 rounded-lg shadow-xl mr-2'>

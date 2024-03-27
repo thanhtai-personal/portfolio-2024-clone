@@ -1,11 +1,12 @@
 import { ReactNode, useEffect, useState } from 'react';
+import { LazyLoadVideo } from "../LazyLoadVideo";
 
 export interface IVideoBackground {
   children: ReactNode;
   className?: string;
   src: string;
   type?: string;
-  id?: string;
+  id: string;
   classes?: {
     container?: string;
   }
@@ -39,18 +40,18 @@ export const VideoBackground = ({
 
   return (
     <div className={`w-full h-full relative ${classes?.container}`}>
-      <video
+      <LazyLoadVideo
         id={id}
+        src={src}
         autoPlay
         muted
         loop
-        className={`absolute right-0 bottom-0 w-full h-full object-cover ${!isLoaded && "display-none"}`}
-      >
-        <source className='w-full h-full' src={src} type={type} />
-        Your browser does not support HTML5 video.
-      </video>
+        sourceClass='w-full h-full'
+        videoClass={`w-full h-full object-cover`}
+        className={`absolute right-0 bottom-0 w-full h-full z-10 ${!isLoaded && "display-none"}`}
+      />
       <div
-        className={`absolute w-full h-full left-0 top-0 bg-transparent ${className}`}
+        className={`absolute w-full h-full left-0 top-0 bg-transparent z-20 ${className}`}
       >
         {children}
       </div>

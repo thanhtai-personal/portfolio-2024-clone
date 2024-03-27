@@ -1,12 +1,12 @@
 import { TextInput, TextInputProps } from "flowbite-react";
-import { useRef } from "react";
+import { memo, useRef } from "react";
 import { DictaphoneButton } from "..";
 
 export interface ITextInputWithMic extends Omit<TextInputProps, 'onChange'> {
   onChange?: (value: string) => void;
 }
 
-export const TextInputWithMic = ({ className, onChange, ...props }: ITextInputWithMic) => {
+export const TextInputWithMic = memo(({ className, onChange, ...props }: ITextInputWithMic) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   return (
@@ -24,4 +24,4 @@ export const TextInputWithMic = ({ className, onChange, ...props }: ITextInputWi
       }} />
     </div>
   );
-};
+});

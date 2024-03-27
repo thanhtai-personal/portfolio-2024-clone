@@ -191,14 +191,14 @@
     --color-gray-300: #2d2923; /* Inverted from #D2D6DC */
     --color-gray-400: #606f4d; /* Inverted from #9FA6B2 */
     --color-gray-500: #7f6d00; /* Inverted from #68768A */
-    --color-gray-600: #4b3dfd; /* Inverted from #475569 */
-    --color-gray-700: #2e25ff; /* Inverted from #334155 */
+    --color-gray-600: #6f6f70; /* Inverted from #475569 */
+    --color-gray-700: #1b1b1b; /* Inverted from #334155 */
     --color-gray-800: #12100f; /* Inverted from #1E293B */
     --color-gray-900: #0d0b00; /* Inverted from #0F172A */
   }
 
   html.navi {
-    --background-color: #001F3F;
+    --background-color: #001f3f;
     --text-color: #0ce7fa;
     --text-active-color: #c7c7;
   }
@@ -288,22 +288,38 @@ body::-webkit-scrollbar-track {
   background: var(--scrollbarBG);
 }
 body::-webkit-scrollbar-thumb {
-  background-color: var(--thumbBG) ;
+  background-color: var(--thumbBG);
   border-radius: 6px;
 }
-
 
 div::-webkit-scrollbar {
   width: 11px;
 }
 div {
-  scrollbar-width: thin;
+  scrollbar-width: none;
   scrollbar-color: var(--thumbBG) var(--scrollbarBG);
 }
 div::-webkit-scrollbar-track {
   background: var(--scrollbarBG);
 }
 div::-webkit-scrollbar-thumb {
-  background-color: var(--thumbBG) ;
+  background-color: var(--thumbBG);
   border-radius: 6px;
+}
+
+select::-webkit-scrollbar {
+  width: 11px;
+}
+select {
+  scrollbar-width: none;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+select::-webkit-scrollbar-track {
+  width: 1px;
+  background: var(--scrollbarBG);
+}
+select::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  width: 11px;
+  border-radius: 11px;
 }

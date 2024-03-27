@@ -1,4 +1,9 @@
-import { AnimationView, ContentSection, IntersectionObserverView, VideoBackground } from '@/components/index';
+import {
+  AnimationView,
+  ContentSection,
+  IntersectionObserverView,
+  VideoBackground,
+} from '@/components/index';
 import { Banner } from './Banner';
 import { Summary } from './Summary';
 import { Footer } from 'flowbite-react';
@@ -7,51 +12,57 @@ import { Experience } from './Experience';
 import { Education } from './Education';
 import { SideProjects } from './SideProjects';
 
-export interface IHomePage { }
+export interface IHomePage {}
 
-const HomePage = ({ }: IHomePage) => {
+const HomePage = ({}: IHomePage) => {
   return (
     <AnimationView.FadeIn className='bg-background w-screen h-screen m-0 p-0 overflow-x-hidden'>
       <Banner />
-      <IntersectionObserverView className=' min-h-2'>
+      <IntersectionObserverView id='section-summary' className=' min-h-2'>
         <AnimationView.FadeIn>
           <ContentSection>
             <Summary />
           </ContentSection>
         </AnimationView.FadeIn>
       </IntersectionObserverView>
-      <IntersectionObserverView className='min-h-20'>
+      <IntersectionObserverView id='section-skills' className='min-h-20'>
         <AnimationView.FadeIn>
-          <Skills />
+          <ContentSection>
+            <Skills />
+          </ContentSection>
         </AnimationView.FadeIn>
       </IntersectionObserverView>
-      <IntersectionObserverView className='min-h-20'>
+      <IntersectionObserverView id='section-experience' className='min-h-20'>
         <AnimationView.FadeIn>
-          <Experience />
+          <ContentSection>
+            <Experience />
+          </ContentSection>
         </AnimationView.FadeIn>
       </IntersectionObserverView>
-      <IntersectionObserverView className='min-h-20'>
+      <IntersectionObserverView id='section-education' className='min-h-20'>
         <AnimationView.FadeIn>
-          <Education />
+          <ContentSection>
+            <Education />
+          </ContentSection>
         </AnimationView.FadeIn>
       </IntersectionObserverView>
-      <IntersectionObserverView className='min-h-20'>
+      <IntersectionObserverView id='section-side-projects' className='min-h-20'>
         <AnimationView.FadeIn>
-          <SideProjects />
+          <ContentSection>
+            <SideProjects />
+          </ContentSection>
         </AnimationView.FadeIn>
       </IntersectionObserverView>
-      <Footer className="w-full h-56">
+      <Footer className='w-full h-56'>
         <VideoBackground
-          id="smoke-button"
+          id='smoke-background'
           classes={{
-            container: "h-auto"
+            container: 'h-auto',
           }}
-          src="https://video.wixstatic.com/video/d47472_58cce06729c54ccb935886c4b3647274/1080p/mp4/file.mp4"
-          className="flex justify-center w-full h-full"
+          src='https://video.wixstatic.com/video/d47472_58cce06729c54ccb935886c4b3647274/1080p/mp4/file.mp4'
+          className='flex justify-center w-full h-full'
         >
-          <div className="flex justify-center items-center">
-
-          </div>
+          <div className='flex justify-center items-center'></div>
         </VideoBackground>
       </Footer>
     </AnimationView.FadeIn>

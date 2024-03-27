@@ -3,9 +3,10 @@ import { ReactNode, useEffect, useRef, useState } from "react";
 export interface IIntersectionObserverView {
   children: ReactNode;
   className?: string;
+  id?: string;
 }
 
-export const IntersectionObserverView = ({ children, className }: IIntersectionObserverView) => {
+export const IntersectionObserverView = ({ children, className, id }: IIntersectionObserverView) => {
   const [isIntersecting, setIsIntersecting] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -28,7 +29,7 @@ export const IntersectionObserverView = ({ children, className }: IIntersectionO
   }, []);
 
   return (
-    <div ref={ref} className={`w-full ${className}`}>
+    <div id={id} ref={ref} className={`w-full ${className}`}>
       {isIntersecting ? children : ""}
     </div>
   );

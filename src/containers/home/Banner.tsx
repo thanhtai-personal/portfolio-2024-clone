@@ -30,7 +30,7 @@ export const Banner = () => {
       className='flex flex-row justify-center items-center bg-cover shadow-lg rounded-b-lg'
       overflowHidden
     >
-      <VideoBackground src={videoSrc} className='bg-cover relative'>
+      <VideoBackground id="banner-background" src={videoSrc} className='bg-cover relative'>
         <div className='relative w-full h-full'>
           <div className='flex absolute left-0 top-0 w-full h-full flex-row justify-center'>
             <ContentSection className='w-full bg-transparent'>

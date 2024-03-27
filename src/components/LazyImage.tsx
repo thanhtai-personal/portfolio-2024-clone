@@ -1,45 +1,53 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useState, useEffect, ImgHTMLAttributes } from "react";
+import { LoadingComponent } from ".";
 
-interface LazyLoadImageProps {
-  src: string;
-  alt: string;
-  threshold?: number;
-  className?: string;
+export interface ILazyLoadImage extends ImgHTMLAttributes<HTMLImageElement> {
+  imageClass?: string;
 }
 
-export const LazyLoadImage: React.FC<LazyLoadImageProps> = ({ src, alt, threshold = 0, className }) => {
-  const imageRef = useRef<HTMLImageElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
+export const LazyLoadImage = ({
+  src,
+  alt,
+  className = "",
+  imageClass = "",
+  ...restProps
+}: ILazyLoadImage) => {
+  const [loaded, setLoaded] = useState(false);
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(imageRef.current!);
-        }
-      },
-      { threshold }
-    );
-
-    if (imageRef.current) {
-      observer.observe(imageRef.current);
+    if (src) {
+      const img = new Image();
+      img.onload = () => {
+        setLoaded(true);
+      };
+      img.src = src;
     }
-
-    return () => {
-      if (imageRef.current) {
-        observer.unobserve(imageRef.current);
-      }
-    };
-  }, [threshold]);
+  }, [src]);
 
   return (
-    <img
-      ref={imageRef}
-      className={`${className}`}
-      src={isVisible ? src : ''}
-      alt={alt}
-      style={{ opacity: isVisible ? 1 : 0, transition: 'opacity 0.3s ease-in' }}
-    />
+    <div
+      className={`relative w-full h-full ${className}`}
+      style={{
+        height: restProps.style?.height || "100%",
+        width: restProps.style?.width || "100%",
+      }}
+    >
+      {!loaded && (
+        <div
+          className="absolute inset-0 flex bg-black justify-center items-center p-4"
+          style={{
+            minHeight: 180,
+          }}
+        >
+          <LoadingComponent />
+        </div>
+      )}
+      <img
+        className={`${imageClass}`}
+        loading="lazy"
+        src={src}
+        alt={alt}
+        {...restProps}
+      />
+    </div>
   );
 };
