@@ -7,14 +7,16 @@ export interface IIntersectionObserverView {
 }
 
 export const IntersectionObserverView = ({ children, className, id }: IIntersectionObserverView) => {
-  const [isIntersecting, setIsIntersecting] = useState(false);
+  const [loaded, setLoaded] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        setIsIntersecting(entry.isIntersecting);
-      });
+        if (entry.isIntersecting) {
+          setLoaded(true);
+        }
+    });
     });
 
     if (ref.current) {
@@ -29,8 +31,8 @@ export const IntersectionObserverView = ({ children, className, id }: IIntersect
   }, []);
 
   return (
-    <div id={id} ref={ref} className={`w-full ${className}`}>
-      {isIntersecting ? children : ""}
+    <div id={id} ref={ref} className={`w-full min-h-10 ${className}`}>
+      {loaded ? children : ""}
     </div>
   );
 };

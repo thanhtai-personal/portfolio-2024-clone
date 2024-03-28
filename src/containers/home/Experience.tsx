@@ -195,14 +195,14 @@ const experienceData: ExperienceItem[] = [
       name: "TiTan core",
       teamSize: 10,
       techStack: "ReactJS, .Net-core, typescript, mono-repository, vitest, npm publish",
-      description: "Auditing platform for Auvenir"
+      description: "Source base for TiTan projects"
     }],
     skills: [
       skillData["ReactJS"], skillData["TypeScript"],
       skillData[".Net"], skillData["HTML/CSS/JS"], skillData["Python"],
       skillData["TypeORM"], skillData["SQL"], skillData["PostgreSQL"],
       skillData["webpack"], skillData["NPM Publish"], skillData["GIT Flow"], skillData["Jira"],
-      skillData["Medical"], skillData["MicroServices"]
+      skillData["MicroServices"]
     ]
   },
 ]
@@ -254,7 +254,7 @@ export const Experience = () => {
             })
           }</div>
           <div className="flex flex-col items-end">
-            <div className="text-text-active text-sm">{`${new Date(item.start).toLocaleDateString()} - ${item.end ? new Date(item.start).toLocaleDateString() : t("Current")}`}</div>
+            <div className="text-text-active text-sm">{`${new Date(item.start).toLocaleDateString()} - ${item.end ? new Date(item.end).toLocaleDateString() : t("Current")}`}</div>
             <div className="flex flex-row justify-end items-center flex-wrap w-40 md:w-64">
               {item.skills?.map((skill) => <div key={skill.key} className="m-2">{skill.image("w-4 h-4")}</div>)}
             </div>
