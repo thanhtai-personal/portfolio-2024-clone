@@ -58,7 +58,7 @@ const HomePageContent = () => {
           </ContentSection>
         </AnimationView.FadeIn>
       </IntersectionObserverView>
-      <Footer className='w-full h-56 relative'>
+      <Footer className='w-full h-16 relative'>
         {themeData?.theme?.key !== setOfThemes.dark.key && (
           <VideoBackground
             id='smoke-background'
@@ -72,7 +72,9 @@ const HomePageContent = () => {
           </VideoBackground>
         )}
         <div className='absolute w-full h-full left-0 top-0 bg-[rgba(255,100,125, 0.25)] dark:bg-[rgba(255,100,125, 0.7)] rounded-t-lg'>
-          <div className='w-full flex flex-row'></div>
+          <div className='w-full h-full flex flex-row items-end justify-center'>
+            <div className="text-xs text-gray-600 font-mono font-bold">kai.tran</div>
+          </div>
         </div>
       </Footer>
     </AnimationView.FadeIn>

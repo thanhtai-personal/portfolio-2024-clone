@@ -199,7 +199,7 @@
 
   html.navi {
     --background-color: #001f3f;
-    --text-color: #0ce7fa;
+    --text-color: rgb(70, 131, 180);
     --text-active-color: #c7c7;
   }
 

@@ -42,7 +42,8 @@ export const Banner = () => {
                 }}
               >
                 <div className='bg-transparent p-2 flex flex-col'>
-                  <EczarText content='Web developer' />
+                  <EczarText content='Web developer' className="hidden sm:flex" />
+                  <EczarText content='W-Dev' className="flex sm:hidden"/>
                   <DevelopmentIcons />
                 </div>
                 <div className='bg-transparent col-span-2'></div>
