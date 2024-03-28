@@ -215,9 +215,9 @@ export const Experience = () => {
       return {
         key: `exp-${item.id.toString()}`,
         className: "w-full",
-        content: <div className="w-full flex flex-row justify-between">
+        content: <div className="w-full flex flex-col sm:flex-row sm:justify-between">
           <div className="flex flex-row items-center">
-            <div className="">
+            <div className="hidden sm:flex">
               <LazyLoadImage
                 src={item.conpanyLogo || defaultImage}
                 imageClass="w-16 h-16 rounded-full mx-2 border-solid  border-[1px] border-text  shadow-lg shadow-inner"

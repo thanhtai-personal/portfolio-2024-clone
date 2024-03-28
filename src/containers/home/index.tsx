@@ -11,12 +11,17 @@ import { Skills } from './Skills';
 import { Experience } from './Experience';
 import { Education } from './Education';
 import { SideProjects } from './SideProjects';
+import page from '@/assets/video/page.mp4';
+import { ThemeContext } from '@/context/theme';
+import { setOfThemes } from '@/utils/constants';
 
 export interface IHomePage {}
 
-const HomePage = ({}: IHomePage) => {
+const HomePageContent = () => {
+  const themeData = ThemeContext.useDataContext();
+
   return (
-    <AnimationView.FadeIn className='bg-background w-screen h-screen m-0 p-0 overflow-x-hidden'>
+    <AnimationView.FadeIn className='bg-transparent dark:bg-background w-screen h-screen m-0 p-0 overflow-x-hidden'>
       <Banner />
       <IntersectionObserverView id='section-summary'>
         <AnimationView.FadeIn>
@@ -53,19 +58,46 @@ const HomePage = ({}: IHomePage) => {
           </ContentSection>
         </AnimationView.FadeIn>
       </IntersectionObserverView>
-      <Footer className='w-full h-56'>
-        <VideoBackground
-          id='smoke-background'
-          classes={{
-            container: 'h-auto',
-          }}
-          src='https://video.wixstatic.com/video/d47472_58cce06729c54ccb935886c4b3647274/1080p/mp4/file.mp4'
-          className='flex justify-center w-full h-full'
-        >
-          <div className='flex justify-center items-center'></div>
-        </VideoBackground>
+      <Footer className='w-full h-56 relative'>
+        {themeData?.theme?.key !== setOfThemes.dark.key && (
+          <VideoBackground
+            id='smoke-background'
+            classes={{
+              container: 'h-auto opacity-40',
+            }}
+            src='https://video.wixstatic.com/video/d47472_58cce06729c54ccb935886c4b3647274/1080p/mp4/file.mp4'
+            className='flex justify-center w-full h-full'
+          >
+            <div></div>
+          </VideoBackground>
+        )}
+        <div className='absolute w-full h-full left-0 top-0 bg-[rgba(255,100,125, 0.25)] dark:bg-[rgba(255,100,125, 0.7)] rounded-t-lg'>
+          <div className='w-full flex flex-row'></div>
+        </div>
       </Footer>
     </AnimationView.FadeIn>
+  );
+};
+
+const HomePage = ({}: IHomePage) => {
+  return (
+    <div className='w-screen h-screen'>
+      <VideoBackground
+        id='page-background'
+        classes={{
+          container: 'opacity-40',
+        }}
+        src={page}
+        className='flex justify-center w-full h-full'
+      >
+        <div></div>
+      </VideoBackground>
+      <div className='absolute w-full h-full left-0 top-0 bg-transparent rounded-t-lg'>
+        <div className='w-full flex flex-row'>
+          <HomePageContent />
+        </div>
+      </div>
+    </div>
   );
 };
 

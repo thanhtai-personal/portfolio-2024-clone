@@ -88,9 +88,9 @@ export const Education = () => {
       <div className='w-full flex flex-col italic text-text mt-3 p-4 bg-black-100 rounded-lg pr-6 transition duration-200 ease-in-out'>
         <Accordion
           title={
-            <div className='w-full flex flex-row justify-between'>
+            <div className='w-full flex flex-col sm:flex-row justify-between'>
               <div className='flex flex-row items-center justify-start'>
-                <div className='w-20 h-20'>
+                <div className='w-20 h-20 hidden md:flex'>
                   <LazyLoadImage
                     src={item!.universityLogo || defaultImage}
                     imageClass='w-16 h-16 rounded-full mx-2 shadow-lg shadow-inner'
@@ -111,7 +111,7 @@ export const Education = () => {
                   </div>
                 </div>
               </div>
-              <div className='flex flex-col items-end'>
+              <div className='flex flex-col items-end mt-3 sm:mt-0'>
                 <div className='text-text-active text-sm'>{`${new Date(
                   item!.start
                 ).toLocaleDateString()} - ${

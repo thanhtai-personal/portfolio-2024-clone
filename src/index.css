@@ -8,7 +8,7 @@
   :root {
     --background-color: #fff;
     --text-color: #000;
-    --text-active-color: #4669fa;
+    --text-active-color: #46d0fa;
     --scrollbarBG: #000;
     --thumbBG: #f9fcf9;
     --bg-cover: #f9fcf9;
@@ -102,9 +102,9 @@
   }
 
   html.dark {
-    --background-color: #111112; /* Background color inverted from #fff */
+    --background-color: #19191a; /* Background color inverted from #fff */
     --text-color: #fff; /* Background color inverted from #fff */
-    --text-active-color: #4669fa;
+    --text-active-color: #46b2fa;
     --scrollbarBG: steelblue;
     --thumbBG: #383838;
 
@@ -189,7 +189,7 @@
     --color-gray-100: #0b0a08; /* Inverted from #F4F5F7 */
     --color-gray-200: #1a1814; /* Inverted from #E5E7EB */
     --color-gray-300: #2d2923; /* Inverted from #D2D6DC */
-    --color-gray-400: #606f4d; /* Inverted from #9FA6B2 */
+    --color-gray-400: #a1ad90; /* Inverted from #9FA6B2 */
     --color-gray-500: #7f6d00; /* Inverted from #68768A */
     --color-gray-600: #6f6f70; /* Inverted from #475569 */
     --color-gray-700: #1b1b1b; /* Inverted from #334155 */

@@ -57,7 +57,7 @@ export const SideProjects = () => {
         content: (
           <div className='w-full flex flex-row justify-between'>
             <div className='flex flex-row items-center'>
-              <div className=''>
+              <div className='hidden sm:flex'>
                 <LazyLoadImage
                   src={item.projectLogo || defaultImage}
                   imageClass='w-16 h-16 rounded-full mx-2 border-solid  border-[1px] border-text  shadow-lg shadow-inner'
@@ -76,7 +76,7 @@ export const SideProjects = () => {
                     ? t(item.description)
                     : item.description}
                 </div>
-                <div className='flex flex-row justify-start items-center flex-wrap w-40 md:w-64'>
+                <div className='flex flex-row justify-start items-center flex-wrap md:w-64'>
                   {item.skills?.map(skill => (
                     <div key={skill.key} className='m-2'>
                       {skill.image('w-4 h-4')}
