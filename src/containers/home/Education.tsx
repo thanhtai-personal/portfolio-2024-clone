@@ -85,7 +85,7 @@ export const Education = () => {
   return (
     <div className='w-full px-2 py-4'>
       <TitleText content='Educations' />
-      <div className='w-full flex flex-col italic text-text mt-3 p-4 bg-black-100 rounded-lg pr-6 transition duration-200 ease-in-out'>
+      <div className='w-full flex flex-col italic text-text mt-3 p-4 bg-black-100 shadow-dark dark:shadow-light-white rounded-lg pr-6 transition duration-200 ease-in-out'>
         <Accordion
           title={
             <div className='w-full flex flex-col sm:flex-row justify-between'>
@@ -148,6 +148,7 @@ export const Education = () => {
                       defaultFullDes
                       embeddedVideo={project.video}
                       embeddedAlt={project.videoAlt}
+                      className="shadow-none"
                     >
                     </Card>
                   </div>

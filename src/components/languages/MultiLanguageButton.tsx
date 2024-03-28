@@ -27,7 +27,7 @@ export const MultiLanguageButton = ({}: IMultiLanguageButton) => {
         {Object.keys(LanguageKey).map((key: string) => (
           <Button
             key={`language-button-${key}`}
-            className={`enabled:hover:bg-initial dark:enabled:hover:bg-initial ${
+            className={`enabled:hover:bg-initial dark:enabled:hover:bg-initial  ${
               appData?.language === key
                 ? 'bg-secondary-500 text-info-700'
                 : ''

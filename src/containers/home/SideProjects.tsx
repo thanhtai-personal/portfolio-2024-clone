@@ -97,7 +97,7 @@ export const SideProjects = () => {
   return (
     <div className='w-full px-2 py-4'>
       <TitleText content='Side Projects' />
-      <div className='w-full flex flex-col italic text-text mt-3 p-4 bg-black-100 rounded-lg pr-6'>
+      <div className='w-full flex flex-col italic text-text mt-3 p-4 bg-black-100 pr-6 shadow-dark dark:shadow-light-white rounded-lg'>
         <ListView
           unstyled
           classes={{

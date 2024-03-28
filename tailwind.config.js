@@ -158,6 +158,10 @@ module.exports = {
 
         testi: "0px 4px 24px rgba(0, 0, 0, 0.06)",
         todo: "rgba(235 233 241, 0.6) 0px 3px 10px 0px",
+        "light-white": "0px 2px 4px 1px #c6dbe2",
+        dark: "0px 2px 4px 1px #302708",
+        "text-light": "0px 2px 4px #f8f8f7",
+        "text-dark": "0px 2px 4px #454503",
       },
       keyframes: {
         zoom: {
