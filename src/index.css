@@ -1,8 +1,9 @@
+@import 'google-fonts.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Your base theme settings */
+
 @layer base {
   html,
   :root {
@@ -324,10 +325,15 @@ select::-webkit-scrollbar-thumb {
   border-radius: 11px;
 }
 
-div, button, a, img, p {
+div,
+button,
+a,
+img,
+p {
   transition-duration: 300ms;
 }
 
-html, body {
+html,
+body {
   overflow: hidden;
 }
