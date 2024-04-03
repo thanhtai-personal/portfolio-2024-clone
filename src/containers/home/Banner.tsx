@@ -59,7 +59,7 @@ export const Banner = () => {
                     className='flex h-fit mx-2 my-2 lg:my-0'
                     onClick={() => {
                       window.open(
-                        'https://drive.google.com/file/d/1uq09NAymdxE1C0dxTqdRmzc48SmBqHtv/view?usp=sharing',
+                        'https://drive.google.com/file/d/19N3MxtJ0xl52mv5NsEz4_aEJyeZqSEHK/view?usp=sharing',
                         '_blank'
                       );
                     }}
