@@ -28,8 +28,8 @@ export const Card = ({
   const [isFullDes, setIsFullDes] = useState(!!defaultFullDes);
 
   return (
-    <FlowBiteCard className=" shadow-dark dark:shadow-light-white rounded-lg" {...nestedProps}>
-      <div className='flex flex-col w-full h-full justify-items-start'>
+    <FlowBiteCard className=" shadow-dark dark:shadow-light-white rounded-lg items-stretch" {...nestedProps}>
+      <div className='flex flex-col w-full h-full justify-items-start items-stretch'>
         <h5 className='text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
           <span className=' whitespace-nowrap'>
             {typeof title === 'string' ? t(title) : title}

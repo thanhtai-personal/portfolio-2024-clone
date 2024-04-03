@@ -17,4 +17,8 @@ export namespace AnimationView {
   export const FadeInLTR = ({ children, className }: IAnimationView) => {
     return <div className={`animate-fade_in_ltr ${className}`}>{children}</div>;
   };
+
+  export const SlideIn = ({ children, className }: IAnimationView) => {
+    return <div className={`animate-slide_in ${className}`}>{children}</div>;
+  };
 }

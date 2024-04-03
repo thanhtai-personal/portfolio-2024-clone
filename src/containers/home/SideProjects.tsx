@@ -30,7 +30,8 @@ const experienceData: SideProjectItem[] = [
   {
     id: 17,
     site: 'https://www.hptool.vn/',
-    description: 'High quality technical and mechanical support tools',
+    description:
+      'HP Tool — Online Shopping is a learning project of mine, aimed at utilizing Next.js to construct an e-commerce website. Data is crawled through the Cheerio tool and stored in an Atlas database powered by MongoDB. The user interface comprises a products page, showcasing and facilitating the search of all available products. Additionally, an admin page is included to manage operations such as posting new content or editing crawled data.',
     projectName: 'HP Tool',
     projectLogo:
       'https://firebasestorage.googleapis.com/v0/b/hptool.appspot.com/o/images%2Fhplogo_full.png?alt=media&token=1a55da38-c7ec-4c0e-bd71-18f68ed7134d',
@@ -57,13 +58,14 @@ export const SideProjects = () => {
         content: (
           <div className='w-full flex flex-row justify-between'>
             <div className='flex flex-row items-center'>
-              <div className='hidden sm:flex'>
+              <div className='hidden lg:flex w-[16rem] h-16'>
                 <LazyLoadImage
                   src={item.projectLogo || defaultImage}
-                  imageClass='w-16 h-16 rounded-full mx-2 border-solid  border-[1px] border-text  shadow-lg shadow-inner'
+                  className="w-[16rem] h-16"
+                  imageClass='w-[16rem] h-16 rounded-full mx-2 border-solid  border-[1px] border-text  shadow-lg shadow-inner'
                 />
               </div>
-              <div className='flex flex-col'>
+              <div className='flex flex-col lg:ml-4'>
                 <a
                   target='_blank'
                   href={item.site}
@@ -71,7 +73,7 @@ export const SideProjects = () => {
                 >
                   {item.projectName ? t(item.projectName) : t('Freelancer')}
                 </a>
-                <div className='text-sm whitespace-normal text-nowrap'>
+                <div className='text-sm whitespace-normal text-wrap'>
                   {typeof item.description === 'string'
                     ? t(item.description)
                     : item.description}

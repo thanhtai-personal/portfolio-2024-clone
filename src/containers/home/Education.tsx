@@ -56,7 +56,8 @@ const educationData: EducationItem[] = [
         name: 'TankVN',
         teamSize: 2,
         techStack: 'C#, ms XNA 4.0',
-        description: 'Classical tank game',
+        description:
+          'TankVN is a nostalgic yet innovative project inspired by the classic Battle City game. With a fresh user interface and exciting new features, TankVN brings the beloved retro gaming experience into the modern era. TankVN is developed by a small team with me and 1 other utilizing microsoft XNA 4.0, and AI technique for enemy objects in game (find the shortest way to go and kill player). At its core, TankVN retains the essence of Battle City, where players navigate a maze-like battlefield, strategically maneuvering their tanks to eliminate enemy forces and defend their base. However, TankVN goes beyond mere homage by introducing captivating new elements, including visually stunning graphics and challenging boss battles.',
         video: `<iframe width="560" height="315" src="https://www.youtube.com/embed/LwJa69CBARk?si=SvPwDfP-0KtUQ70r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
       },
       {
@@ -90,10 +91,10 @@ export const Education = () => {
           title={
             <div className='w-full flex flex-col sm:flex-row justify-between'>
               <div className='flex flex-row items-center justify-start'>
-                <div className='w-20 h-20 hidden md:flex'>
+                <div className='w-[8rem] h-20 hidden lg:flex'>
                   <LazyLoadImage
                     src={item!.universityLogo || defaultImage}
-                    imageClass='w-16 h-16 rounded-full mx-2 shadow-lg shadow-inner'
+                    imageClass='w-[8rem] h-16 rounded-full mx-2 shadow-lg shadow-inner'
                   />
                 </div>
                 <div className='flex flex-col ml-6'>
@@ -131,26 +132,26 @@ export const Education = () => {
           }
         >
           <div className='bg-secondary-300 p-4 rounded-lg flex flex-col'>
-            <div className="font-bold">{t("Projects")}</div>
+            <div className='font-bold'>{t('Projects')}</div>
             <GridView
               gap='2'
               classes={{
-                container:
-                  'mt-8 overflow-x-hidden grid-cols-1 md:grid-cols-2',
+                container: 'mt-8 overflow-x-hidden grid-cols-1 md:grid-cols-2',
               }}
             >
               {item?.projects?.map(project => {
                 return (
-                  <div key={`project-${project.id}`} className=" overflow-hidden">
+                  <div
+                    key={`project-${project.id}`}
+                    className='overflow-hidden items-stretch h-full'
+                  >
                     <Card
                       title={project.name}
                       description={project.description as string}
-                      defaultFullDes
                       embeddedVideo={project.video}
                       embeddedAlt={project.videoAlt}
-                      className="shadow-none"
-                    >
-                    </Card>
+                      className='shadow-none items-stretch h-full'
+                    ></Card>
                   </div>
                 );
               })}

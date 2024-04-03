@@ -201,6 +201,10 @@ module.exports = {
           "0%": { opacity: 0.3 },
           "100%": { opacity: 1 }
         },
+        slide_in: {
+          "0%": { transform: "translateY(10%)" },
+          "100%": {  }
+        },
         expand: {
           "0%": { height: 0 },
           "100%": { height: "auto" }
@@ -217,7 +221,8 @@ module.exports = {
         spin_2: "spin 1.2s linear infinite",
         spin_3: "spin 1.4s linear infinite",
         spin_4: "spin 1.6s linear infinite",
-        expand: "expand .3s ease-in-out"
+        expand: "expand .3s ease-in-out",
+        slide_in: "slide_in .3s ease-in"
       },
     },
   },

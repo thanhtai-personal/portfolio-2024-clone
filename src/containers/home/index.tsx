@@ -25,37 +25,47 @@ const HomePageContent = () => {
       <Banner />
       <IntersectionObserverView id='section-summary'>
         <AnimationView.FadeIn>
-          <ContentSection>
-            <Summary />
-          </ContentSection>
+          <AnimationView.SlideIn>
+            <ContentSection>
+              <Summary />
+            </ContentSection>
+          </AnimationView.SlideIn>
         </AnimationView.FadeIn>
       </IntersectionObserverView>
       <IntersectionObserverView id='section-skills'>
         <AnimationView.FadeIn>
-          <ContentSection>
-            <Skills />
-          </ContentSection>
+          <AnimationView.SlideIn>
+            <ContentSection>
+              <Skills />
+            </ContentSection>
+          </AnimationView.SlideIn>
         </AnimationView.FadeIn>
       </IntersectionObserverView>
       <IntersectionObserverView id='section-experience'>
         <AnimationView.FadeIn>
-          <ContentSection>
-            <Experience />
-          </ContentSection>
+          <AnimationView.SlideIn>
+            <ContentSection>
+              <Experience />
+            </ContentSection>
+          </AnimationView.SlideIn>
         </AnimationView.FadeIn>
       </IntersectionObserverView>
       <IntersectionObserverView id='section-education'>
         <AnimationView.FadeIn>
-          <ContentSection>
-            <Education />
-          </ContentSection>
+          <AnimationView.SlideIn>
+            <ContentSection>
+              <Education />
+            </ContentSection>
+          </AnimationView.SlideIn>
         </AnimationView.FadeIn>
       </IntersectionObserverView>
       <IntersectionObserverView id='section-side-projects'>
         <AnimationView.FadeIn>
-          <ContentSection>
-            <SideProjects />
-          </ContentSection>
+          <AnimationView.SlideIn>
+            <ContentSection>
+              <SideProjects />
+            </ContentSection>
+          </AnimationView.SlideIn>
         </AnimationView.FadeIn>
       </IntersectionObserverView>
       <Footer className='w-full h-16 relative'>
@@ -73,7 +83,9 @@ const HomePageContent = () => {
         )}
         <div className='absolute w-full h-full left-0 top-0 bg-[rgba(255,100,125, 0.25)] dark:bg-[rgba(255,100,125, 0.7)] rounded-t-lg'>
           <div className='w-full h-full flex flex-row items-end justify-center'>
-            <div className="text-xs text-gray-600 font-mono font-bold">kai.tran</div>
+            <div className='text-xs text-gray-600 font-mono font-bold'>
+              kai.tran
+            </div>
           </div>
         </div>
       </Footer>
