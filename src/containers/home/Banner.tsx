@@ -79,7 +79,7 @@ export const Banner = () => {
                       className='hidden sm:flex'
                     />
                     <EczarText content='W-Dev' className='flex sm:hidden' />
-                    <div className='text-1xl lg:text-2xl whitespace-normal text-wrap text-start mt-4 lg:mr-6'>
+                    <div className='text-text text-1xl lg:text-2xl whitespace-normal text-wrap text-start mt-4 lg:mr-6'>
                       {t(
                         'I am passionate about crafting robust and scalable products, employing top-tier software architecture principles'
                       )}
