@@ -2,6 +2,7 @@ import {
   AnimationView,
   ContentSection,
   IntersectionObserverView,
+  ScrollingButton,
   VideoBackground,
 } from '@/components/index';
 import { Banner } from './Banner';
@@ -21,7 +22,8 @@ const HomePageContent = () => {
   const themeData = ThemeContext.useDataContext();
 
   return (
-    <AnimationView.FadeIn className='bg-transparent dark:bg-background w-screen h-screen m-0 p-0 overflow-x-hidden'>
+    <AnimationView.FadeIn id="scroll-container" className='bg-transparent dark:bg-background w-screen h-screen m-0 p-0 overflow-x-hidden'>
+      <ScrollingButton scrollContainer={document.getElementById("scroll-container")}/>
       <Banner />
       <IntersectionObserverView id='section-summary'>
         <AnimationView.FadeIn>
