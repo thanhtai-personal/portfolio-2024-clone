@@ -15,7 +15,7 @@ import { SideProjects } from './SideProjects';
 // import { ThemeContext } from '@/context/theme';
 // import { setOfThemes } from '@/utils/constants';
 import { RightActionPanel } from './RightActionPanel';
-import preloadImage from "@/assets/images/preload-image.webp"
+import preloadImage from "@/assets/images/preload-image.jpg"
 
 export interface IHomePage {}
 

@@ -17,7 +17,7 @@ import { Button } from 'flowbite-react';
 import { useTranslate } from '@/hooks/useTranslate';
 import { FaDownload } from 'react-icons/fa6';
 import { SocialIcons } from './SocialIcons';
-import preloadImage from "@/assets/images/preload-image.webp"
+import preloadImage from "@/assets/images/preload-image.jpg"
 
 export const Banner = () => {
   const themeData = ThemeContext.useDataContext();
