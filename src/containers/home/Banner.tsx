@@ -16,7 +16,7 @@ import { useMemo } from 'react';
 import { Button } from 'flowbite-react';
 import { useTranslate } from '@/hooks/useTranslate';
 import { FaDownload } from 'react-icons/fa6';
-import { SocialIcons } from "./SocialIcons";
+import { SocialIcons } from './SocialIcons';
 
 export const Banner = () => {
   const themeData = ThemeContext.useDataContext();
@@ -52,13 +52,15 @@ export const Banner = () => {
               >
                 <div className='bg-transparent p-2 flex flex-col'>
                   <SocialIcons
-                    classes={{ container: 'w-full flex flex-col lg:flex-row justify-start items-start' }}
+                    classes={{
+                      container:
+                        'w-full flex flex-col lg:flex-row justify-start items-start',
+                    }}
                   />
                 </div>
-                <div className='bg-transparent col-span-2'></div>
-                <div className='bg-transparent p-2 flex flex-col lg:flex-row h-fit mr-14 overflow-hidden'>
+                <div className='bg-transparent col-span-2 flex flex-col-reverse justify-end items-center'>
                   <Button
-                    className='flex h-fit mx-2 my-2 lg:my-0'
+                    className='h-fit mx-2 my-2 lg:my-0 flex md:hidden'
                     onClick={() => {
                       window.open(
                         'https://drive.google.com/file/d/19N3MxtJ0xl52mv5NsEz4_aEJyeZqSEHK/view?usp=sharing',
@@ -69,7 +71,30 @@ export const Banner = () => {
                     <FaDownload className='mr-2' />
                     {t('Resume')}
                   </Button>
-                  <LanguageSetting classes={{ container: "flex h-fit mx-2 my-2 lg:my-0" }} />
+                  <LanguageSetting
+                    classes={{
+                      container: 'flex h-fit mx-2 my-2 lg:my-0 flex md:hidden',
+                    }}
+                  />
+                </div>
+                <div className='bg-transparent p-2 flex flex-col lg:flex-row h-fit mr-14 overflow-hidden'>
+                  <Button
+                    className='h-fit mx-2 my-2 lg:my-0 hidden md:flex'
+                    onClick={() => {
+                      window.open(
+                        'https://drive.google.com/file/d/19N3MxtJ0xl52mv5NsEz4_aEJyeZqSEHK/view?usp=sharing',
+                        '_blank'
+                      );
+                    }}
+                  >
+                    <FaDownload className='mr-2' />
+                    {t('Resume')}
+                  </Button>
+                  <LanguageSetting
+                    classes={{
+                      container: 'flex h-fit mx-2 my-2 lg:my-0  hidden md:flex',
+                    }}
+                  />
                 </div>
 
                 <div className='bg-transparent'></div>

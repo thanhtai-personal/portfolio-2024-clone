@@ -23,6 +23,7 @@ export const RightActionPanel = () => {
         id={'right-action-menu'}
         ariaControls={'action-menu'}
         classes={{
+          container: "hidden sm:flex",
           button: isHover ? 'text-text hover' : 'text-text',
         }}
       >

@@ -14,25 +14,25 @@ export const SectionButtons = ({ vertical }: { vertical?: boolean }) => {
           {t('Summary')}
         </Button>
         <Button
-          className={vertical ? 'm-1' : ''}
+          className={vertical ? 'm-1 rounded-lg' : ''}
           onClick={() => goToSection('section-skills')}
         >
           {t('Skills')}
         </Button>
         <Button
-          className={vertical ? 'm-1' : ''}
+          className={vertical ? 'm-1 rounded-lg' : ''}
           onClick={() => goToSection('section-experience')}
         >
           {t('Experience')}
         </Button>
         <Button
-          className={vertical ? 'm-1' : ''}
+          className={vertical ? 'm-1 rounded-lg' : ''}
           onClick={() => goToSection('section-education')}
         >
           {t('Education')}
         </Button>
         <Button
-          className={vertical ? 'm-1' : ''}
+          className={vertical ? 'm-1 rounded-lg' : ''}
           onClick={() => goToSection('section-side-projects')}
         >
           {t('Side Projects')}
