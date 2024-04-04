@@ -138,14 +138,14 @@ export const Education = () => {
               return (
                 <div
                   key={`project-${project.id}`}
-                  className='overflow-hidden h-full'
+                  className='overflow-x-hidden items-stretch h-full'
                 >
                   <Card
                     title={project.name}
                     description={project.description as string}
                     embeddedVideo={project.video}
                     embeddedAlt={project.videoAlt}
-                    className='shadow-none h-full'
+                    className='shadow-none items-stretch h-full'
                   ></Card>
                 </div>
               );
