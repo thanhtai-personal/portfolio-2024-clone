@@ -104,12 +104,12 @@
   }
 
   html.dark {
-    --background-color: #010208; /* Background color inverted from #fff */
+    --background-color: #000; /* Background color inverted from #fff */
     --text-color: #fff; /* Background color inverted from #fff */
     --text-active-color: #46b2fa;
     --text-unactive-color: #a9a9ba;
     --scrollbarBG: steelblue;
-    --thumbBG: #383838;
+    --thumbBG: #000;
     --gradient: linear-gradient(to right, #010208, #021620); 
     --color-primary-50: #0d0b00; /* Inverted from #F6F8FF */
     --color-primary-100: #12100f; /* Inverted from #EDF0FF */

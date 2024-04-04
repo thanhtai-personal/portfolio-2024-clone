@@ -1,4 +1,5 @@
 const colors = require("tailwindcss/colors");
+const plugin = require('tailwindcss/plugin')
 
 /** @type {import("tailwindcss").Config} */
 module.exports = {
@@ -9,13 +10,35 @@ module.exports = {
     "node_modules/flowbite-react/lib/esm/**/*.js",
   ],
   plugins: [
-    require("@tailwindcss/forms")({
-      strategy: 'class'
+    plugin(function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          'animate-duration': (value) => ({
+            animationDuration: value,
+          }),
+        },
+        { values: theme('transitionDuration') }
+      )
     }),
-    require('flowbite/plugin')({
-      charts: true,
-      forms: true,
-      tooltips: true
+    plugin(function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          'animate-delay': (value) => ({
+            animationDelay: value,
+          }),
+        },
+        { values: theme('transitionDelay') }
+      )
+    }),
+    plugin(function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          'animate-ease': (value) => ({
+            animationTimingFunction: value,
+          }),
+        },
+        { values: theme('transitionTimingFunction') }
+      )
     }),
   ],
   mode: "jit",
@@ -194,12 +217,33 @@ module.exports = {
           "60%": { width: "100%" },
           "100%": { width: "0%" }
         },
+        fade_in_ltr_70: {
+          "0%": { opacity: 0, transform: "translateX(-70%)" },
+          "95%": { opacity: 1, transform: "translateX(20%)" },
+          "100%": { opacity: 1 }
+        },
+        fade_in_ltr_150: {
+          "0%": { opacity: 0, transform: "translateX(-150%)" },
+          "95%": { opacity: 1, transform: "translateX(20%)" },
+          "100%": { opacity: 1 }
+        },
+        fade_in_ltr_250: {
+          "0%": { opacity: 0, transform: "translateX(-250%)" },
+          "95%": { opacity: 1, transform: "translateX(20%)" },
+          "100%": { opacity: 1 }
+        },
+        fade_in_ltr_350: {
+          "0%": { opacity: 0, transform: "translateX(-350%)" },
+          "95%": { opacity: 1, transform: "translateX(20%)" },
+          "100%": { opacity: 1 }
+        },
+        
         fade_in_rtl: {
-          "0%": { opacity: 0.5, transform: "translateX(70%)" },
+          "0%": { opacity: 0, transform: "translateX(70%)" },
           "100%": { opacity: 1 }
         },
         fade_in: {
-          "0%": { opacity: 0.3 },
+          "0%": { opacity: 0 },
           "100%": { opacity: 1 }
         },
         slide_in: {
@@ -218,12 +262,16 @@ module.exports = {
         fadeltr: "fadeltr 3s ease-in alternate infinite",
         fadertl: "fadertl 3s ease-in alternate infinite",
         fade_in_rtl: "fade_in_rtl .25s ease-in",
+        fade_in_ltr_70: "fade_in_ltr_70 .25s ease-in",
+        fade_in_ltr_150: "fade_in_ltr_150 .25s ease-in",
+        fade_in_ltr_250: "fade_in_ltr_250 .25s ease-in",
+        fade_in_ltr_350: "fade_in_ltr_350 .25s ease-in",
         fade_in: "fade_in .3s ease-in",
         spin_2: "spin 1.2s linear infinite",
         spin_3: "spin 1.4s linear infinite",
         spin_4: "spin 1.6s linear infinite",
         expand: "expand .25s ease-in-out",
-        slide_in: "slide_in .25s ease-in"
+        slide_in: "slide_in .25s ease-in",
       },
       backgroundImage: {
         "bg-gradient": "var(--gradient)"

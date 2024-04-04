@@ -26,7 +26,6 @@ export const Card = ({
 }: ICard) => {
   const { t } = useTranslate();
   const [isFullDes, setIsFullDes] = useState(!!defaultFullDes);
-
   return (
     <FlowBiteCard className="rounded-lg items-stretch bg-transparent" {...nestedProps}>
       <div className='flex flex-col w-full h-full justify-items-start items-stretch'>
@@ -48,11 +47,10 @@ export const Card = ({
           </Tooltip>
         )}
         <p
-          className={`font-normal text-gray-700 dark:text-gray-400 italic ${
-            isFullDes
+          className={`font-normal text-gray-700 dark:text-gray-400 italic ${isFullDes
               ? 'animate-fade_in'
               : 'max-h-40 overflow-hidden whitespace-nowrap text-ellipsis'
-          }`}
+            }`}
         >
           {description && t(description)}
         </p>
