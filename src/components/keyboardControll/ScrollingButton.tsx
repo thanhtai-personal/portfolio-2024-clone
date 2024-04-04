@@ -29,9 +29,9 @@ export const ScrollingButton = ({
         element?.scrollIntoView({ behavior: 'smooth' });
       }
     } else {
-      window.scroll({
-        behavior: 'smooth',
-        top: window.screenY - offset > 0 ? window.screenY - offset : 0,
+      window.scrollBy({
+        top: offset,
+        behavior: "smooth"
       });
     }
   }, [activeId, listSection?.length]);
@@ -46,7 +46,10 @@ export const ScrollingButton = ({
         element?.scrollIntoView({ behavior: 'smooth' });
       }
     } else {
-      window.scroll({ behavior: 'smooth', top: window.screenY + offset });
+      window.scrollBy({
+        top: offset,
+        behavior: "smooth"
+      });
     }
   }, [activeId]);
 
@@ -75,13 +78,13 @@ export const ScrollingButton = ({
         className='hover:bg-[rgba(0,255,0,0.4)] rounded-full cursor-pointer'
         onClick={handleDown}
       >
-        {activeId > 0 && <FaArrowAltCircleUp className='text-text w-8 h-8' />}
+        {((activeId > 0)  || (offset > 100)) && <FaArrowAltCircleUp className='text-text w-8 h-8' />}
       </div>
       <div
         className='hover:bg-[rgba(0,255,0,0.4)] rounded-full cursor-pointer'
         onClick={handleUp}
       >
-        {listSection && activeId < listSection?.length - 1 && (
+        {((listSection && activeId < listSection?.length - 1) || (offset > 100)) && (
           <FaArrowAltCircleDown className='text-text w-8 h-8' />
         )}
       </div>

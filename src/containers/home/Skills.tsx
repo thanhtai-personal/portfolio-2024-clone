@@ -474,9 +474,9 @@ export const Skills = () => {
   return (
     <div className='w-full px-2 py-4'>
       <TitleText content='SKILLS' />
-      <div className='w-full flex flex-col italic text-text mt-3 p-4  rounded-lg pr-6'>
+      <div className='w-full flex flex-col italic text-text mt-3 p-4 rounded-none sm:rounded-lg pr-6'>
         <div className='flex flex-row justify-center'>
-          <ButtonGroup className='scale-[40%] sm:scale-50 md:scale-100'>
+          <ButtonGroup className='w-full sm:w-auto overflow-auto sm:scale-[0.8] md:scale-100'>
             {Object.keys(SkillType).map((key: string) => {
               return (
                 <Button

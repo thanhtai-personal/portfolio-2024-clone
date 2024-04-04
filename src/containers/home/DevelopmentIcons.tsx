@@ -1,6 +1,5 @@
 import { FaReact, FaGithub, FaNodeJs } from 'react-icons/fa';
-import { TbBrandReactNative, TbBrandTypescript, TbBrandJavascript } from 'react-icons/tb';
-import { FaGitlab } from "react-icons/fa6";
+import { TbBrandTypescript, TbBrandJavascript } from 'react-icons/tb';
 import { SiDotnet, SiVitess, SiTailwindcss  } from "react-icons/si";
 import { PiFileCssFill } from "react-icons/pi";
 
@@ -23,14 +22,6 @@ export const DevelopmentIcons = () => {
         className='m-2 md:m-4 cursor-pointer rounded-full hover:scale-110 hover:text-text-active my-2'
       >
         <FaNodeJs color="#0c7fa5" className='w-4 h-4 md:w-8 md:h-8' />
-      </a>
-      <a
-        target='_blank'
-        title="React native"
-        href='https://reactnative.dev/'
-        className='m-2 md:m-4 cursor-pointer rounded-full hover:scale-110 hover:text-text-active my-2'
-      >
-        <TbBrandReactNative color="#0c7fa5" className='w-4 h-4 md:w-8 md:h-8' />
       </a>
       <a
         target='_blank'

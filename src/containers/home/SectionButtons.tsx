@@ -2,24 +2,39 @@ import { useTranslate } from '@/hooks/useTranslate';
 import { goToSection } from '@/utils/index';
 import { ButtonGroup, Button } from 'flowbite-react';
 
-export const SectionButtons = () => {
+export const SectionButtons = ({ vertical }: { vertical?: boolean }) => {
   const { t } = useTranslate();
   return (
     <div className='flex flex-col'>
-      <ButtonGroup className='hidden md:flex'>
-        <Button onClick={() => goToSection('section-summary')}>
+      <ButtonGroup className={`flex ${vertical ? 'flex-col' : 'flex-row'}`}>
+        <Button
+          className={vertical ? 'm-1' : ''}
+          onClick={() => goToSection('section-summary')}
+        >
           {t('Summary')}
         </Button>
-        <Button onClick={() => goToSection('section-skills')}>
+        <Button
+          className={vertical ? 'm-1' : ''}
+          onClick={() => goToSection('section-skills')}
+        >
           {t('Skills')}
         </Button>
-        <Button onClick={() => goToSection('section-experience')}>
+        <Button
+          className={vertical ? 'm-1' : ''}
+          onClick={() => goToSection('section-experience')}
+        >
           {t('Experience')}
         </Button>
-        <Button onClick={() => goToSection('section-education')}>
+        <Button
+          className={vertical ? 'm-1' : ''}
+          onClick={() => goToSection('section-education')}
+        >
           {t('Education')}
         </Button>
-        <Button onClick={() => goToSection('section-side-projects')}>
+        <Button
+          className={vertical ? 'm-1' : ''}
+          onClick={() => goToSection('section-side-projects')}
+        >
           {t('Side Projects')}
         </Button>
       </ButtonGroup>

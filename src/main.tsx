@@ -9,7 +9,7 @@ import { ThemeContext } from './context/theme';
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <ThemeContext.Provider>
-      <ThemeProvider useSettingBoard>
+      <ThemeProvider>
         <AppRoute />
       </ThemeProvider>
     </ThemeContext.Provider>
