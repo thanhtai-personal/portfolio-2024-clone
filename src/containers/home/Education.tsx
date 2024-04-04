@@ -138,7 +138,7 @@ export const Education = () => {
               return (
                 <div
                   key={`project-${project.id}`}
-                  className='overflow-x-hidden items-stretch h-full'
+                  className='overflow-x-hidden items-stretch h-auto'
                 >
                   <Card
                     title={project.name}
