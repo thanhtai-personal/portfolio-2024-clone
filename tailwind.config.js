@@ -45,6 +45,7 @@ module.exports = {
         text: "var(--text-color)",
         cover: "var(--thumbBG)",
         "text-active": "var(--text-active-color)",
+        "text-unactive": "var(--text-unactive-color)",
         primary: {
           50: "var(--color-primary-50)", //"#F6F8FF",
           100: "var(--color-primary-100)", //"#EDF0FF",
@@ -224,6 +225,9 @@ module.exports = {
         expand: "expand .25s ease-in-out",
         slide_in: "slide_in .25s ease-in"
       },
+      backgroundImage: {
+        "bg-gradient": "var(--gradient)"
+      }
     },
   },
 };

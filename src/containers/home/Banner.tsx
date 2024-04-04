@@ -17,6 +17,7 @@ import { Button } from 'flowbite-react';
 import { useTranslate } from '@/hooks/useTranslate';
 import { FaDownload } from 'react-icons/fa6';
 import { SocialIcons } from './SocialIcons';
+import preloadImage from "@/assets/images/ho-chi-minh-city.jpg"
 
 export const Banner = () => {
   const themeData = ThemeContext.useDataContext();
@@ -38,6 +39,7 @@ export const Banner = () => {
       <VideoBackground
         id='banner-background'
         src={videoSrc}
+        preloadSrc={preloadImage}
         className='bg-cover relative'
       >
         <div className='relative w-full h-full'>

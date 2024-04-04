@@ -5,8 +5,8 @@ export interface IVideoBackground {
   children: ReactNode;
   className?: string;
   src: string;
-  type?: string;
   id: string;
+  preloadSrc: string;
   classes?: {
     container?: string;
   }
@@ -16,9 +16,9 @@ export const VideoBackground = ({
   children,
   className,
   src,
-  type = 'video/mp4',
   id = "source-video",
   classes,
+  preloadSrc,
 }: IVideoBackground) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -43,6 +43,7 @@ export const VideoBackground = ({
       <LazyLoadVideo
         id={id}
         src={src}
+        preloadSrc={preloadSrc}
         autoPlay
         muted
         loop

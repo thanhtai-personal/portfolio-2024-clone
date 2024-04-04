@@ -486,7 +486,7 @@ export const Skills = () => {
                       SkillType[key as keyof typeof SkillType]
                     )
                       ? ''
-                      : 'text-text-active'
+                      : 'text-text dark:text-text-unactive'
                   }
                   onClick={() => {
                     const findIndex = filter.types?.findIndex(

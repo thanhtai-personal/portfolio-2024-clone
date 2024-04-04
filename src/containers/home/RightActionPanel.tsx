@@ -44,15 +44,6 @@ export const RightActionPanel = () => {
             <div className='w-full flex justify-center items-end'>
               <ScrollingButton
                 scrollContainer={document.getElementById('scroll-container')}
-                // listSection={[
-                //   'section-banner',
-                //   'section-summary',
-                //   'section-skills',
-                //   'section-experience',
-                //   'section-education',
-                //   'section-side-projects',
-                // ]}
-                // offset={250}
                 hidden
               />
             </div>

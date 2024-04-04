@@ -1,9 +1,10 @@
 import { useState, useEffect, MediaHTMLAttributes } from 'react';
-import { LoadingComponent } from '.';
+import { LazyLoadImage } from '.';
 
 interface ILazyLoadVideo extends MediaHTMLAttributes<HTMLVideoElement> {
   id: string;
   src: string;
+  preloadSrc: string;
   type?: string;
   videoClass?: string;
   sourceClass?: string;
@@ -16,6 +17,7 @@ export const LazyLoadVideo = ({
   videoClass = '',
   sourceClass = '',
   className = '',
+  preloadSrc,
   ...restProps
 }: ILazyLoadVideo) => {
   const [loaded, setLoaded] = useState(false);
@@ -52,7 +54,11 @@ export const LazyLoadVideo = ({
               minHeight: 180,
             }}
           >
-            <LoadingComponent />
+            <LazyLoadImage src={preloadSrc}
+              style={{
+                height: restProps.style?.height || '100%',
+                width: restProps.style?.width || '100%',
+              }} />
           </div>
         )}
         <video
@@ -73,7 +79,6 @@ export const LazyLoadVideo = ({
             src={src}
             type={type}
           />
-          Your browser does not support HTML5 video.
         </video>
       </div>
     </div>

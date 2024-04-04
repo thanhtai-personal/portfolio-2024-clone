@@ -3,6 +3,7 @@ import { LoadingComponent } from ".";
 
 export interface ILazyLoadImage extends ImgHTMLAttributes<HTMLImageElement> {
   imageClass?: string;
+  preloadSrc?: string;
 }
 
 export const LazyLoadImage = ({
@@ -10,6 +11,7 @@ export const LazyLoadImage = ({
   alt,
   className = "",
   imageClass = "",
+  preloadSrc,
   ...restProps
 }: ILazyLoadImage) => {
   const [loaded, setLoaded] = useState(false);
@@ -38,7 +40,14 @@ export const LazyLoadImage = ({
             minHeight: 180,
           }}
         >
-          <LoadingComponent />
+          {preloadSrc ?
+            <img
+              className={`${imageClass}`}
+              loading="lazy"
+              src={src}
+              alt={alt}
+              {...restProps}
+            /> : <LoadingComponent />}
         </div>
       )}
       <img

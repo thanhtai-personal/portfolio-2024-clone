@@ -11,15 +11,16 @@ import { Skills } from './Skills';
 import { Experience } from './Experience';
 import { Education } from './Education';
 import { SideProjects } from './SideProjects';
-import page from '@/assets/video/page.mp4';
-import { ThemeContext } from '@/context/theme';
-import { setOfThemes } from '@/utils/constants';
+// import page from '@/assets/video/page.mp4';
+// import { ThemeContext } from '@/context/theme';
+// import { setOfThemes } from '@/utils/constants';
 import { RightActionPanel } from './RightActionPanel';
+import preloadImage from "@/assets/images/ho-chi-minh-city.jpg"
 
 export interface IHomePage {}
 
 const HomePageContent = () => {
-  const themeData = ThemeContext.useDataContext();
+  // const themeData = ThemeContext.useDataContext();
 
   return (
     <AnimationView.FadeIn
@@ -74,7 +75,7 @@ const HomePageContent = () => {
         </AnimationView.FadeIn>
       </IntersectionObserverView>
       <Footer className='w-full h-4 relative'>
-        {themeData?.theme?.key !== setOfThemes.dark.key && (
+        {/* {themeData?.theme?.key !== setOfThemes.dark.key && (
           <VideoBackground
             id='smoke-background'
             classes={{
@@ -85,7 +86,7 @@ const HomePageContent = () => {
           >
             <div></div>
           </VideoBackground>
-        )}
+        )} */}
         <div className='absolute w-full h-full left-0 top-0 rounded-t-lg'>
           <div className='w-full h-full flex flex-row items-end justify-center'>
             <div className='text-xs text-gray-600 font-mono font-bold w-full text-center justify-center items-center h-4 bg-[rgba(255,100,125,0.25)] dark:bg-[rgba(0,15,5,0.7)]'>
@@ -100,19 +101,21 @@ const HomePageContent = () => {
 
 const HomePage = ({}: IHomePage) => {
   return (
-    <div className='w-screen h-screen'>
+    <div className='w-screen h-screen bg-bg-gradient'>
       <VideoBackground
         id='page-background'
         classes={{
-          container: 'opacity-20',
+          container: 'opacity-30',
         }}
-        src={page}
+        preloadSrc={preloadImage}
+        // src={page}
+        src='https://video.wixstatic.com/video/d47472_58cce06729c54ccb935886c4b3647274/1080p/mp4/file.mp4'
         className='flex justify-center w-full h-full'
       >
         <div></div>
       </VideoBackground>
       <div className='absolute w-full h-full left-0 top-0 bg-transparent rounded-t-lg'>
-        <div className='w-full flex flex-row bg-background'>
+        <div className='w-full flex flex-row bg-transparent'>
           <HomePageContent />
         </div>
       </div>
