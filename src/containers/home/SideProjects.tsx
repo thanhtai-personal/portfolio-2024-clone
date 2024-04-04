@@ -39,7 +39,6 @@ const experienceData: SideProjectItem[] = [
       skillData['ReactJS'],
       skillData['NextJS'],
       skillData['Vercel'],
-      skillData['NextJS'],
       skillData['MongoDB'],
       skillData['fireBase'],
       skillData['cheerioCrawler'],

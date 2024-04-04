@@ -33,6 +33,7 @@ export const Banner = () => {
   return (
     <ScreenSection
       className='flex flex-row justify-center items-center bg-cover shadow-lg rounded-b-lg'
+      id="section-banner"
       overflowHidden
     >
       <VideoBackground
