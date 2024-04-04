@@ -125,7 +125,7 @@ export const Banner = () => {
                   <BannerAvartar classes={{ container: ' hidden lg:flex' }} />
                 </div>
 
-                <div className='bg-transparent flex justify-start items-end p-2'>
+                <div className='bg-transparent hidden lg:flex justify-start items-end p-2'>
                   <UserInfo />
                 </div>
                 <div className='bg-transparent col-span-2 flex flex-row justify-center items-end'></div>
