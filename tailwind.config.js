@@ -216,13 +216,13 @@ module.exports = {
         tada: "tada 1.5s ease-in-out infinite",
         fadeltr: "fadeltr 3s ease-in alternate infinite",
         fadertl: "fadertl 3s ease-in alternate infinite",
-        fade_in_rtl: "fade_in_rtl .4s ease-in",
-        fade_in: "fade_in .8s ease-in",
+        fade_in_rtl: "fade_in_rtl .25s ease-in",
+        fade_in: "fade_in .3s ease-in",
         spin_2: "spin 1.2s linear infinite",
         spin_3: "spin 1.4s linear infinite",
         spin_4: "spin 1.6s linear infinite",
-        expand: "expand .3s ease-in-out",
-        slide_in: "slide_in .3s ease-in"
+        expand: "expand .25s ease-in-out",
+        slide_in: "slide_in .25s ease-in"
       },
     },
   },

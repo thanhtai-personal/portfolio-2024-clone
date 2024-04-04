@@ -12,7 +12,7 @@ export const ThemeSettingBoard = ({}: IThemeSettingBoard) => {
   const themeDispatch = ThemeContext.useDataDispatchContext();
 
   return (
-    <div className={'fixed top-1/3 right-1 z-50'}>
+    <div className={'fixed top-4 right-1 z-50'}>
       {isOpen ? (
         <AnimationView.FadeInRTL>
           <div className='flex flex-row justify-center items-start p-2 bg-black-200 opacity-80 rounded-lg shadow-xl mr-2'>

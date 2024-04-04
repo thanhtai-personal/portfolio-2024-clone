@@ -2,7 +2,6 @@ import {
   AnimationView,
   ContentSection,
   IntersectionObserverView,
-  ScrollingButton,
   VideoBackground,
 } from '@/components/index';
 import { Banner } from './Banner';
@@ -15,6 +14,7 @@ import { SideProjects } from './SideProjects';
 import page from '@/assets/video/page.mp4';
 import { ThemeContext } from '@/context/theme';
 import { setOfThemes } from '@/utils/constants';
+import { RightActionPanel } from './RightActionPanel';
 
 export interface IHomePage {}
 
@@ -22,8 +22,11 @@ const HomePageContent = () => {
   const themeData = ThemeContext.useDataContext();
 
   return (
-    <AnimationView.FadeIn id="scroll-container" className='bg-transparent dark:bg-background w-screen h-screen m-0 p-0 overflow-x-hidden'>
-      <ScrollingButton scrollContainer={document.getElementById("scroll-container")}/>
+    <AnimationView.FadeIn
+      id='scroll-container'
+      className='bg-transparent w-screen h-screen m-0 p-0 overflow-x-hidden'
+    >
+      <RightActionPanel />
       <Banner />
       <IntersectionObserverView id='section-summary'>
         <AnimationView.FadeIn>
@@ -70,7 +73,7 @@ const HomePageContent = () => {
           </AnimationView.SlideIn>
         </AnimationView.FadeIn>
       </IntersectionObserverView>
-      <Footer className='w-full h-16 relative'>
+      <Footer className='w-full h-4 relative'>
         {themeData?.theme?.key !== setOfThemes.dark.key && (
           <VideoBackground
             id='smoke-background'
@@ -83,10 +86,10 @@ const HomePageContent = () => {
             <div></div>
           </VideoBackground>
         )}
-        <div className='absolute w-full h-full left-0 top-0 bg-[rgba(255,100,125, 0.25)] dark:bg-[rgba(255,100,125, 0.7)] rounded-t-lg'>
+        <div className='absolute w-full h-full left-0 top-0 rounded-t-lg'>
           <div className='w-full h-full flex flex-row items-end justify-center'>
-            <div className='text-xs text-gray-600 font-mono font-bold'>
-              kai.tran
+            <div className='text-xs text-gray-600 font-mono font-bold w-full text-center justify-center items-center h-4 bg-[rgba(255,100,125,0.25)] dark:bg-[rgba(0,15,5,0.7)]'>
+              @2024 taitran
             </div>
           </div>
         </div>
@@ -101,7 +104,7 @@ const HomePage = ({}: IHomePage) => {
       <VideoBackground
         id='page-background'
         classes={{
-          container: 'opacity-40',
+          container: 'opacity-20',
         }}
         src={page}
         className='flex justify-center w-full h-full'
@@ -109,7 +112,7 @@ const HomePage = ({}: IHomePage) => {
         <div></div>
       </VideoBackground>
       <div className='absolute w-full h-full left-0 top-0 bg-transparent rounded-t-lg'>
-        <div className='w-full flex flex-row'>
+        <div className='w-full flex flex-row bg-background'>
           <HomePageContent />
         </div>
       </div>

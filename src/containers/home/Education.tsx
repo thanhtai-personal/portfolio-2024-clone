@@ -86,78 +86,72 @@ export const Education = () => {
   return (
     <div className='w-full px-2 py-4'>
       <TitleText content='Educations' />
-      <div className='w-full flex flex-col italic text-text mt-3 p-4 bg-black-100 shadow-dark dark:shadow-light-white rounded-lg pr-6 transition duration-200 ease-in-out'>
-        <Accordion
-          title={
-            <div className='w-full flex flex-col sm:flex-row justify-between'>
-              <div className='flex flex-row items-center justify-start'>
-                <div className='w-[8rem] h-20 hidden lg:flex'>
-                  <LazyLoadImage
-                    src={item!.universityLogo || defaultImage}
-                    imageClass='w-[8rem] h-16 rounded-full mx-2 shadow-lg shadow-inner'
-                  />
-                </div>
-                <div className='flex flex-col ml-6'>
-                  <a
-                    target='_blank'
-                    href={item!.site}
-                    className='text-text-active underline text-lg font-bold'
-                  >
-                    {item!.universityName ? t(item!.universityName) : t('---')}
-                  </a>
-                  <div className='text-sm'>
-                    {typeof item!.description === 'string'
-                      ? t(item!.description)
-                      : item!.description}
-                  </div>
-                </div>
-              </div>
-              <div className='flex flex-col items-end mt-3 sm:mt-0'>
-                <div className='text-text-active text-sm'>{`${new Date(
-                  item!.start
-                ).toLocaleDateString()} - ${
-                  item!.end
-                    ? new Date(item!.end).toLocaleDateString()
-                    : t('Current')
-                }`}</div>
-                <div className='flex flex-row justify-end items-center flex-wrap w-40 md:w-64'>
-                  {item!.skills?.map(skill => (
-                    <div key={skill.key} className='m-2'>
-                      {skill.image('w-4 h-4')}
-                    </div>
-                  ))}
-                </div>
+      <div className='w-full flex flex-col italic text-text mt-3 p-4 rounded-lg pr-6 transition duration-200 ease-in-out'>
+        <div className='w-full flex flex-col sm:flex-row justify-between'>
+          <div className='flex flex-row items-center justify-start'>
+            <div className='w-[8rem] h-20 hidden lg:flex'>
+              <LazyLoadImage
+                src={item!.universityLogo || defaultImage}
+                imageClass='w-[8rem] h-16 rounded-full mx-2 shadow-lg shadow-inner'
+              />
+            </div>
+            <div className='flex flex-col ml-6'>
+              <a
+                target='_blank'
+                href={item!.site}
+                className='text-text-active underline text-lg font-bold'
+              >
+                {item!.universityName ? t(item!.universityName) : t('---')}
+              </a>
+              <div className='text-sm'>
+                {typeof item!.description === 'string'
+                  ? t(item!.description)
+                  : item!.description}
               </div>
             </div>
-          }
-        >
-          <div className='bg-secondary-300 p-4 rounded-lg flex flex-col'>
-            <div className='font-bold'>{t('Projects')}</div>
-            <GridView
-              gap='2'
-              classes={{
-                container: 'mt-8 overflow-x-hidden grid-cols-1 md:grid-cols-2',
-              }}
-            >
-              {item?.projects?.map(project => {
-                return (
-                  <div
-                    key={`project-${project.id}`}
-                    className='overflow-hidden items-stretch h-full'
-                  >
-                    <Card
-                      title={project.name}
-                      description={project.description as string}
-                      embeddedVideo={project.video}
-                      embeddedAlt={project.videoAlt}
-                      className='shadow-none items-stretch h-full'
-                    ></Card>
-                  </div>
-                );
-              })}
-            </GridView>
           </div>
-        </Accordion>
+          <div className='flex flex-col items-end mt-3 sm:mt-0'>
+            <div className='text-text-active text-sm'>{`${new Date(
+              item!.start
+            ).toLocaleDateString()} - ${
+              item!.end
+                ? new Date(item!.end).toLocaleDateString()
+                : t('Current')
+            }`}</div>
+            <div className='flex flex-row justify-end items-center flex-wrap w-40 md:w-64'>
+              {item!.skills?.map(skill => (
+                <div key={skill.key} className='m-2'>
+                  {skill.image('w-4 h-4')}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className='p-4 rounded-lg flex flex-col'>
+          <GridView
+            gap='2'
+            classes={{
+              container: 'mt-8 overflow-x-hidden grid-cols-1 md:grid-cols-2',
+            }}
+          >
+            {item?.projects?.map(project => {
+              return (
+                <div
+                  key={`project-${project.id}`}
+                  className='overflow-hidden items-stretch h-full'
+                >
+                  <Card
+                    title={project.name}
+                    description={project.description as string}
+                    embeddedVideo={project.video}
+                    embeddedAlt={project.videoAlt}
+                    className='shadow-none items-stretch h-full'
+                  ></Card>
+                </div>
+              );
+            })}
+          </GridView>
+        </div>
       </div>
     </div>
   );

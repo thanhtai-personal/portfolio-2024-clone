@@ -9,7 +9,7 @@ export interface IScreenSection {
 export const ScreenSection = ({ children, className, overflowHidden }: IScreenSection) => {
 
   return (
-    <div className={`w-screen h-screen bg-background ${
+    <div className={`w-screen h-screen ${
         overflowHidden ? "overflow-hidden" : "overflow-auto"
       } ${className}`}>
       {children}

@@ -61,8 +61,8 @@ export const SideProjects = () => {
               <div className='hidden lg:flex w-[16rem] h-16'>
                 <LazyLoadImage
                   src={item.projectLogo || defaultImage}
-                  className="w-[16rem] h-16"
-                  imageClass='w-[16rem] h-16 rounded-full mx-2 border-solid  border-[1px] border-text  shadow-lg shadow-inner'
+                  className='w-[16rem] h-16'
+                  imageClass='w-[16rem] h-16 rounded-full mx-2 border-solid  border-[1px] border-text shadow-lg shadow-inner'
                 />
               </div>
               <div className='flex flex-col lg:ml-4'>
@@ -79,8 +79,11 @@ export const SideProjects = () => {
                     : item.description}
                 </div>
                 <div className='flex flex-row justify-start items-center flex-wrap md:w-64'>
-                  {item.skills?.map(skill => (
-                    <div key={skill.key} className='m-2'>
+                  {item.skills?.map((skill, index) => (
+                    <div
+                      key={skill.key || `skill-undefined-${index}`}
+                      className='m-2'
+                    >
                       {skill.image('w-4 h-4')}
                     </div>
                   ))}
@@ -99,7 +102,7 @@ export const SideProjects = () => {
   return (
     <div className='w-full px-2 py-4'>
       <TitleText content='Side Projects' />
-      <div className='w-full flex flex-col italic text-text mt-3 p-4 bg-black-100 pr-6 shadow-dark dark:shadow-light-white rounded-lg'>
+      <div className='w-full flex flex-col italic text-text mt-3 p-4  pr-6 rounded-lg'>
         <ListView
           unstyled
           classes={{
