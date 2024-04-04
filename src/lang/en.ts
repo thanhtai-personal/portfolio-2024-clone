@@ -8,6 +8,7 @@ export default {
   From: "From",
   Title: "Titles",
   "Web developer": "Web developer",
+  "Web Dev": "Web Dev",
   "Experienced Frontend/Full-stack Web Developer with a strong background in ReactJS, NodeJS, TS. Skilled in project management, deployment, and problem-solving.": "Experienced Frontend/Full-stack Web Developer with a strong background in ReactJS, NodeJS, TS. Skilled in project management, deployment, and problem-solving.",
   "SUMMARY": "SUMMARY",
   "Summary": "Summary",

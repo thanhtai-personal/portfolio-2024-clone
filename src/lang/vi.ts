@@ -8,6 +8,7 @@ export default {
   From: "Đến từ",
   Title: "Vị trí",
   "Web developer": "Lập trình viên web",
+  "Web Dev": "LTV web",
   "Experienced Frontend/Full-stack Web Developer with a strong background in ReactJS, NodeJS, TS. Skilled in project management, deployment, and problem-solving.": "Lập trình viên Web Frontend/Full-stack có kinh nghiệm vững chắc với ReactJS, NodeJS, TS. Thành thạo trong quản lý dự án, triển khai, và giải quyết vấn đề",
   "SUMMARY": "TỔNG QUAN",
   "Summary": "Tổng quan",

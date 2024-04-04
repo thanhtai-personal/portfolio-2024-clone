@@ -106,7 +106,7 @@ export const Banner = () => {
                       className='hidden sm:flex text-center'
                     />
                     <EczarText
-                      content='W-Dev'
+                      content='Web Dev'
                       className='flex sm:hidden text-center'
                     />
                     <div className='text-text text-1xl lg:text-2xl whitespace-normal text-wrap text-center mt-4 lg:mr-6'>
