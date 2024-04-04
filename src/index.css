@@ -7,7 +7,7 @@
 @layer base {
   html,
   :root {
-    --background-color: #fff;
+    --background-color: rgba(255,255,255, 0.5);
     --text-color: #000;
     --text-active-color: #46d0fa;
     --scrollbarBG: #000;
@@ -98,12 +98,12 @@
     --color-gray-500: #68768a;
     --color-gray-600: #475569;
     --color-gray-700: #334155;
-    --color-gray-800: #1e293b;
+    --color-gray-800: #1e293b3a;
     --color-gray-900: #0f172a;
   }
 
   html.dark {
-    --background-color: #19191a; /* Background color inverted from #fff */
+    --background-color: rgba(0,0,0, 0.75); /* Background color inverted from #fff */
     --text-color: #fff; /* Background color inverted from #fff */
     --text-active-color: #46b2fa;
     --scrollbarBG: steelblue;
@@ -194,7 +194,7 @@
     --color-gray-500: #7f6d00; /* Inverted from #68768A */
     --color-gray-600: #6f6f70; /* Inverted from #475569 */
     --color-gray-700: #1b1b1b; /* Inverted from #334155 */
-    --color-gray-800: #12100f; /* Inverted from #1E293B */
+    --color-gray-800: rgba(0,0,0, 0.25); /* Inverted from #1E293B */
     --color-gray-900: #0d0b00; /* Inverted from #0F172A */
   }
 

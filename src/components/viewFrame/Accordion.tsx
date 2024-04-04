@@ -14,7 +14,7 @@ export const Accordion = ({ children, title, collapseAll }: IAccordion) => {
         <FlowBiteAccordion.Title
           className={
             typeof title === 'string'
-              ? 'bg-gray-700 focus:bg-gray-700 hover:bg-gray-700 enabled:bg-gray-700 active:bg-gray-700 text-white'
+              ? ' text-white'
               : ''
           }
         >
