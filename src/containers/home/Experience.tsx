@@ -363,7 +363,7 @@ export const Experience = () => {
   return (
     <div className='w-full px-2 py-4'>
       <TitleText content='Experiences' />
-      <div className='w-full flex flex-col italic text-text mt-3 p-4 bg-black-100 rounded-lg pr-6 shadow-dark dark:shadow-light-white'>
+      <div className='w-full flex flex-col italic text-text mt-3 p-4 rounded-lg pr-6'>
         <ListView
           unstyled
           classes={{
