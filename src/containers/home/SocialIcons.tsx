@@ -1,5 +1,5 @@
 import { AnimationView } from '@/components/viewFrame';
-import { useEffect, useState } from 'react';
+import { GiAirplane } from "react-icons/gi";
 import {
   SlSocialSkype,
   SlSocialLinkedin,
@@ -9,23 +9,22 @@ import {
 
 export const SocialIcons = ({
   classes = {
-    container: "w-full h-full flex flex-col justify-end items-end"
+    container: 'w-full h-full flex flex-col justify-end items-end',
   },
 }: {
   classes?: { container?: string };
 }) => {
-  const [firstLoad, setFirstLoad] = useState(false);
-
-  useEffect(() => {
-    setFirstLoad(true)
-      , []
-  })
-
   return (
-    <div
-      className={`${classes?.container}`}
-    >
-      <AnimationView.FadeInLTR className={`m-4 animate-fade_in_ltr_70 animate-duration-[350ms] animate-delay-[50ms] ${!firstLoad && "hidden"}`}>
+    <div className={`${classes?.container} relative`}>
+      <div className='absolute pointer-events-none opacity-0 top-6 left-0 bg-text animate-shoot_y animate-duration-[20s] animate-delay-[300ms]'>
+        <GiAirplane className="w-8 h-8 bg-background text-text rotate-90" />
+      </div>
+      <div className='absolute pointer-events-none opacity-0 top-6 left-0 bg-text animate-shoot_x animate-duration-[20s] animate-delay-[300ms]'>
+        <GiAirplane className="w-8 h-8 bg-background text-text" />
+      </div>
+      <AnimationView.Bird
+        className={`m-4 animate-duration-[1.5s] animate-delay-[50ms]`}
+      >
         <a
           target='_blank'
           href='https://vi-vn.facebook.com/mindinme'
@@ -33,8 +32,10 @@ export const SocialIcons = ({
         >
           <SlSocialFacebook className='w-8 h-8' />
         </a>
-      </AnimationView.FadeInLTR>
-      <AnimationView.FadeInLTR className={`m-4 animate-fade_in_ltr_70 animate-duration-[350ms] animate-delay-[500ms] ${!firstLoad && "hidden"}`}>
+      </AnimationView.Bird>
+      <AnimationView.Bird
+        className={`m-4 animate-duration-[1.5s] animate-delay-[200ms]`}
+      >
         <a
           target='_blank'
           href='https://join.skype.com/invite/gTOdyRdTjN2f'
@@ -42,8 +43,10 @@ export const SocialIcons = ({
         >
           <SlSocialSkype className='w-8 h-8' />
         </a>
-      </AnimationView.FadeInLTR>
-      <AnimationView.FadeInLTR className={`m-4 animate-fade_in_ltr_70 animate-duration-[350ms] animate-delay-[950ms] ${!firstLoad && "hidden"}`}>
+      </AnimationView.Bird>
+      <AnimationView.Bird
+        className={`m-4 animate-duration-[1.5s] animate-delay-[550ms]`}
+      >
         <a
           target='_blank'
           href='https://www.linkedin.com/in/tran-thanh-tai-539250129/'
@@ -51,8 +54,10 @@ export const SocialIcons = ({
         >
           <SlSocialLinkedin className='w-8 h-8 ' />
         </a>
-      </AnimationView.FadeInLTR>
-      <AnimationView.FadeInLTR className={`m-4 animate-fade_in_ltr_70 animate-duration-[350ms] animate-delay-[1400ms] ${!firstLoad && "hidden"}`}>
+      </AnimationView.Bird>
+      <AnimationView.Bird
+        className={`m-4 animate-duration-[1.5s] animate-delay-[800ms]`}
+      >
         <a
           target='_blank'
           href='https://twitter.com/TiTrn93656888'
@@ -60,10 +65,7 @@ export const SocialIcons = ({
         >
           <SlSocialTwitter className='w-8 h-8' />
         </a>
-      </AnimationView.FadeInLTR>
-
-
-
+      </AnimationView.Bird>
     </div>
   );
 };

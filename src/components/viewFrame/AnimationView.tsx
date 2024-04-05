@@ -28,4 +28,8 @@ export namespace AnimationView {
   export const SlideLTR = ({ children, className, id }: IAnimationView) => {
     return <div id={id} className={`animate-slide_ltr ${className}`}>{children}</div>;
   };
+
+  export const Bird = ({ children, className, id }: IAnimationView) => {
+    return <div id={id} className={`animate-bird ${className}`}>{children}</div>;
+  };
 }

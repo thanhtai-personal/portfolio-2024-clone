@@ -4,32 +4,43 @@ import {
   MenuButton,
   ThemeSettingBoard,
 } from '@/components/index';
-import { useState } from 'react';
 import { SectionButtons } from "./SectionButtons";
+import { HomeActionType, HomeContext } from "@/context/home";
 
 export const RightActionPanel = () => {
-  const [isHover, setIsHover] = useState(false);
+  const homeData = HomeContext.useDataContext();
+  const homeDispatcher = HomeContext.useDataDispatchContext();
 
   return (
     <div
       id='right-panel-wrapper'
       className={`flex fixed w-20 top-0 right-0 flex-col h-screen z-40 py-4 hover:shadow-xl ${
-        isHover ? 'bg-[rgba(255,0,0,0.15)]' : 'bg-[rgba(0,0,0,0.01)]'
+        homeData?.isOpenActionPane ? 'bg-[rgba(255,0,0,0.15)]' : 'bg-[rgba(0,0,0,0.01)]'
       }`}
-      onMouseEnter={() => setIsHover(true)}
-      onMouseLeave={() => setIsHover(false)}
+      onMouseEnter={() => homeDispatcher && homeDispatcher({
+        type: HomeActionType.openActionPane,
+        payload: {
+          isOpenActionPane: true
+        }
+      })}
+      onMouseLeave={() => homeDispatcher && homeDispatcher({
+        type: HomeActionType.openActionPane,
+        payload: {
+          isOpenActionPane: false
+        }
+      })}
     >
       <MenuButton
         id={'right-action-menu'}
         ariaControls={'action-menu'}
         classes={{
           container: "hidden sm:flex",
-          button: isHover ? 'text-text hover' : 'text-text',
+          button: homeData?.isOpenActionPane ? 'text-text hover' : 'text-text',
         }}
       >
         <div></div>
       </MenuButton>
-      {isHover && (
+      {homeData?.isOpenActionPane && (
         <AnimationView.FadeInRTL className='h-full w-full'>
           <div
             id='right-panel-content'

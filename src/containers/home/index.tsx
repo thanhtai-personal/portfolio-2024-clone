@@ -1,4 +1,5 @@
 import {
+  Animates,
   AnimationView,
   ContentSection,
   IntersectionObserverView,
@@ -15,7 +16,10 @@ import { SideProjects } from './SideProjects';
 // import { ThemeContext } from '@/context/theme';
 // import { setOfThemes } from '@/utils/constants';
 import { RightActionPanel } from './RightActionPanel';
-import preloadImage from "@/assets/images/preload-image.jpg"
+import preloadImage from '@/assets/images/preload-image.jpg';
+import { HomeContext, HomeSectionIds } from '@/context/index';
+import { useCustomCursor } from '@/hooks/useCustomCursor';
+import { FaHandPointUp } from 'react-icons/fa';
 
 export interface IHomePage {}
 
@@ -29,7 +33,7 @@ const HomePageContent = () => {
     >
       <RightActionPanel />
       <Banner />
-      <IntersectionObserverView id='section-summary'>
+      <IntersectionObserverView id={HomeSectionIds.summary}>
         <AnimationView.FadeIn>
           <AnimationView.SlideIn>
             <ContentSection>
@@ -38,7 +42,7 @@ const HomePageContent = () => {
           </AnimationView.SlideIn>
         </AnimationView.FadeIn>
       </IntersectionObserverView>
-      <IntersectionObserverView id='section-skills'>
+      <IntersectionObserverView id={HomeSectionIds.skills}>
         <AnimationView.FadeIn>
           <AnimationView.SlideIn>
             <ContentSection>
@@ -47,7 +51,7 @@ const HomePageContent = () => {
           </AnimationView.SlideIn>
         </AnimationView.FadeIn>
       </IntersectionObserverView>
-      <IntersectionObserverView id='section-experience'>
+      <IntersectionObserverView id={HomeSectionIds.experience}>
         <AnimationView.FadeIn>
           <AnimationView.SlideIn>
             <ContentSection>
@@ -56,7 +60,7 @@ const HomePageContent = () => {
           </AnimationView.SlideIn>
         </AnimationView.FadeIn>
       </IntersectionObserverView>
-      <IntersectionObserverView id='section-education'>
+      <IntersectionObserverView id={HomeSectionIds.education}>
         <AnimationView.FadeIn>
           <AnimationView.SlideIn>
             <ContentSection>
@@ -65,7 +69,7 @@ const HomePageContent = () => {
           </AnimationView.SlideIn>
         </AnimationView.FadeIn>
       </IntersectionObserverView>
-      <IntersectionObserverView id='section-side-projects'>
+      <IntersectionObserverView id={HomeSectionIds.projects}>
         <AnimationView.FadeIn>
           <AnimationView.SlideIn>
             <ContentSection>
@@ -100,26 +104,36 @@ const HomePageContent = () => {
 };
 
 const HomePage = ({}: IHomePage) => {
+  useCustomCursor('custom-cursor');
+
   return (
-    <div className='w-screen h-screen bg-bg-gradient'>
-      <VideoBackground
-        id='page-background'
-        classes={{
-          container: 'opacity-30',
-        }}
-        preloadSrc={preloadImage}
-        // src={page}
-        src='https://video.wixstatic.com/video/d47472_58cce06729c54ccb935886c4b3647274/1080p/mp4/file.mp4'
-        className='flex justify-center w-full h-full'
-      >
-        <div></div>
-      </VideoBackground>
-      <div className='absolute w-full h-full left-0 top-0 bg-transparent rounded-t-lg'>
-        <div className='w-full flex flex-row bg-transparent'>
-          <HomePageContent />
+    <HomeContext.Provider>
+      <div className='w-screen h-screen bg-bg-gradient cursor-none'>
+        <div
+          id='custom-cursor'
+          className='absolute left-[-100px] top-0] z-50 duration-0 pointer-events-none'
+        >
+          <FaHandPointUp className='w-8 h-8 text-text bg-transparent ' />
+        </div>
+        <VideoBackground
+          id='page-background'
+          classes={{
+            container: 'opacity-30',
+          }}
+          preloadSrc={preloadImage}
+          // src={page}
+          src='https://video.wixstatic.com/video/d47472_58cce06729c54ccb935886c4b3647274/1080p/mp4/file.mp4'
+          className='flex justify-center w-full h-full'
+        >
+          <div></div>
+        </VideoBackground>
+        <div className='absolute w-full h-full left-0 top-0 bg-transparent rounded-t-lg'>
+          <div className='w-full flex flex-row bg-transparent'>
+            <HomePageContent />
+          </div>
         </div>
       </div>
-    </div>
+    </HomeContext.Provider>
   );
 };
 

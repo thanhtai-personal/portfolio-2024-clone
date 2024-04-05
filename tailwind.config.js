@@ -237,7 +237,7 @@ module.exports = {
           "95%": { opacity: 1, transform: "translateX(20%)" },
           "100%": { opacity: 1 }
         },
-        
+
         fade_in_rtl: {
           "0%": { opacity: 0, transform: "translateX(70%)" },
           "100%": { opacity: 1 }
@@ -248,11 +248,37 @@ module.exports = {
         },
         slide_in: {
           "0%": { transform: "translateY(10%)" },
-          "100%": {  }
+          "100%": {}
         },
         expand: {
           "0%": { height: 0 },
           "100%": { height: "auto" }
+        },
+        bird: {
+          "0%": {},
+          "40%": { transform: "translate(200%, 200%)" },
+          "80%": { transform: "translate(200%, 200%)" },
+          "100%": {}
+        },
+        shoot_x: {
+          "0%": { transform: "translate(0,0)", opacity: 1 },
+          "33%": { transform: "translate(1500px, 0)", opacity: 1 },
+          "66%": { transform: "translate(3000px, 0)", opacity: 1 },
+          "99%": { transform: "translate(5000px, 0)", opacity: 1 }
+        },
+        shoot_y: {
+          "0%": { transform: "translate(0,0)", opacity: 1 },
+          "33%": { transform: "translate(0, 1500px)", opacity: 1 },
+          "66%": { transform: "translate(0, 3000px)", opacity: 1 },
+          "99%": { transform: "translate(0, 5000px)", opacity: 1 }
+        },
+        mouse_click: {
+          "20%": { transform: "rotateZ(-60deg)" },
+          "50%": { transform: "rotateZ(60deg)" },
+          "50%": { transform: "rotateZ(0deg)" },
+        },
+        text_appear: {
+          
         }
       },
       animation: {
@@ -272,6 +298,11 @@ module.exports = {
         spin_4: "spin 1.6s linear infinite",
         expand: "expand .25s ease-in-out",
         slide_in: "slide_in .25s ease-in",
+        bird: "bird 2.25s ease-in-out",
+        shoot_x: "shoot_x 12s ease-in-out",
+        shoot_y: "shoot_y 1s ease-in-out",
+        mouse_click: "mouse_click 1.2s ease-in-out",
+        text_appear: "text_appear 1.2s ease-in-out"
       },
       backgroundImage: {
         "bg-gradient": "var(--gradient)"

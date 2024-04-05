@@ -12,7 +12,17 @@ export default defineConfig({
   plugins: [react(), libInjectCss(), dts({ include: ["cordova-build/www"] })],
   build: {
     outDir: "release/www",
+    chunkSizeWarningLimit: 10240,
+    // modulePreload: { polyfill: true }
   },
+  // server: {
+    // middlewareMode: true,
+    // port: 5173,
+    // warmup: {
+    //   clientFiles: [],
+    //   ssrFiles: [],
+    // }
+  // },
   resolve: {
     alias: {
       "@/components": path.resolve(__dirname, "src", "components"),
