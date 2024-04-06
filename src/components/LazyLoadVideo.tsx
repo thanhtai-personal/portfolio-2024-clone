@@ -72,6 +72,7 @@ export const LazyLoadVideo = ({
             width: restProps.style?.width || '100%',
           }}
           unselectable="on"
+          controls
           {...restProps}
         >
           <source

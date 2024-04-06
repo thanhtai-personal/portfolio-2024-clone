@@ -19,20 +19,23 @@ import { useTranslate } from '@/hooks/useTranslate';
 import { SocialIcons } from './SocialIcons';
 import preloadImage from "@/assets/images/preload-image.jpg"
 import { HomeSectionIds } from "@/context/home";
+import { Button } from 'flowbite-react';
+import { FaDownload } from 'react-icons/fa';
+import { GiAirplane } from 'react-icons/gi';
 
 export const Banner = () => {
   const themeData = ThemeContext.useDataContext();
 
   const { t } = useTranslate();
 
-  // const videoSrc = useMemo(() => {
-  //   return themeData?.theme?.key === 'dark'
-  //     ? backgroundVideoDark
-  //     : backgroundVideoLight;
-  // }, [themeData?.theme?.key]);
-
   const content =
     <div className='relative w-full h-full'>
+      <div className='absolute pointer-events-none opacity-0 top-6 left-0 bg-text animate-shoot_y animate-duration-[20s] animate-delay-[300ms]'>
+        <GiAirplane className="w-8 h-8 bg-background text-text rotate-90" />
+      </div>
+      <div className='absolute pointer-events-none opacity-0 top-6 left-0 bg-text animate-shoot_x animate-duration-[20s] animate-delay-[300ms]'>
+        <GiAirplane className="w-8 h-8 bg-background text-text" />
+      </div>
       <div className='flex absolute left-0 top-0 w-full h-full flex-row justify-center'>
         <ContentSection className='w-full bg-transparent'>
           <GridView
@@ -46,11 +49,19 @@ export const Banner = () => {
               <SocialIcons
                 classes={{
                   container:
-                    'w-full flex flex-col lg:flex-row justify-start items-start',
+                    'w-full hidden lg:flex flex-row justify-start items-start',
                 }}
               />
             </div>
-            <div></div>
+            <div className='w-full justify-center'>
+              <SocialIcons
+                disabledAnimation
+                classes={{
+                  container:
+                    'w-full flex lg:hidden flex-row justify-center items-start',
+                }}
+              />
+            </div>
             <div className='bg-transparent col-span-2 flex flex-col-reverse justify-end items-center'>
               <LanguageSetting
                 classes={{
@@ -60,7 +71,7 @@ export const Banner = () => {
             </div>
 
             <div className='bg-transparent'></div>
-            <div className='bg-transparent flex justify-center items-center col-span-2'>
+            <div className='bg-transparent flex justify-center items-start lg:items-center col-span-2'>
               <div className='bg-transparent p-2 flex flex-col items-center'>
                 <BannerAvartar classes={{ container: ' flex lg:hidden' }} />
                 <EczarText
@@ -75,13 +86,28 @@ export const Banner = () => {
                   {t(
                     'I am passionate about crafting robust and scalable products, employing top-tier software architecture principles'
                   )}
-                  {t(
-                    '. Find me at '
-                  )}
-                  
                 </div>
                 <div className='w-full mt-6'>
                   <DevelopmentIcons />
+                </div>
+                <div className='flex flex-row justify-center items-center mt-6 w-full'>
+                  <div className='text-text text-1xl lg:text-2xl whitespace-normal mr-2'>
+                    {t(
+                      'Find me at'
+                    )}
+                  </div>
+                  <Button
+                    className='h-fit mx-2 my-2 lg:my-0 flex'
+                    onClick={() => {
+                      window.open(
+                        'https://drive.google.com/file/d/19N3MxtJ0xl52mv5NsEz4_aEJyeZqSEHK/view?usp=sharing',
+                        '_blank'
+                      );
+                    }}
+                  >
+                    <FaDownload className='mr-2' />
+                    {t('Resume')}
+                  </Button>
                 </div>
               </div>
             </div>
@@ -115,7 +141,7 @@ export const Banner = () => {
       >
         {content}
       </VideoBackground>
-      : content}
+        : content}
     </ScreenSection>
   );
 };
