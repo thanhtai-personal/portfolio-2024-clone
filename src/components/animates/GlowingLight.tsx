@@ -1,17 +1,17 @@
 import { useDragableElement } from '@/hooks/useDragableElement';
 
-export interface IGlowingBall {
+export interface IGlowingLine {
   className?: string;
   id: string;
 }
 
-export const GlowingBall = ({ className, id }: IGlowingBall) => {
+export const GlowingLine = ({ className, id }: IGlowingLine) => {
   const { onSelect } = useDragableElement(id);
   return (
     <div className={`absolute duration-0`} onClick={onSelect} id={id}>
       <div className='relative'>
         <div
-          className={`absolute cursor-grab z-50 top-[calc(50%-20px)] left-[50%-20px] w-16 h-16 rounded-full bg-white glowing-ball ${className}`}
+          className={`absolute cursor-grab z-50 top-[calc(50%-20px)] left-[50%-20px] w-4 h-16 rounded-lg bg-white glowing-line ${className}`}
         ></div>
       </div>
     </div>

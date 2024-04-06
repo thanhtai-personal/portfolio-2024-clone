@@ -1,5 +1,4 @@
 import { AnimationView } from '@/components/viewFrame';
-import { GiAirplane } from "react-icons/gi";
 import {
   SlSocialSkype,
   SlSocialLinkedin,
@@ -19,45 +18,53 @@ export const SocialIcons = ({
   return (
     <div className={`${classes?.container} relative`}>
       <AnimationView.Bird
-        className={disabledAnimation ? "m-4" : `m-4 animate-duration-[1.5s] animate-delay-[50ms]`}
+        disabled={disabledAnimation}
+        delay={2000}
+        className={`m-4 animate-duration-[1.5s]`}
       >
         <a
           target='_blank'
           href='https://vi-vn.facebook.com/mindinme'
-          className='cursor-pointer rounded-full hover:scale-110 text-text hover:text-text-active'
+          className='rounded-full hover:scale-110 text-text hover:text-text-active'
         >
           <SlSocialFacebook className='w-8 h-8' />
         </a>
       </AnimationView.Bird>
       <AnimationView.Bird
-        className={disabledAnimation ? "m-4" : `m-4 animate-duration-[1.5s] animate-delay-[200ms]`}
+        disabled={disabledAnimation}
+        delay={2200}
+        className={`m-4 animate-duration-[1.5s]`}
       >
         <a
           target='_blank'
           href='https://join.skype.com/invite/gTOdyRdTjN2f'
-          className=' cursor-pointer rounded-full hover:scale-110 text-text hover:text-text-active'
+          className=' rounded-full hover:scale-110 text-text hover:text-text-active'
         >
           <SlSocialSkype className='w-8 h-8' />
         </a>
       </AnimationView.Bird>
       <AnimationView.Bird
-        className={disabledAnimation ? "m-4" : `m-4 animate-duration-[1.5s] animate-delay-[550ms]`}
+        disabled={disabledAnimation}
+        delay={2350}
+        className={`m-4 animate-duration-[1.5s]`}
       >
         <a
           target='_blank'
           href='https://www.linkedin.com/in/tran-thanh-tai-539250129/'
-          className=' cursor-pointer rounded-full hover:scale-110 text-text hover:text-text-active'
+          className=' rounded-full hover:scale-110 text-text hover:text-text-active'
         >
           <SlSocialLinkedin className='w-8 h-8 ' />
         </a>
       </AnimationView.Bird>
       <AnimationView.Bird
-        className={disabledAnimation ? "m-4" : `m-4 animate-duration-[1.5s] animate-delay-[800ms]`}
+        disabled={disabledAnimation}
+        delay={2500}
+        className={`m-4 animate-duration-[1.5s]`}
       >
         <a
           target='_blank'
           href='https://twitter.com/TiTrn93656888'
-          className=' cursor-pointer rounded-full hover:scale-110 text-text hover:text-text-active'
+          className=' rounded-full hover:scale-110 text-text hover:text-text-active'
         >
           <SlSocialTwitter className='w-8 h-8' />
         </a>

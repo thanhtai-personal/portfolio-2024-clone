@@ -75,13 +75,13 @@ export const ScrollingButton = ({
       } ${hidden && 'hidden'}`}
     >
       <div
-        className='hover:bg-[rgba(0,255,0,0.4)] rounded-full cursor-pointer'
+        className='hover:bg-[rgba(0,255,0,0.4)] rounded-full'
         onClick={handleDown}
       >
         {((activeId > 0)  || (offset > 100)) && <FaArrowAltCircleUp className='text-text w-8 h-8' />}
       </div>
       <div
-        className='hover:bg-[rgba(0,255,0,0.4)] rounded-full cursor-pointer'
+        className='hover:bg-[rgba(0,255,0,0.4)] rounded-full'
         onClick={handleUp}
       >
         {((listSection && activeId < listSection?.length - 1) || (offset > 100)) && (

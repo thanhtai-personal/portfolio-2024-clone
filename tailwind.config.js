@@ -1,5 +1,6 @@
 const colors = require("tailwindcss/colors");
-const plugin = require('tailwindcss/plugin')
+const plugin = require('tailwindcss/plugin');
+const { transform } = require("typescript");
 
 /** @type {import("tailwindcss").Config} */
 module.exports = {
@@ -237,7 +238,10 @@ module.exports = {
           "95%": { opacity: 1, transform: "translateX(20%)" },
           "100%": { opacity: 1 }
         },
-
+        fade_in_ltr: {
+          "0%": { opacity: 0, transform: "translateX(-70%)" },
+          "100%": { opacity: 1 }
+        },
         fade_in_rtl: {
           "0%": { opacity: 0, transform: "translateX(70%)" },
           "100%": { opacity: 1 }
@@ -255,30 +259,46 @@ module.exports = {
           "100%": { height: "auto" }
         },
         bird: {
-          "0%": {},
-          "40%": { transform: "translate(200%, 200%)" },
-          "80%": { transform: "translate(200%, 200%)" },
+          "0%": { transform: "translate(-250px, 0)", opacity: 0 },
           "100%": {}
         },
         shoot_x: {
-          "0%": { transform: "translate(0,0)", opacity: 1 },
-          "33%": { transform: "translate(1500px, 0)", opacity: 1 },
-          "66%": { transform: "translate(3000px, 0)", opacity: 1 },
+          "0%": { transform: "translate(16px,0)", opacity: 0.5 },
           "99%": { transform: "translate(5000px, 0)", opacity: 1 }
         },
         shoot_y: {
-          "0%": { transform: "translate(0,0)", opacity: 1 },
-          "33%": { transform: "translate(0, 1500px)", opacity: 1 },
-          "66%": { transform: "translate(0, 3000px)", opacity: 1 },
+          "0%": { transform: "translate(0, 16px)", opacity: 0.5 },
           "99%": { transform: "translate(0, 5000px)", opacity: 1 }
         },
         mouse_click: {
-          "20%": { transform: "rotateZ(-60deg)" },
-          "50%": { transform: "rotateZ(60deg)" },
-          "50%": { transform: "rotateZ(0deg)" },
+          "0%": {
+            background: "rgba(255,100,0, 0.6)",
+            borderRadius: "100%",
+          },
         },
         text_appear: {
-          
+          "0%": {
+            opacity: 0.1
+          },
+        },
+        sub_text_appear: {
+          "0%": {
+            opacity: 0.1
+          },
+        },
+        spin_custom: {
+          "0%": {
+            transform: "rotate(0deg)"
+          },
+          "45%": {
+            transform: "rotate(35999deg)"
+          },
+          "55%": {
+            transform: "rotate(35999deg)"
+          },
+          "100%": {
+            transform: "rotate(0deg)"
+          },
         }
       },
       animation: {
@@ -288,21 +308,23 @@ module.exports = {
         fadeltr: "fadeltr 3s ease-in alternate infinite",
         fadertl: "fadertl 3s ease-in alternate infinite",
         fade_in_rtl: "fade_in_rtl .25s ease-in",
+        fade_in_ltr: "fade_in_ltr .25s ease-in",
         fade_in_ltr_70: "fade_in_ltr_70 .25s ease-in",
         fade_in_ltr_150: "fade_in_ltr_150 .25s ease-in",
         fade_in_ltr_250: "fade_in_ltr_250 .25s ease-in",
         fade_in_ltr_350: "fade_in_ltr_350 .25s ease-in",
         fade_in: "fade_in .3s ease-in",
-        spin_2: "spin 1.2s linear infinite",
-        spin_3: "spin 1.4s linear infinite",
-        spin_4: "spin 1.6s linear infinite",
+        spin_2: "spin_custom 30s linear infinite",
+        spin_3: "spin_custom 35s linear infinite",
+        spin_4: "spin_custom 40s linear infinite",
         expand: "expand .25s ease-in-out",
         slide_in: "slide_in .25s ease-in",
         bird: "bird 2.25s ease-in-out",
         shoot_x: "shoot_x 12s ease-in-out",
         shoot_y: "shoot_y 1s ease-in-out",
         mouse_click: "mouse_click 1.2s ease-in-out",
-        text_appear: "text_appear 1.2s ease-in-out"
+        text_appear: "text_appear 1.2s ease-in-out",
+        sub_text_appear: "sub_text_appear 1.2s ease-in-out"
       },
       backgroundImage: {
         "bg-gradient": "var(--gradient)"

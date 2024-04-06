@@ -56,7 +56,7 @@ export const Card = ({
         </p>
         {!isFullDes && (
           <div
-            className='w-full cursor-pointer flex justify-center items-center p-2 underline'
+            className='w-full flex justify-center items-center p-2 underline'
             onClick={() => setIsFullDes(true)}
           >
             {t('Read more...')}

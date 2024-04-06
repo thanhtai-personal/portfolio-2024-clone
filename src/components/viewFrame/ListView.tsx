@@ -49,7 +49,7 @@ export const ListView = ({
         <List.Item key={item.key || `key-missing-${index}`}>
           {unstyled ? (
             <div
-              className={`w-full h-full hover:cursor-pointer p-2 ${
+              className={`w-full h-full p-2 ${
                 item.className
               } ${item.isActive && 'bg-[wheat]'}`}
               onClick={handleClickItem(item)}

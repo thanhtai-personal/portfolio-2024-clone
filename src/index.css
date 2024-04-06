@@ -1,4 +1,4 @@
-@import 'google-fonts.css';
+@import "google-fonts.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,14 +6,14 @@
 @layer base {
   html,
   :root {
-    --background-color: #7AA0B7;
+    --background-color: #7aa0b7;
     --text-color: #000;
     --text-active-color: #2b62f8;
     --text-unactive-color: #161618;
     --scrollbarBG: #000;
     --thumbBG: #f9fcf9;
     --bg-cover: #f9fcf9;
-    --gradient: linear-gradient(to right, #7A9DB6, #FFF , #7A9DB6); 
+    --gradient: linear-gradient(to right, #7a9db6, #fff, #7a9db6);
     --color-primary-50: #f6f8ff;
     --color-primary-100: #edf0ff;
     --color-primary-200: #d1dafe;
@@ -110,7 +110,7 @@
     --text-unactive-color: #a9a9ba;
     --scrollbarBG: steelblue;
     --thumbBG: #000;
-    --gradient: linear-gradient(to right, #010208, #021620); 
+    --gradient: linear-gradient(to right, #010208, #021620);
     --color-primary-50: #0d0b00; /* Inverted from #F6F8FF */
     --color-primary-100: #12100f; /* Inverted from #EDF0FF */
     --color-primary-200: #2e25ff; /* Inverted from #D1DAFE */
@@ -355,11 +355,6 @@ button.btn-menu {
   opacity: 0.4;
 }
 
-button.btn-menu:hover {
-  border: none !important;
-  opacity: 1;
-}
-
 button.btn-menu:focus {
   border: none !important;
   opacity: 1;
@@ -370,7 +365,7 @@ button.btn-menu.hover {
 }
 
 button.btn-menu::before {
-  content: '';
+  content: "";
   width: 100%;
   height: 2px;
   position: absolute;
@@ -378,63 +373,187 @@ button.btn-menu::before {
   transition: 0.2s ease;
   -webkit-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
-  transform: rotate(0deg) translateY(-.8rem);
+  transform: rotate(0deg) translateY(-0.8rem);
   background-color: currentColor;
-}
-
-button.btn-menu:hover::before {
-  top: 0;
-  width: 100%;
-  -webkit-transform: rotate(45deg) translateY(.8rem);
-  -ms-transform: rotate(45deg) translateY(.8rem);
-  transform: rotate(45deg) translateY(.8rem);
 }
 
 button.btn-menu.hover::before {
   top: 0;
   width: 100%;
-  -webkit-transform: rotate(45deg) translateY(.8rem);
-  -ms-transform: rotate(45deg) translateY(.8rem);
-  transform: rotate(45deg) translateY(.8rem);
+  background: red;
+  -webkit-transform: rotate(45deg) translateY(0.8rem);
+  -ms-transform: rotate(45deg) translateY(0.8rem);
+  transform: rotate(45deg) translateY(0.8rem);
 }
 
 button.btn-menu::after {
-  content: '';
+  content: "";
   width: 70%;
   height: 2px;
   right: -40%;
   position: absolute;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
-  -webkit-transform: rotate(0deg) translateY(.8rem);
-  -ms-transform: rotate(0deg) translateY(.8rem);
-  transform: rotate(0deg) translateY(.8rem);
+  -webkit-transform: rotate(0deg) translateY(0.8rem);
+  -ms-transform: rotate(0deg) translateY(0.8rem);
+  transform: rotate(0deg) translateY(0.8rem);
   background-color: currentColor;
 }
 
-button.btn-menu:hover::after {
-  top: 0;
-  height: 2px;
-  width: 100%;
-  -webkit-transform: rotate(-45deg) translateY(.8rem);
-  -ms-transform: rotate(-45deg) translateY(.8rem);
-  transform: rotate(-45deg) translateY(.8rem);
-  right: 0;
-}
-
 button.btn-menu.hover::after {
+  background: red;
   height: 2px;
   top: 0;
   width: 100%;
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg) translateY(.8rem);
+  transform: rotate(-45deg) translateY(0.8rem);
   right: 0;
 }
 
 .glowing-ball {
-  box-shadow:
-    0 0 60px 30px #fff,
-    0 0 100px 60px #f0f,
-    0 0 140px 90px #0ff;
+  box-shadow: 0 0 60px 30px #fff, 0 0 100px 60px #f0f, 0 0 140px 90px #0ff;
+}
+
+.glowing-line {
+  box-shadow: 0 0 10px 5px #48abe0,
+              0 0 20px 7px #ebecca,
+              0 0 25px 20px #2f8888,
+              0 0 30px 25px #2f8888;
+}
+
+/* for using default custom cursor */
+button {
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+}
+
+.draw-border {
+  box-shadow: inset 0 0 0 4px #58afd1;
+  color: #58afd1;
+  transition: color 0.25s 0.0833333333s;
+  position: relative;
+}
+.draw-border::before,
+.draw-border::after {
+  border: 0 solid transparent;
+  box-sizing: border-box;
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+.draw-border::before {
+  border-bottom-width: 4px;
+  border-left-width: 4px;
+}
+.draw-border::after {
+  border-top-width: 4px;
+  border-right-width: 4px;
+}
+.draw-border:hover {
+  color: #ffe593;
+}
+.draw-border:hover::before,
+.draw-border:hover::after {
+  border-color: #ffe593;
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
+}
+.draw-border:hover::before {
+  transition-delay: 0s, 0s, 0.25s;
+}
+.draw-border:hover::after {
+  transition-delay: 0s, 0.25s, 0s;
+}
+
+.drawingBtn {
+  background: none;
+  border: none;
+  line-height: 1.5;
+  letter-spacing: 0.05rem;
+}
+.drawingBtn:focus {
+  outline: 2px dotted #55d7dc;
+}
+
+.ripleBtn {
+  border: none;
+  outline: none;
+
+  /* We need this to position
+                span inside button */
+  position: relative;
+  overflow: hidden;
+  box-shadow: 6px 7px 40px -4px rgba(0, 0, 0, 0.2);
+}
+
+.ripleBtn span {
+  position: absolute;
+  border-radius: 50%;
+  /* To make it round */
+  background-color: rgba(0, 0, 0, 0.3);
+
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+  /* for positioning */
+  margin-left: -50px;
+
+  animation: ripple 1s;
+  opacity: 0;
+}
+
+/* Add animation */
+@keyframes ripple {
+  from {
+    opacity: 1;
+    transform: scale(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(10);
+  }
+}
+
+#cursor-shadow.wrapper {
+  height: 100vh;
+  background-image: url("https://cs4.pikabu.ru/post_img/big/2016/05/14/11/1463253214123152134.jpg");
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+#cursor-shadow .shadow {
+  position: absolute;
+  width: 200vw;
+  height: 200vh;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-image: radial-gradient(circle at center, transparent, #000 20%);
+}
+
+.mouse-wave {
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  position: fixed;
+  border-radius: 50%;
+  border: 1px solid #ffffff59;
+}
+
+@keyframes mouse-wave-effect {
+  to {
+    transform: scale(15);
+    opacity: 0.01;
+  }
 }

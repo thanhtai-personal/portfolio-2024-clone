@@ -12,16 +12,13 @@ import { Skills } from './Skills';
 import { Experience } from './Experience';
 import { Education } from './Education';
 import { SideProjects } from './SideProjects';
-// import page from '@/assets/video/page.mp4';
-// import { ThemeContext } from '@/context/theme';
-// import { setOfThemes } from '@/utils/constants';
 import { RightActionPanel } from './RightActionPanel';
 import preloadImage from '@/assets/images/preload-image.jpg';
 import { HomeContext, HomeSectionIds } from '@/context/index';
-import { useCustomCursor } from '@/hooks/useCustomCursor';
-import { FaHandPointUp } from 'react-icons/fa';
+import { useMouseWaveClicker } from '@/hooks/useMouseWaveClicker';
+import { ThemeContext } from '@/context/theme';
 
-export interface IHomePage {}
+export interface IHomePage { }
 
 const HomePageContent = () => {
   // const themeData = ThemeContext.useDataContext();
@@ -79,18 +76,6 @@ const HomePageContent = () => {
         </AnimationView.FadeIn>
       </IntersectionObserverView>
       <Footer className='w-full h-4 relative'>
-        {/* {themeData?.theme?.key !== setOfThemes.dark.key && (
-          <VideoBackground
-            id='smoke-background'
-            classes={{
-              container: 'h-auto opacity-40',
-            }}
-            src='https://video.wixstatic.com/video/d47472_58cce06729c54ccb935886c4b3647274/1080p/mp4/file.mp4'
-            className='flex justify-center w-full h-full'
-          >
-            <div></div>
-          </VideoBackground>
-        )} */}
         <div className='absolute w-full h-full left-0 top-0 rounded-t-lg'>
           <div className='w-full h-full flex flex-row items-end justify-center'>
             <div className='text-xs text-gray-600 font-mono font-bold w-full text-center justify-center items-center h-4 bg-[rgba(255,100,125,0.25)] dark:bg-[rgba(0,15,5,0.7)]'>
@@ -103,25 +88,20 @@ const HomePageContent = () => {
   );
 };
 
-const HomePage = ({}: IHomePage) => {
-  useCustomCursor('custom-cursor');
-
+const HomePage = ({ }: IHomePage) => {
+  useMouseWaveClicker();
+  const themeData = ThemeContext.useDataContext();
   return (
     <HomeContext.Provider>
-      <div className='w-screen h-screen bg-bg-gradient cursor-none'>
-        <div
-          id='custom-cursor'
-          className='absolute left-[-100px] top-0] z-50 duration-0 pointer-events-none'
-        >
-          <FaHandPointUp className='w-8 h-8 text-text bg-transparent ' />
-        </div>
+      <div className='w-screen h-screen bg-bg-gradient'>
+        {themeData?.theme?.key === "dark" && <Animates.CursorShadow />}
+        <Animates.CursorCustom />
         <VideoBackground
           id='page-background'
           classes={{
             container: 'opacity-30',
           }}
           preloadSrc={preloadImage}
-          // src={page}
           src='https://video.wixstatic.com/video/d47472_58cce06729c54ccb935886c4b3647274/1080p/mp4/file.mp4'
           className='flex justify-center w-full h-full'
         >

@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { useDelayedDisplay } from "@/hooks/index"
 
 export interface IAnimationView {
   children: ReactNode;
@@ -6,30 +7,42 @@ export interface IAnimationView {
   id?: string;
   duration?: number;
   delay?: number;
+  disabled?: boolean;
 }
 
 export namespace AnimationView {
-  export const FadeInRTL = ({ children, className, id }: IAnimationView) => {
-    return <div id={id} className={`animate-fade_in_rtl ${className}`}>{children}</div>;
+  export const FadeInRTL = ({ children, className, id, delay }: IAnimationView) => {
+    const isDisplay = useDelayedDisplay(delay);
+    return <div id={id} className={`${isDisplay ? "animate-fade_in_rtl" : "hidden"} ${!isDisplay && "hidden"} ${className}`}>{children}</div>;
   };
 
-  export const FadeIn = ({ children, className, id }: IAnimationView) => {
-    return <div id={id} className={`animate-fade_in ${className}`}>{children}</div>;
+  export const FadeIn = ({ children, className, id, delay }: IAnimationView) => {
+    const isDisplay = useDelayedDisplay(delay);
+    return <div id={id} className={`${isDisplay ? "animate-fade_in" :  "hidden"} ${className}`}>{children}</div>;
   };
 
-  export const FadeInLTR = ({ children, className, id }: IAnimationView) => {
-    return <div id={id} className={`animate-fade_in_ltr ${className}`}>{children}</div>;
+  export const FadeInLTR = ({ children, className, id, delay }: IAnimationView) => {
+    const isDisplay = useDelayedDisplay(delay);
+    return <div id={id} className={`${isDisplay ? "animate-fade_in_ltr" :  "hidden"} ${className}`}>{children}</div>;
   };
 
-  export const SlideIn = ({ children, className, id }: IAnimationView) => {
-    return <div id={id} className={`animate-slide_in ${className}`}>{children}</div>;
+  export const SlideIn = ({ children, className, id, delay }: IAnimationView) => {
+    const isDisplay = useDelayedDisplay(delay);
+    return <div id={id} className={`${isDisplay ? "animate-slide_in" :  "hidden"} ${className}`}>{children}</div>;
   };
 
-  export const SlideLTR = ({ children, className, id }: IAnimationView) => {
-    return <div id={id} className={`animate-slide_ltr ${className}`}>{children}</div>;
+  export const SlideLTR = ({ children, className, id, delay }: IAnimationView) => {
+    const isDisplay = useDelayedDisplay(delay);
+    return <div id={id} className={` ${isDisplay ? "animate-slide_ltr" :  "hidden"} ${className}`}>{children}</div>;
   };
 
-  export const Bird = ({ children, className, id }: IAnimationView) => {
-    return <div id={id} className={`animate-bird ${className}`}>{children}</div>;
+  export const Bird = ({ children, className, id, disabled, delay }: IAnimationView) => {
+    const isDisplay = useDelayedDisplay(delay);
+    return <div id={id} className={`${isDisplay && !disabled ? `animate-bird ${className}` : "hidden"} `}>{children}</div>;
+  };
+
+  export const TextAppearance = ({ children, className, id, disabled, delay }: IAnimationView) => {
+    const isDisplay = useDelayedDisplay(delay);
+    return <div id={id} className={`${isDisplay && !disabled ? "animate-text_appear" : "hidden"} ${className}`}>{children}</div>;
   };
 }

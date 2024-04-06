@@ -25,7 +25,7 @@ export const ThemeSettingBoard = ({ classes }: IThemeSettingBoard) => {
                 const theme = setOfThemes[key];
                 return (
                   <div
-                    className='hover:border-solid hover:cursor-pointer text-text flex flex-col justify-center items-center'
+                    className='hover:border-solid text-text flex flex-col justify-center items-center'
                     key={key}
                     onClick={() => {
                       setIsOpen(false);
