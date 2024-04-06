@@ -30,8 +30,8 @@ export const LazyLoadVideo = ({
 
     const handleLoaded = () => {
       setLoaded(true);
-      videoElement.play();
-      videoElement.style.display = 'block';
+      // videoElement.play();
+      // videoElement.style.display = 'block';
     };
 
     if (videoElement && sourceElement) {
@@ -65,10 +65,11 @@ export const LazyLoadVideo = ({
         )}
         <video
           id={id}
-          // autoPlay
+          autoPlay
+          playsInline
           muted
           loop
-          className={`${videoClass} hidden lg:block`}
+          className={`${videoClass}`}
           style={{
             height: restProps.style?.height || '100%',
             width: restProps.style?.width || '100%',
