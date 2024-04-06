@@ -30,19 +30,19 @@ export const Banner = () => {
         <GlowingLine id="hor-line" className='w-screen h-2' />
       </div>} */}
       {themeData?.theme?.key === "dark" && <div className='absolute pointer-events-none opacity-0 top-0 left-0 bg-text animate-shoot_x animate-duration-[3s]'>
-        <GlowingLine id="ver-line" className='w-screen h-1 rotate-90 -translate-x-[50%]' />
+        <GlowingLine id="ver-line" className='w-[1000vw] h-1 rotate-90 -translate-x-[50%]' />
       </div>}
       {themeData?.theme?.key === "dark" && <div className='absolute pointer-events-none opacity-0 top-0 left-0 bg-text animate-shoot_x animate-duration-[3s] animate-delay-[.2s]'>
-        <GlowingLine id="ver-line" className='w-screen h-2 rotate-90 -translate-x-[50%]' />
+        <GlowingLine id="ver-line" className='w-[1000vw] h-2 rotate-90 -translate-x-[50%]' />
       </div>}
       {themeData?.theme?.key === "dark" && <div className='absolute pointer-events-none opacity-0 top-0 left-0 bg-text animate-shoot_x animate-duration-[3s] animate-delay-[.4s]'>
-        <GlowingLine id="ver-line" className='w-screen h-2 rotate-90 -translate-x-[50%]' />
+        <GlowingLine id="ver-line" className='w-[1000vw] h-2 rotate-90 -translate-x-[50%]' />
       </div>}
       {themeData?.theme?.key === "dark" && <div className='absolute pointer-events-none opacity-0 top-0 left-0 bg-text animate-shoot_x animate-duration-[3s] animate-delay-[.8s]'>
-        <GlowingLine id="ver-line" className='w-screen h-3 rotate-90 -translate-x-[50%]' />
+        <GlowingLine id="ver-line" className='w-[1000vw] h-3 rotate-90 -translate-x-[50%]' />
       </div>}
       {themeData?.theme?.key === "dark" && <div className='absolute pointer-events-none opacity-0 top-0 left-0 bg-text animate-shoot_x animate-duration-[3s] animate-delay-[1s]'>
-        <GlowingLine id="ver-line" className='w-screen h-4 rotate-90 -translate-x-[50%]' />
+        <GlowingLine id="ver-line" className='w-[1000vw] h-4 rotate-90 -translate-x-[50%]' />
       </div>}
       <div className='flex absolute left-0 top-0 w-full h-full flex-row justify-center'>
         <ContentSection className='w-full bg-transparent'>
@@ -103,7 +103,7 @@ export const Banner = () => {
                     <DevelopmentIcons />
                   </div>
                   <div className='flex flex-row justify-center items-center mt-6 w-full'>
-                    <div className='text-text text-1xl lg:text-2xl whitespace-normal mr-2'>
+                    <div className='text-text text-1xl lg:text-2xl whitespace-nowrap mr-2'>
                       {t(
                         'Find me at'
                       )}
