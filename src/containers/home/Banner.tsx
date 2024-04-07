@@ -147,13 +147,13 @@ export const Banner = () => {
 
   return (
     <ScreenSection
-      className='flex flex-row justify-center items-center bg-cover shadow-lg rounded-b-lg'
+      className={`flex flex-row justify-center items-center bg-cover shadow-lg rounded-b-lg `}
       id={HomeSectionIds.banner}
       overflowHidden
     >
       {themeData?.theme?.key != "dark" ? <VideoBackground
         id='banner-background'
-        src={backgroundVideoLight} //{videoSrc}
+        src={backgroundVideoLight}
         preloadSrc={preloadImage}
         className='bg-cover relative'
       >

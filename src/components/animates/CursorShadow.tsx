@@ -1,6 +1,7 @@
 import { useCustomCursor } from "@/hooks/index";
+import { ReactNode } from "react";
 
-export const CursorShadow = ({ className }: { className?: string }) => {
+export const CursorShadow = ({ className, children }: { className?: string, children?: ReactNode }) => {
   const customMouseMove = (e: MouseEvent) => {
     const shadow = document.querySelector('#custom-cursor-shadow .shadow') as HTMLElement;
     if (!shadow) return;
@@ -13,7 +14,9 @@ export const CursorShadow = ({ className }: { className?: string }) => {
 
   return (
     <div id="custom-cursor-shadow" className={`wrapper ${className}`}>
-      <div className="shadow"></div>
+      <div className="shadow">
+      </div>
+      {children && children}
     </div>
 
   )

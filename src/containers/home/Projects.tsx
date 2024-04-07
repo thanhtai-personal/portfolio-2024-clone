@@ -1,6 +1,7 @@
 import {
   Animates,
   AnimationView,
+  ContentSection,
   GridView,
   IListItem,
   LazyLoadImage,
@@ -8,11 +9,12 @@ import {
   ScreenSection,
   ThemeSettingBoard,
   TitleText,
+  VideoBackground,
 } from '@/components/index';
 import { AnimationRef, useTranslate } from '@/hooks/index';
 import { SkillItem, Skills, skillData } from './Skills';
 import { ReactNode, useMemo, useRef } from 'react';
-import defaultImage from '@/assets/images/default_image.jpg';
+import preloadImage from '@/assets/images/preload-image.jpg';
 import { HomeActionType, HomeContext, HomeSectionIds } from '@/context/home';
 import { BsCaretUpFill } from 'react-icons/bs';
 import { LanguageSetting } from './LanguageSetting';
@@ -38,6 +40,7 @@ export interface ProjectItem {
 export const Projects = () => {
   const animationRef = useRef<AnimationRef>(null);
   const homeDispatcher = HomeContext.useDataDispatchContext();
+  // const themeData = ThemeContext.useDataContext();
   const { t } = useTranslate();
 
   const projectItems: IListItem[] = useMemo(() => {
@@ -48,13 +51,6 @@ export const Projects = () => {
         content: (
           <div className='w-full flex flex-row justify-between'>
             <div className='flex flex-row items-center'>
-              <div className='hidden lg:flex w-[16rem] h-16'>
-                <LazyLoadImage
-                  src={item.projectLogo || defaultImage}
-                  className='w-[16rem] h-16'
-                  imageClass='w-[16rem] h-16 rounded-full mx-2 border-solid  border-[1px] border-text shadow-lg shadow-inner'
-                />
-              </div>
               <div className='flex flex-col lg:ml-4'>
                 <a
                   target='_blank'
@@ -67,6 +63,11 @@ export const Projects = () => {
                   {typeof item.description === 'string'
                     ? t(item.description)
                     : item.description}
+                </div>
+                <div className='text-sm whitespace-normal text-wrap mt-2'>
+                  {typeof item.responsibility === 'string'
+                    ? t(item.responsibility)
+                    : item.responsibility}
                 </div>
                 <div className='flex flex-row justify-start items-center flex-wrap md:w-64'>
                   {item.skills?.map((skill, index) => (
@@ -91,79 +92,90 @@ export const Projects = () => {
 
   return (
     <AnimationView.SlideUp ref={animationRef} className={`
-      absolute z-[70] w-screen h-screen top-0 left-0
+      absolute z-[70] w-screen h-auto top-0 left-0
     `}>
-      <ScreenSection
-        className='flex flex-row justify-center items-center bg-cover shadow-lg rounded-b-lg'
-        id={HomeSectionIds.banner}
-        overflowHidden
-      >
-        <GridView
-          cols={4}
-          gap={'1'}
+      {/* {themeData?.theme?.key === "dark" && <Animates.CursorShadow />} */}
+      <div className='w-full h-screen bg-background'>
+        <VideoBackground
+          id='page-background'
           classes={{
-            container: 'h-screen',
+            container: 'opacity-30',
           }}
+          preloadSrc={preloadImage}
+          src='https://video.wixstatic.com/video/d47472_58cce06729c54ccb935886c4b3647274/1080p/mp4/file.mp4'
+          className='flex justify-center w-full h-full'
         >
           <div></div>
-          <div className=' col-span-2 flex justify-center items-start'>
-            <div className='mt-16'>
-              <TitleText content='Projects' />
-            </div>
-          </div>
-          <div className='bg-transparent flex flex-row justify-end items-start pr-2'>
-            <div className='flex flex-row w-fit'>
-              <div className='flex justify-center items-center'>
-                <LanguageSetting classes={{ container: "mx-2" }} />
+        </VideoBackground>
+        <div className='absolute top-0 left-0 bg-transparent w-screen h-screen overflow-auto'>
+          <ContentSection
+            className='flex flex-row justify-center items-center bg-cover shadow-lg rounded-b-lg'
+          >
+            <GridView
+              cols={4}
+              gap={'1'}
+            >
+              <div></div>
+              <div className=' col-span-2 flex justify-center items-start'>
+                <div className='mt-16'>
+                  <TitleText content='Projects' />
+                </div>
               </div>
-              <div className='flex justify-center items-center'>
-                <ThemeSettingBoard classes={{ container: 'flex relative my-2 items-start' }} />
+              <div className='bg-transparent flex flex-row justify-end items-start pr-2'>
+                <div className='flex flex-row w-fit'>
+                  <div className='flex justify-center items-center'>
+                    <LanguageSetting classes={{ container: "mx-2" }} />
+                  </div>
+                  <div className='flex justify-center items-center'>
+                    <ThemeSettingBoard classes={{ container: 'flex relative my-2 items-start' }} />
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
 
-          <div className=' col-span-4 row-span-12'>
-            <div className='w-full px-2 py-4'>
-              <div className='w-full flex flex-col italic text-text mt-3 p-4  pr-6 rounded-lg'>
-                <ListView
-                  unstyled
-                  classes={{
-                    container: 'w-full px-2',
-                  }}
-                  items={projectItems}
-                />
+              <div className=' col-span-4 row-span-12'>
+                <div className='w-full px-2 py-4'>
+                  <div className='w-full flex flex-col italic text-text mt-3 p-4 pr-6 rounded-lg'>
+                    <ListView
+                      unstyled
+                      classes={{
+                        container: 'w-full px-2',
+                      }}
+                      items={projectItems}
+                    />
+                  </div>
+                </div>
               </div>
+            </GridView>
+            <div className='absolute top-0 left-0 w-full justify-center pointer-events-none'>
+              <AnimationView.FadeIn delay={100}>
+                <div className='flex w-full h-full justify-center items-start'>
+                  <div className='z-40'>
+                    <Animates.RippleButton className=' pointer-events-auto w-32 h-16 mb-4 flex flex-col items-center justify-center cursor-pointer' id="project-section-btn"
+                      onClick={() => {
+                        if (animationRef && animationRef.current) {
+                          animationRef.current.triggerQuitAnimate("animate-disappear_slide");
+                        }
+                        setTimeout(() => {
+                          homeDispatcher &&
+                            homeDispatcher({
+                              type: HomeActionType.updateActiveSection,
+                              payload: {
+                                value: HomeSectionIds.banner,
+                              },
+                            })
+                        }, 700)
+                      }}
+                    >
+                      <BsCaretUpFill className='w-4 h-4' />
+                      {t("Home")}
+                    </Animates.RippleButton>
+                  </div>
+                </div>
+              </AnimationView.FadeIn>
             </div>
-          </div>
-        </GridView>
-        <div className='absolute top-0 left-0 w-full justify-center pointer-events-none'>
-          <AnimationView.FadeIn delay={100}>
-            <div className='flex w-full h-full justify-center items-start'>
-              <div className='z-40'>
-                <Animates.RippleButton className=' pointer-events-auto w-32 h-16 mb-4 flex flex-col items-center justify-center cursor-pointer' id="project-section-btn"
-                  onClick={() => {
-                    if (animationRef && animationRef.current) {
-                      animationRef.current.triggerQuitAnimate("animate-disappear_slide");
-                    }
-                    setTimeout(() => {
-                      homeDispatcher &&
-                        homeDispatcher({
-                          type: HomeActionType.updateActiveSection,
-                          payload: {
-                            value: HomeSectionIds.banner,
-                          },
-                        })
-                    }, 700)
-                  }}
-                >
-                  <BsCaretUpFill className='w-4 h-4' />
-                  {t("Home")}
-                </Animates.RippleButton>
-              </div>
-            </div>
-          </AnimationView.FadeIn>
+          </ContentSection>
         </div>
-      </ScreenSection>
+      </div>
     </AnimationView.SlideUp>
   );
 };

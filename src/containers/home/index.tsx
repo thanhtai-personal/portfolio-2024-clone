@@ -84,11 +84,9 @@ const HomePageContent = () => {
 
 const HomePage = ({ }: IHomePage) => {
   useMouseWaveClicker();
-  const themeData = ThemeContext.useDataContext();
   return (
     <HomeContext.Provider>
       <div className='w-screen h-screen bg-bg-gradient'>
-        {themeData?.theme?.key === "dark" && <Animates.CursorShadow />}
         <VideoBackground
           id='page-background'
           classes={{
