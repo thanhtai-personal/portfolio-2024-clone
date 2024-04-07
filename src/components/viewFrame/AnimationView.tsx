@@ -50,4 +50,9 @@ export namespace AnimationView {
     const isDisplay = useDelayedDisplay(delay);
     return <div id={id} className={`${isDisplay && !disabled ? "animate-text_appear" : "hidden"} ${className}`}>{children}</div>;
   };
+
+  export const SpaceAppear = ({ children, className, id, disabled, delay }: IAnimationView) => {
+    const isDisplay = useDelayedDisplay(delay);
+    return <div id={id} className={`${isDisplay && !disabled ? "animate-space_appear" : "hidden"} ${className}`}>{children}</div>;
+  };
 }

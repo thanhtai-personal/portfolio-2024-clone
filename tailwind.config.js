@@ -262,6 +262,10 @@ module.exports = {
           "0%": { transform: "translateY(-100vh)" },
           "100%": {}
         },
+        slide_ltr: {
+          "0%": { transform: "translateX(-100vw)" },
+          "100%": {}
+        },
         expand: {
           "0%": { height: 0 },
           "100%": { height: "auto" }
@@ -317,6 +321,16 @@ module.exports = {
           },
           "100%": {
           },
+        },
+        space_appear: {
+          "0%": {
+            transform: "scale3d(0.1, 0.1, 0.1)",
+            borderRadius: "100%",
+          },
+          "99%": {
+            transform: "scale3d(1, 1, 1)",
+            borderRadius: "100%",
+          },
         }
       },
       animation: {
@@ -344,8 +358,10 @@ module.exports = {
         text_appear: "text_appear 1.2s ease-in-out",
         sub_text_appear: "sub_text_appear 1.2s ease-in-out",
         slide_down: "slide_down 2s ease-in-out",
+        slide_ltr: "slide_ltr 2s ease-in-out",
         slide_down_vh: "slide_down_vh .5s ease-in-out",
-        rotate: "rotate .5s ease-in-out"
+        rotate: "rotate .5s ease-in-out",
+        space_appear: "space_appear 1s ease-in-out"
       },
       backgroundImage: {
         "bg-gradient": "var(--gradient)"

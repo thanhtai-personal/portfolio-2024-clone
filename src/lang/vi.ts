@@ -16,7 +16,7 @@ export default {
   "Experience": "Kinh nghiệm",
   "Experiences": "Kinh nghiệm",
   "Education": "Đào tạo",
-  "Side Projects": "Dự án khác",
+  "Projects": "Dự án",
   "ReactJS is a JavaScript library for building user interfaces, particularly for single-page applications. It allows developers to create reusable UI components and efficiently manage the application state.": "ReactJS là một thư viện JavaScript dùng để xây dựng giao diện người dùng, đặc biệt là cho các ứng dụng trang đơn. Nó cho phép các nhà phát triển tạo ra các thành phần giao diện người dùng có thể tái sử dụng và quản lý trạng thái ứng dụng một cách hiệu quả.",
   "The combination of HTML, CSS, and JavaScript refers to the fundamental technologies used for building and styling web pages. HTML provides the structure, CSS controls the presentation and layout, and JavaScript adds interactivity and behavior to web pages.": "Sự kết hợp của HTML, CSS và JavaScript đề cập đến các công nghệ cơ bản được sử dụng để xây dựng và trang trí các trang web. HTML cung cấp cấu trúc, CSS kiểm soát trình bày và bố trí, và JavaScript thêm tính tương tác và hành vi vào các trang web.",
   "React Native is a framework for building mobile applications using JavaScript and React. It allows developers to write code once and deploy it across multiple platforms, such as iOS and Android, while maintaining a native-like user experience.": "React Native là một framework để xây dựng ứng dụng di động bằng cách sử dụng JavaScript và React. Nó cho phép các nhà phát triển viết mã một lần và triển khai trên nhiều nền tảng, như iOS và Android, trong khi vẫn duy trì trải nghiệm người dùng tương tự như ứng dụng native.",

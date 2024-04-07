@@ -46,7 +46,7 @@ const experienceData: SideProjectItem[] = [
   },
 ];
 
-export const SideProjects = () => {
+export const Projects = () => {
   const { t } = useTranslate();
 
   const experienceItems: IListItem[] = useMemo(() => {
@@ -100,7 +100,7 @@ export const SideProjects = () => {
 
   return (
     <div className='w-full px-2 py-4'>
-      <TitleText content='Side Projects' />
+      <TitleText content='Projects' />
       <div className='w-full flex flex-col italic text-text mt-3 p-4  pr-6 rounded-lg'>
         <ListView
           unstyled

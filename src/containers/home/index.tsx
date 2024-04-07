@@ -6,13 +6,13 @@ import {
   VideoBackground,
 } from '@/components/index';
 import { Banner } from './Banner';
-import { Summary } from './Summary';
+// import { Summary } from './Summary';
 import { Footer } from 'flowbite-react';
-import { Skills } from './Skills';
-import { Experience } from './Experience';
-import { Education } from './Education';
-import { SideProjects } from './SideProjects';
-import { RightActionPanel } from './RightActionPanel';
+// import { Skills } from './Skills';
+// import { Experience } from './Experience';
+// import { Education } from './Education';
+import { Projects } from './Projects';
+// import { RightActionPanel } from './RightActionPanel';
 import preloadImage from '@/assets/images/preload-image.jpg';
 import { HomeContext, HomeSectionIds } from '@/context/index';
 import { useMouseWaveClicker } from '@/hooks/useMouseWaveClicker';
@@ -26,7 +26,7 @@ const HomePageContent = () => {
       id='scroll-container'
       className='bg-transparent w-screen h-screen m-0 p-0 overflow-x-hidden'
     >
-      <RightActionPanel />
+      {/* <RightActionPanel /> */}
       <Banner />
       {/* <IntersectionObserverView id={HomeSectionIds.summary}>
         <AnimationView.FadeIn>
@@ -68,7 +68,7 @@ const HomePageContent = () => {
         <AnimationView.FadeIn>
           <AnimationView.SlideIn>
             <ContentSection>
-              <SideProjects />
+              <Projects />
             </ContentSection>
           </AnimationView.SlideIn>
         </AnimationView.FadeIn>

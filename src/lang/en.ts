@@ -16,7 +16,7 @@ export default {
   "Experience": "Experience",
   "Experiences": "Experiences",
   "Education": "Education",
-  "Side Projects": "Side Projects",
+  "Projects": "Projects",
   "ReactJS is a JavaScript library for building user interfaces, particularly for single-page applications. It allows developers to create reusable UI components and efficiently manage the application state.": "ReactJS is a JavaScript library for building user interfaces, particularly for single-page applications. It allows developers to create reusable UI components and efficiently manage the application state.",
   "The combination of HTML, CSS, and JavaScript refers to the fundamental technologies used for building and styling web pages. HTML provides the structure, CSS controls the presentation and layout, and JavaScript adds interactivity and behavior to web pages.": "The combination of HTML, CSS, and JavaScript refers to the fundamental technologies used for building and styling web pages. HTML provides the structure, CSS controls the presentation and layout, and JavaScript adds interactivity and behavior to web pages.",
   "React Native is a framework for building mobile applications using JavaScript and React. It allows developers to write code once and deploy it across multiple platforms, such as iOS and Android, while maintaining a native-like user experience.": "React Native is a framework for building mobile applications using JavaScript and React. It allows developers to write code once and deploy it across multiple platforms, such as iOS and Android, while maintaining a native-like user experience.",

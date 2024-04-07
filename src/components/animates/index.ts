@@ -5,6 +5,7 @@ import { DrawingBorderButton as DrawingBorderButtonComponent } from "./DrawingBo
 import { RippleButton as RippleButtonComponent } from "./RippleButton";
 import { CursorCustom as CursorCustomComponent } from "./CursorCustom";
 import { CursorShadow as CursorShadowComponent } from "./CursorShadow";
+import { BlackHole as BlackHoleComponent } from "./BlackHole";
 
 export namespace Animates {
   export const GlowingJumpAnim = GlowingJump
@@ -14,4 +15,5 @@ export namespace Animates {
   export const RippleButton = RippleButtonComponent
   export const CursorCustom = CursorCustomComponent
   export const CursorShadow = CursorShadowComponent
+  export const BlackHole = BlackHoleComponent
 }

@@ -30,14 +30,14 @@ export const MultiLanguageButton = ({ }: IMultiLanguageButton) => {
     return (
       <div className='flex flex-row flex-nowrap justify-center items-center'>
         {Object.keys(LanguageKey).filter((key) => key === appData?.language).map((key: string) => (
-          <button
+          <div
             id={`language-button-${key}`}
             key={`language-button-${key}`}
-            className={` rounded-lg overflow-hidden hover:border-none active:border-none enabled:border-none ${key === appData?.language ? "animate-rotate" : "hidden"}`}
+            className={` cursor-pointer rounded-lg min-w-fit min-h-fit overflow-hidden hover:border-none active:border-none enabled:border-none ${key === appData?.language ? "" : "hidden"}`}
             onClick={handleChangeLanguage(getNextLanguage(key as LanguageKey))}
           >
             <img alt={key} className=' rounded-lg' src={key === LanguageKey.vi ? vi : en} />
-          </button>
+          </div>
         ))}
       </div>
     );
