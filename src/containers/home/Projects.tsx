@@ -107,11 +107,12 @@ export const Projects = () => {
 
   return (
     <AnimationView.SlideUp ref={animationRef} className={`
-      absolute z-[70] w-screen h-screen overflow-auto bg-red-300 top-0 left-0
+      absolute z-[70] w-screen h-screen top-0 left-0
     `}>
       <ScreenSection
         className='flex flex-row justify-center items-center bg-cover shadow-lg rounded-b-lg'
         id={HomeSectionIds.banner}
+        overflowHidden
       >
         <div className='w-full px-2 py-4'>
           <TitleText content='Projects' />
@@ -129,7 +130,7 @@ export const Projects = () => {
           <AnimationView.FadeIn delay={100}>
             <div className='flex w-full h-full justify-center items-end'>
               <div className='z-40'>
-                <Animates.RippleButton className='w-32 h-16 flex flex-col items-center justify-center cursor-pointer text-red-500' id="project-section-btn"
+                <Animates.RippleButton className='w-32 h-16 mb-4 flex flex-col items-center justify-center cursor-pointer text-red-500' id="project-section-btn"
                   onClick={() => {
                     if (animationRef && animationRef.current) {
                       animationRef.current.triggerQuitAnimate("animate-disappear_slide");

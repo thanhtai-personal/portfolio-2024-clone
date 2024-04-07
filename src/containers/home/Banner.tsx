@@ -120,7 +120,7 @@ export const Banner = () => {
               <AnimationView.FadeIn delay={4000}>
                 <div className='flex w-full h-full justify-center items-end'>
                   <div className='z-40'>
-                    <Animates.RippleButton className='w-32 h-16 flex flex-col items-center justify-center cursor-pointer text-red-500' id="project-section-btn"
+                    <Animates.RippleButton className='w-32 h-16 mb-4 flex flex-col items-center justify-center cursor-pointer text-red-500' id="project-section-btn"
                       onClick={() => homeDispatcher &&
                         homeDispatcher({
                           type: HomeActionType.updateActiveSection,
@@ -147,6 +147,7 @@ export const Banner = () => {
     <ScreenSection
       className='flex flex-row justify-center items-center bg-cover shadow-lg rounded-b-lg'
       id={HomeSectionIds.banner}
+      overflowHidden
     >
       {themeData?.theme?.key != "dark" ? <VideoBackground
         id='banner-background'
