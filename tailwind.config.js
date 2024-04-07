@@ -254,6 +254,14 @@ module.exports = {
           "0%": { transform: "translateY(10%)" },
           "100%": {}
         },
+        slide_down: {
+          "0%": { transform: "translateY(-450%)" },
+          "100%": {}
+        },
+        slide_down_vh: {
+          "0%": { transform: "translateY(-100vh)" },
+          "100%": {}
+        },
         expand: {
           "0%": { height: 0 },
           "100%": { height: "auto" }
@@ -263,12 +271,12 @@ module.exports = {
           "100%": {}
         },
         shoot_x: {
-          "0%": { transform: "translate(16px,0)", opacity: 0.5 },
-          "99%": { transform: "translate(5000px, 0)", opacity: 1 }
+          "0%": { transform: "translate(0,0)", opacity: 0.5 },
+          "99%": { transform: "translate(-5000px, 0)", opacity: 1 }
         },
         shoot_y: {
-          "0%": { transform: "translate(0, 16px)", opacity: 0.5 },
-          "99%": { transform: "translate(0, 5000px)", opacity: 1 }
+          "0%": { transform: "translate(0, 0)", opacity: 0.5 },
+          "99%": { transform: "translate(0, -5000px)", opacity: 1 }
         },
         mouse_click: {
           "0%": {
@@ -290,14 +298,24 @@ module.exports = {
           "0%": {
             transform: "rotate(0deg)"
           },
-          "45%": {
-            transform: "rotate(35999deg)"
+          "40%": {
+            transform: "rotate(3599deg)"
           },
-          "55%": {
-            transform: "rotate(35999deg)"
+          "60%": {
+            transform: "rotate(3599deg)"
           },
           "100%": {
             transform: "rotate(0deg)"
+          },
+        },
+        rotate: {
+          "0%": {
+            transform: "rotateX(0deg)"
+          },
+          "50%": {
+            transform: "rotateX(-90deg)"
+          },
+          "100%": {
           },
         }
       },
@@ -314,17 +332,20 @@ module.exports = {
         fade_in_ltr_250: "fade_in_ltr_250 .25s ease-in",
         fade_in_ltr_350: "fade_in_ltr_350 .25s ease-in",
         fade_in: "fade_in .3s ease-in",
-        spin_2: "spin_custom 30s linear infinite",
-        spin_3: "spin_custom 35s linear infinite",
-        spin_4: "spin_custom 40s linear infinite",
+        spin_2: "spin_custom 36s linear infinite",
+        spin_3: "spin_custom 42s linear infinite",
+        spin_4: "spin_custom 60s linear infinite",
         expand: "expand .25s ease-in-out",
         slide_in: "slide_in .25s ease-in",
         bird: "bird 2.25s ease-in-out",
         shoot_x: "shoot_x 12s ease-in-out",
-        shoot_y: "shoot_y 1s ease-in-out",
+        shoot_y: "shoot_y 12s ease-in-out",
         mouse_click: "mouse_click 1.2s ease-in-out",
         text_appear: "text_appear 1.2s ease-in-out",
-        sub_text_appear: "sub_text_appear 1.2s ease-in-out"
+        sub_text_appear: "sub_text_appear 1.2s ease-in-out",
+        slide_down: "slide_down 2s ease-in-out",
+        slide_down_vh: "slide_down_vh .5s ease-in-out",
+        rotate: "rotate .5s ease-in-out"
       },
       backgroundImage: {
         "bg-gradient": "var(--gradient)"

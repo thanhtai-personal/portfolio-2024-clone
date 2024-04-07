@@ -21,8 +21,6 @@ import { ThemeContext } from '@/context/theme';
 export interface IHomePage { }
 
 const HomePageContent = () => {
-  // const themeData = ThemeContext.useDataContext();
-
   return (
     <AnimationView.FadeIn
       id='scroll-container'
@@ -30,7 +28,7 @@ const HomePageContent = () => {
     >
       <RightActionPanel />
       <Banner />
-      <IntersectionObserverView id={HomeSectionIds.summary}>
+      {/* <IntersectionObserverView id={HomeSectionIds.summary}>
         <AnimationView.FadeIn>
           <AnimationView.SlideIn>
             <ContentSection>
@@ -38,8 +36,8 @@ const HomePageContent = () => {
             </ContentSection>
           </AnimationView.SlideIn>
         </AnimationView.FadeIn>
-      </IntersectionObserverView>
-      <IntersectionObserverView id={HomeSectionIds.skills}>
+      </IntersectionObserverView> */}
+      {/* <IntersectionObserverView id={HomeSectionIds.skills}>
         <AnimationView.FadeIn>
           <AnimationView.SlideIn>
             <ContentSection>
@@ -47,8 +45,8 @@ const HomePageContent = () => {
             </ContentSection>
           </AnimationView.SlideIn>
         </AnimationView.FadeIn>
-      </IntersectionObserverView>
-      <IntersectionObserverView id={HomeSectionIds.experience}>
+      </IntersectionObserverView> */}
+      {/* <IntersectionObserverView id={HomeSectionIds.experience}>
         <AnimationView.FadeIn>
           <AnimationView.SlideIn>
             <ContentSection>
@@ -56,8 +54,8 @@ const HomePageContent = () => {
             </ContentSection>
           </AnimationView.SlideIn>
         </AnimationView.FadeIn>
-      </IntersectionObserverView>
-      <IntersectionObserverView id={HomeSectionIds.education}>
+      </IntersectionObserverView> */}
+      {/* <IntersectionObserverView id={HomeSectionIds.education}>
         <AnimationView.FadeIn>
           <AnimationView.SlideIn>
             <ContentSection>
@@ -65,7 +63,7 @@ const HomePageContent = () => {
             </ContentSection>
           </AnimationView.SlideIn>
         </AnimationView.FadeIn>
-      </IntersectionObserverView>
+      </IntersectionObserverView> */}
       <IntersectionObserverView id={HomeSectionIds.projects}>
         <AnimationView.FadeIn>
           <AnimationView.SlideIn>
@@ -95,7 +93,6 @@ const HomePage = ({ }: IHomePage) => {
     <HomeContext.Provider>
       <div className='w-screen h-screen bg-bg-gradient'>
         {themeData?.theme?.key === "dark" && <Animates.CursorShadow />}
-        <Animates.CursorCustom />
         <VideoBackground
           id='page-background'
           classes={{

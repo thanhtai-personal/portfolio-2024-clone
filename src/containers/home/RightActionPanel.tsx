@@ -60,7 +60,7 @@ export const RightActionPanel = () => {
                   <div></div>
                 </MenuButton>
               </div>
-              <div className='flex flex-col justify-start items-center'>
+              <div className='flex flex-col justify-start items-start'>
                 <LanguageSetting
                   classes={{
                     container: 'flex h-fit mx-2 my-2 lg:my-0 lg:hidden',

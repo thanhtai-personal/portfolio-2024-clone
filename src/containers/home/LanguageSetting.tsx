@@ -9,7 +9,7 @@ export const LanguageSetting = ({
 }) => {
 
   return (
-    <div className={`flex flex-row justify-end items-start ${classes?.container}`}>
+    <div className={`flex flex-row justify-center items-center ${classes?.container}`}>
       <MultiLanguageButton />
     </div>
   )

@@ -17,7 +17,6 @@ import { SocialIcons } from './SocialIcons';
 import preloadImage from "@/assets/images/preload-image.jpg"
 import { HomeSectionIds } from "@/context/home";
 import { FaDownload } from 'react-icons/fa';
-import { GlowingLine } from '@/components/animates/GlowingLight';
 
 export const Banner = () => {
   const themeData = ThemeContext.useDataContext();
@@ -26,24 +25,7 @@ export const Banner = () => {
 
   const content =
     <div className='relative w-full h-full'>
-      {/* {themeData?.theme?.key === "dark" && <div className='absolute pointer-events-none opacity-0 top-0 left-0 bg-text animate-shoot_y animate-duration-[10s] animate-delay-[300ms]'>
-        <GlowingLine id="hor-line" className='w-screen h-2' />
-      </div>} */}
-      {themeData?.theme?.key === "dark" && <div className='absolute pointer-events-none opacity-0 top-0 left-0 bg-text animate-shoot_x animate-duration-[3s]'>
-        <GlowingLine id="ver-line" className='w-[1000vw] h-1 rotate-90 -translate-x-[50%]' />
-      </div>}
-      {themeData?.theme?.key === "dark" && <div className='absolute pointer-events-none opacity-0 top-0 left-0 bg-text animate-shoot_x animate-duration-[3s] animate-delay-[.2s]'>
-        <GlowingLine id="ver-line" className='w-[1000vw] h-2 rotate-90 -translate-x-[50%]' />
-      </div>}
-      {themeData?.theme?.key === "dark" && <div className='absolute pointer-events-none opacity-0 top-0 left-0 bg-text animate-shoot_x animate-duration-[3s] animate-delay-[.4s]'>
-        <GlowingLine id="ver-line" className='w-[1000vw] h-2 rotate-90 -translate-x-[50%]' />
-      </div>}
-      {themeData?.theme?.key === "dark" && <div className='absolute pointer-events-none opacity-0 top-0 left-0 bg-text animate-shoot_x animate-duration-[3s] animate-delay-[.8s]'>
-        <GlowingLine id="ver-line" className='w-[1000vw] h-3 rotate-90 -translate-x-[50%]' />
-      </div>}
-      {themeData?.theme?.key === "dark" && <div className='absolute pointer-events-none opacity-0 top-0 left-0 bg-text animate-shoot_x animate-duration-[3s] animate-delay-[1s]'>
-        <GlowingLine id="ver-line" className='w-[1000vw] h-4 rotate-90 -translate-x-[50%]' />
-      </div>}
+      <Animates.GlowingBallAnim id="ball-1" className='animation-slide_down_vh bottom-0 right-0' delay={2500} />
       <div className='flex absolute left-0 top-0 w-full h-full flex-row justify-center'>
         <ContentSection className='w-full bg-transparent'>
           <GridView
@@ -70,10 +52,10 @@ export const Banner = () => {
                 }}
               />
             </div>
-            <div className='bg-transparent flex flex-col-reverse justify-center items-end pr-10'>
+            <div className='bg-transparent flex flex-col justify-start items-end pr-10'>
               <LanguageSetting
                 classes={{
-                  container: 'flex h-fit mx-2 my-2 lg:my-0 hidden lg:flex',
+                  container: 'hidden lg:flex',
                 }}
               />
             </div>
@@ -81,10 +63,8 @@ export const Banner = () => {
             <div className='bg-transparent'></div>
             <div className='bg-transparent flex justify-center items-start lg:items-center col-span-2'>
               <div className='bg-transparent p-2 flex flex-col justify-start items-center'>
-                <AnimationView.SlideLTR delay={2000}>
-                  <BannerAvartar classes={{ container: ' flex lg:hidden' }} />
-                </AnimationView.SlideLTR>
-                <AnimationView.TextAppearance delay={2000}>
+                <BannerAvartar classes={{ container: ' flex lg:hidden' }} />
+                <AnimationView.TextAppearance delay={2500}>
                   <EczarText
                     content='Sr. Full stack JS developer'
                     className='hidden sm:flex text-center mt-6'

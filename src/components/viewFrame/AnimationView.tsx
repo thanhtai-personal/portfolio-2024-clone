@@ -36,6 +36,11 @@ export namespace AnimationView {
     return <div id={id} className={` ${isDisplay ? "animate-slide_ltr" :  "hidden"} ${className}`}>{children}</div>;
   };
 
+  export const SlideDown = ({ children, className, id, delay }: IAnimationView) => {
+    const isDisplay = useDelayedDisplay(delay);
+    return <div id={id} className={` ${isDisplay ? "animate-slide_down" :  "hidden"} ${className}`}>{children}</div>;
+  };
+
   export const Bird = ({ children, className, id, disabled, delay }: IAnimationView) => {
     const isDisplay = useDelayedDisplay(delay);
     return <div id={id} className={`${isDisplay && !disabled ? `animate-bird ${className}` : "hidden"} `}>{children}</div>;
