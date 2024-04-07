@@ -12,7 +12,7 @@ import { SkillItem, skillData } from './Skills';
 import { ReactNode, useMemo, useRef, useState } from 'react';
 import defaultImage from '@/assets/images/default_image.jpg';
 import { HomeActionType, HomeContext, HomeSectionIds } from '@/context/home';
-import { BsCaretDownFill } from 'react-icons/bs';
+import { BsCaretDownFill, BsCaretUpFill } from 'react-icons/bs';
 
 export interface Project {
   id: number;
@@ -126,11 +126,11 @@ export const Projects = () => {
             />
           </div>
         </div>
-        <div className='absolute bottom-0 left-[45%]'>
+        <div className='absolute top-0 left-[45%]'>
           <AnimationView.FadeIn delay={100}>
-            <div className='flex w-full h-full justify-center items-end'>
+            <div className='flex w-full h-full justify-center items-start'>
               <div className='z-40'>
-                <Animates.RippleButton className='w-32 h-16 mb-4 flex flex-col items-center justify-center cursor-pointer text-red-500' id="project-section-btn"
+                <Animates.RippleButton className='w-32 h-16 mb-4 flex flex-col items-center justify-center cursor-pointer' id="project-section-btn"
                   onClick={() => {
                     if (animationRef && animationRef.current) {
                       animationRef.current.triggerQuitAnimate("animate-disappear_slide");
@@ -146,8 +146,8 @@ export const Projects = () => {
                     }, 700)
                   }}
                 >
+                  <BsCaretUpFill className='w-4 h-4' />
                   {t("Home")}
-                  <BsCaretDownFill className='w-4 h-4' />
                 </Animates.RippleButton>
               </div>
             </div>
