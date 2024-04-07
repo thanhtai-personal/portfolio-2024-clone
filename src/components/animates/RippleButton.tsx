@@ -38,7 +38,7 @@ export const RippleButton = ({ children, className, onClick, id, style }: {
   }
 
   return (
-    <button style={style || {}} onClick={handleClick} id={id} className={`ripleBtn ${className}`}>{
+    <button style={style || {}} onClick={handleClick} id={id} className={`ripleBtn cursor-pointer ${className}`}>{
       children
     }</button>
   )

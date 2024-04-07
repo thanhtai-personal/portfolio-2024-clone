@@ -21,10 +21,12 @@ import { ThemeContext } from '@/context/theme';
 export interface IHomePage { }
 
 const HomePageContent = () => {
+  const homeData = HomeContext.useDataContext();
+
   return (
     <AnimationView.FadeIn
       id='scroll-container'
-      className='bg-transparent w-screen h-screen m-0 p-0 overflow-x-hidden'
+      className='bg-transparent relative w-screen h-screen m-0 p-0 overflow-x-hidden'
     >
       {/* <RightActionPanel /> */}
       <Banner />
@@ -64,16 +66,10 @@ const HomePageContent = () => {
           </AnimationView.SlideIn>
         </AnimationView.FadeIn>
       </IntersectionObserverView> */}
-      <IntersectionObserverView id={HomeSectionIds.projects}>
-        <AnimationView.FadeIn>
-          <AnimationView.SlideIn>
-            <ContentSection>
-              <Projects />
-            </ContentSection>
-          </AnimationView.SlideIn>
-        </AnimationView.FadeIn>
-      </IntersectionObserverView>
-      <Footer className='w-full h-4 relative'>
+      {/* <IntersectionObserverView id={HomeSectionIds.projects}> */}
+      {homeData?.activeSection === HomeSectionIds.projects && <Projects />}
+      {/* </IntersectionObserverView> */}
+      {/* <Footer className='w-full h-4 relative'>
         <div className='absolute w-full h-full left-0 top-0 rounded-t-lg'>
           <div className='w-full h-full flex flex-row items-end justify-center'>
             <div className='text-xs text-gray-600 font-mono font-bold w-full text-center justify-center items-center h-4 bg-[rgba(255,100,125,0.25)] dark:bg-[rgba(0,15,5,0.7)]'>
@@ -81,7 +77,7 @@ const HomePageContent = () => {
             </div>
           </div>
         </div>
-      </Footer>
+      </Footer> */}
     </AnimationView.FadeIn>
   );
 };

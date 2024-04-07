@@ -15,13 +15,13 @@ import { ThemeContext } from '@/context/theme';
 import { useTranslate } from '@/hooks/useTranslate';
 import { SocialIcons } from './SocialIcons';
 import preloadImage from "@/assets/images/preload-image.jpg"
-import { HomeSectionIds } from "@/context/home";
+import { HomeActionType, HomeContext, HomeSectionIds } from "@/context/home";
 import { FaDownload } from 'react-icons/fa';
-import { goToSection } from '@/utils/index';
+import { BsCaretDownFill } from 'react-icons/bs';
 
 export const Banner = () => {
   const themeData = ThemeContext.useDataContext();
-
+  const homeDispatcher = HomeContext.useDataDispatchContext();
   const { t } = useTranslate();
 
   const content =
@@ -108,24 +108,35 @@ export const Banner = () => {
               <BannerAvartar classes={{ container: ' hidden lg:flex' }} />
             </div>
 
-            <div className='bg-transparent hidden lg:flex justify-start items-end p-2'>
-              <AnimationView.FadeInLTR delay={3000}>
-                <UserInfo />
-              </AnimationView.FadeInLTR>
-            </div>
-            <div className='bg-transparent col-span-2 flex flex-row justify-center '>
-              <div className='flex w-full h-full justify-center items-end'>
-                <div className='z-40'>
-                  <Animates.RippleButton className='w-32 h-12 cursor-pointer bg-red-400' id="project-section-btn"
-                    onClick={() => goToSection("projects")}
-                  >
-                    {t("Projects")}
-                  </Animates.RippleButton>
-                </div>
+            <div className='bg-transparent'>
+              <div className='bg-transparent hidden lg:flex justify-start items-end p-2'>
+                <AnimationView.FadeInLTR delay={3000}>
+                  <UserInfo />
+                </AnimationView.FadeInLTR>
               </div>
             </div>
-            <div className='bg-transparent p-2'>
 
+            <div className='bg-transparent col-span-2 flex flex-row justify-center '>
+              <AnimationView.FadeIn delay={4000}>
+                <div className='flex w-full h-full justify-center items-end'>
+                  <div className='z-40'>
+                    <Animates.RippleButton className='w-32 h-16 flex flex-col items-center justify-center cursor-pointer text-red-500' id="project-section-btn"
+                      onClick={() => homeDispatcher &&
+                        homeDispatcher({
+                          type: HomeActionType.updateActiveSection,
+                          payload: {
+                            value: HomeSectionIds.projects,
+                          },
+                        })}
+                    >
+                      {t("Projects")}
+                      <BsCaretDownFill className='w-4 h-4' />
+                    </Animates.RippleButton>
+                  </div>
+                </div>
+              </AnimationView.FadeIn>
+            </div>
+            <div className='bg-transparent p-2'>
             </div>
           </GridView>
         </ContentSection>

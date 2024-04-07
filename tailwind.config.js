@@ -258,6 +258,10 @@ module.exports = {
           "0%": { transform: "translateY(-450%)" },
           "100%": {}
         },
+        slide_up: {
+          "0%": { transform: "translateY(100vh)" },
+          "100%": {}
+        },
         slide_down_vh: {
           "0%": { transform: "translateY(-100vh)" },
           "100%": {}
@@ -322,6 +326,16 @@ module.exports = {
           "100%": {
           },
         },
+        disappear_slide: {
+          "0%": {
+            transform: "translateY(0)",
+            // opacity: 1,
+          },
+          "100%": {
+            // opacity: 0,
+            transform: "translateY(100vh)"
+          },
+        },
         space_appear: {
           "0%": {
             transform: "scale3d(0.1, 0.1, 0.1)",
@@ -358,10 +372,12 @@ module.exports = {
         text_appear: "text_appear 1.2s ease-in-out",
         sub_text_appear: "sub_text_appear 1.2s ease-in-out",
         slide_down: "slide_down 2s ease-in-out",
+        slide_up: "slide_up 1s ease-in-out",
         slide_ltr: "slide_ltr 2s ease-in-out",
         slide_down_vh: "slide_down_vh .5s ease-in-out",
         rotate: "rotate .5s ease-in-out",
-        space_appear: "space_appear 1s ease-in-out"
+        space_appear: "space_appear 1s ease-in-out",
+        disappear_slide: "disappear_slide .7s forwards ease-in-out",
       },
       backgroundImage: {
         "bg-gradient": "var(--gradient)"

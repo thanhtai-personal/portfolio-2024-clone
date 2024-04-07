@@ -1,13 +1,19 @@
 import {
+  Animates,
+  AnimationView,
   IListItem,
   LazyLoadImage,
   ListView,
+  ScreenSection,
   TitleText,
 } from '@/components/index';
 import { useTranslate } from '@/hooks/index';
 import { SkillItem, skillData } from './Skills';
-import { ReactNode, useMemo } from 'react';
+import { ReactNode, useMemo, useState } from 'react';
 import defaultImage from '@/assets/images/default_image.jpg';
+import { HomeActionType, HomeContext, HomeSectionIds } from '@/context/home';
+import { CursorShadow } from '@/components/animates/CursorShadow';
+import { BsCaretDownFill } from 'react-icons/bs';
 
 export interface Project {
   id: number;
@@ -47,6 +53,8 @@ const experienceData: SideProjectItem[] = [
 ];
 
 export const Projects = () => {
+  const [prepareQuit, setPrepareQuit] = useState(false);
+  const homeDispatcher = HomeContext.useDataDispatchContext();
   const { t } = useTranslate();
 
   const experienceItems: IListItem[] = useMemo(() => {
@@ -92,24 +100,59 @@ export const Projects = () => {
           </div>
         ),
         isActive: false,
-        onClick: (_item?: IListItem) => {},
-        onHover: (_item?: IListItem) => {},
+        onClick: (_item?: IListItem) => { },
+        onHover: (_item?: IListItem) => { },
       } as IListItem;
     });
   }, []);
 
   return (
-    <div className='w-full px-2 py-4'>
-      <TitleText content='Projects' />
-      <div className='w-full flex flex-col italic text-text mt-3 p-4  pr-6 rounded-lg'>
-        <ListView
-          unstyled
-          classes={{
-            container: 'w-full px-2',
-          }}
-          items={experienceItems}
-        />
-      </div>
-    </div>
+    <AnimationView.SlideUp quitAnimate={prepareQuit ? "animate-disappear_slide" : ""} className={`
+      absolute z-[70] w-screen h-screen overflow-auto bg-red-300 top-0 left-0
+    `}>
+      <ScreenSection
+        className='flex flex-row justify-center items-center bg-cover shadow-lg rounded-b-lg'
+        id={HomeSectionIds.banner}
+        overflowHidden
+      >
+        <div className='w-full px-2 py-4'>
+          <TitleText content='Projects' />
+          <div className='w-full flex flex-col italic text-text mt-3 p-4  pr-6 rounded-lg'>
+            <ListView
+              unstyled
+              classes={{
+                container: 'w-full px-2',
+              }}
+              items={experienceItems}
+            />
+          </div>
+        </div>
+        <div className='absolute bottom-0 left-[45%]'>
+          <AnimationView.FadeIn delay={100}>
+            <div className='flex w-full h-full justify-center items-end'>
+              <div className='z-40'>
+                <Animates.RippleButton className='w-32 h-16 flex flex-col items-center justify-center cursor-pointer text-red-500' id="project-section-btn"
+                  onClick={() => {
+                    setPrepareQuit(true);
+                    setTimeout(() => {
+                      homeDispatcher &&
+                        homeDispatcher({
+                          type: HomeActionType.updateActiveSection,
+                          payload: {
+                            value: HomeSectionIds.banner,
+                          },
+                        })
+                    }, 1000)
+                  }}
+                >
+                  {t("Home")}
+                  <BsCaretDownFill className='w-4 h-4' />
+                </Animates.RippleButton>
+              </div>
+            </div>
+          </AnimationView.FadeIn>
+        </div>
+      </ScreenSection>
+    </AnimationView.SlideUp>
   );
 };

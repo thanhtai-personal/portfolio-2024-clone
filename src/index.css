@@ -485,9 +485,6 @@ a {
 .ripleBtn {
   border: none;
   outline: none;
-
-  /* We need this to position
-                span inside button */
   position: relative;
   overflow: hidden;
   box-shadow: 6px 7px 40px -4px rgba(0, 0, 0, 0.2);
@@ -496,7 +493,6 @@ a {
 .ripleBtn span {
   position: absolute;
   border-radius: 50%;
-  /* To make it round */
   background-color: rgba(0, 0, 0, 0.3);
 
   width: 100px;
@@ -522,7 +518,7 @@ a {
   }
 }
 
-#cursor-shadow.wrapper {
+#custom-cursor-shadow.wrapper {
   height: 100vh;
   background-image: url("https://cs4.pikabu.ru/post_img/big/2016/05/14/11/1463253214123152134.jpg");
   background-size: cover;
@@ -530,7 +526,7 @@ a {
   overflow: hidden;
 }
 
-#cursor-shadow .shadow {
+#custom-cursor-shadow .shadow {
   position: absolute;
   width: 200vw;
   height: 200vh;
