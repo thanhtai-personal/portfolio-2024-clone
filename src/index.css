@@ -491,6 +491,12 @@ a {
   box-shadow: 6px 7px 40px -4px rgba(0, 0, 0, 0.2);
 }
 
+.ripleBtn:hover {
+  background: rgba(175, 85, 220, 0.5);
+  transition-duration: 0.25s;
+  color: white;
+}
+
 .ripleBtn span {
   position: absolute;
   border-radius: 50%;
@@ -598,7 +604,7 @@ a {
   }
 }
 
-/* WATTER BUTTON */
+/* WATER BUTTON */
 .waterButton {
   position:relative;
   padding: 10px 20px;  
@@ -695,4 +701,85 @@ a {
     transform: translate(0, -66.666%);
   }
 }
-/* WATTER BUTTON */
+/* WATER BUTTON */
+
+/* Water Text */
+.waterText .content {
+	position: relative;
+}
+
+.waterText .content span {
+	color: #fff;
+	position: absolute;
+}
+
+.waterText .content span:nth-child(1) {
+	color: transparent;
+	-webkit-text-stroke: 2px #2B6C6E;
+}
+
+.waterText .content span:nth-child(2) {
+	color: #2B6C6E;
+	animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+	0%,
+	100% {
+		clip-path: polygon(
+			0% 45%,
+			16% 44%,
+			33% 50%,
+			54% 60%,
+			70% 61%,
+			84% 59%,
+			100% 52%,
+			100% 100%,
+			0% 100%
+		);
+	}
+
+	50% {
+		clip-path: polygon(
+			0% 60%,
+			15% 65%,
+			34% 66%,
+			51% 62%,
+			67% 50%,
+			84% 45%,
+			100% 46%,
+			100% 100%,
+			0% 100%
+		);
+	}
+}
+
+/* Water Text */
+
+/* Marquee content */
+.marquee {
+  display: flex ;
+  white-space: nowrap ;
+  animation-name: marquee-content ;
+  animation-duration: 5s ;
+  animation-iteration-count: infinite ;
+  animation-timing-function: linear ;
+}
+
+.marquee:hover {
+  animation-play-state: paused ;
+}
+
+.marquee__item {
+  padding: 5px 15px 5px 15px ;
+}
+
+@keyframes marquee-content {
+	from {
+		transform: translateX( 0% );
+	}
+	to {
+		transform: translateX( -100% );
+	}
+}
+/* Marquee content */

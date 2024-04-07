@@ -9,10 +9,10 @@ import {
 } from '@/components/index';
 import { AnimationRef, useTranslate } from '@/hooks/index';
 import { SkillItem, skillData } from './Skills';
-import { ReactNode, useMemo, useRef, useState } from 'react';
+import { ReactNode, useMemo, useRef } from 'react';
 import defaultImage from '@/assets/images/default_image.jpg';
 import { HomeActionType, HomeContext, HomeSectionIds } from '@/context/home';
-import { BsCaretDownFill, BsCaretUpFill } from 'react-icons/bs';
+import { BsCaretUpFill } from 'react-icons/bs';
 
 export interface Project {
   id: number;
@@ -30,26 +30,6 @@ export interface SideProjectItem {
   projects?: Project[];
   skills?: SkillItem[];
 }
-
-const experienceData: SideProjectItem[] = [
-  {
-    id: 171,
-    site: 'https://www.hptool.vn/',
-    description:
-      'HP Tool — Online Shopping is a learning project of mine, aimed at utilizing Next.js to construct an e-commerce website. Data is crawled through the Cheerio tool and stored in an Atlas database powered by MongoDB. The user interface comprises a products page, showcasing and facilitating the search of all available products. Additionally, an admin page is included to manage operations such as posting new content or editing crawled data.',
-    projectName: 'HP Tool',
-    projectLogo:
-      'https://firebasestorage.googleapis.com/v0/b/hptool.appspot.com/o/images%2Fhplogo_full.png?alt=media&token=1a55da38-c7ec-4c0e-bd71-18f68ed7134d',
-    skills: [
-      skillData['ReactJS'],
-      skillData['NextJS'],
-      skillData['Vercel'],
-      skillData['MongoDB'],
-      skillData['fireBase'],
-      skillData['cheerioCrawler'],
-    ],
-  },
-];
 
 export const Projects = () => {
   const animationRef = useRef<AnimationRef>(null);
@@ -126,7 +106,7 @@ export const Projects = () => {
             />
           </div>
         </div>
-        <div className='absolute top-0 left-[45%]'>
+        <div className='absolute top-0 left-0 w-full justify-center'>
           <AnimationView.FadeIn delay={100}>
             <div className='flex w-full h-full justify-center items-start'>
               <div className='z-40'>
@@ -157,3 +137,25 @@ export const Projects = () => {
     </AnimationView.SlideUp>
   );
 };
+
+
+
+var experienceData: SideProjectItem[] = [
+  {
+    id: 1,
+    site: 'https://www.hptool.vn/',
+    description:
+      'HP Tool — Online Shopping is a learning project of mine, aimed at utilizing Next.js to construct an e-commerce website. Data is crawled through the Cheerio tool and stored in an Atlas database powered by MongoDB. The user interface comprises a products page, showcasing and facilitating the search of all available products. Additionally, an admin page is included to manage operations such as posting new content or editing crawled data.',
+    projectName: 'HP Tool',
+    projectLogo:
+      'https://firebasestorage.googleapis.com/v0/b/hptool.appspot.com/o/images%2Fhplogo_full.png?alt=media&token=1a55da38-c7ec-4c0e-bd71-18f68ed7134d',
+    skills: [
+      skillData['ReactJS'],
+      skillData['NextJS'],
+      skillData['Vercel'],
+      skillData['MongoDB'],
+      skillData['fireBase'],
+      skillData['cheerioCrawler'],
+    ],
+  },
+];

@@ -49,10 +49,10 @@ export const Banner = () => {
             </div>
             <div className='bg-transparent flex flex-row justify-end items-start pr-2'>
               <div className='flex flex-row w-fit'>
-                <div>
+                <div className='flex justify-center items-center'>
                   <LanguageSetting classes={{ container: "mx-2" }} />
                 </div>
-                <div>
+                <div className='flex justify-center items-center'>
                   <ThemeSettingBoard classes={{ container: 'flex relative my-2 items-start' }} />
                 </div>
               </div>
@@ -63,13 +63,15 @@ export const Banner = () => {
               <div className='bg-transparent p-2 flex flex-col justify-start items-center'>
                 <BannerAvartar classes={{ container: ' flex lg:hidden' }} />
                 <AnimationView.TextAppearance delay={3000}>
-                  <EczarText
+                  <Animates.WaterText
                     content='Sr. Full stack JS developer'
-                    className='hidden sm:flex text-center mt-6'
+                    className='hidden sm:flex text-center mb-8'
+                    textClass=' text-[2xl] lg:text-[3rem] font-bold'
                   />
-                  <EczarText
+                  <Animates.WaterText
                     content='Sr. JS developer'
-                    className='flex sm:hidden text-center mt-6'
+                    className='flex sm:hidden text-center mb-8'
+                    textClass=' text-[2xl] lg:text-[3rem] font-bold'
                   />
                   <div className='text-text text-1xl lg:text-2xl whitespace-normal text-wrap text-center mt-4 lg:mr-6'>
                     {t(
