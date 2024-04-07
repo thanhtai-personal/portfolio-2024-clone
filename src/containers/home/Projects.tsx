@@ -7,12 +7,11 @@ import {
   ScreenSection,
   TitleText,
 } from '@/components/index';
-import { useTranslate } from '@/hooks/index';
+import { AnimationRef, useTranslate } from '@/hooks/index';
 import { SkillItem, skillData } from './Skills';
-import { ReactNode, useMemo, useState } from 'react';
+import { ReactNode, useMemo, useRef, useState } from 'react';
 import defaultImage from '@/assets/images/default_image.jpg';
 import { HomeActionType, HomeContext, HomeSectionIds } from '@/context/home';
-import { CursorShadow } from '@/components/animates/CursorShadow';
 import { BsCaretDownFill } from 'react-icons/bs';
 
 export interface Project {
@@ -53,7 +52,7 @@ const experienceData: SideProjectItem[] = [
 ];
 
 export const Projects = () => {
-  const [prepareQuit, setPrepareQuit] = useState(false);
+  const animationRef = useRef<AnimationRef>(null);
   const homeDispatcher = HomeContext.useDataDispatchContext();
   const { t } = useTranslate();
 
@@ -107,13 +106,12 @@ export const Projects = () => {
   }, []);
 
   return (
-    <AnimationView.SlideUp quitAnimate={prepareQuit ? "animate-disappear_slide" : ""} className={`
+    <AnimationView.SlideUp ref={animationRef} className={`
       absolute z-[70] w-screen h-screen overflow-auto bg-red-300 top-0 left-0
     `}>
       <ScreenSection
         className='flex flex-row justify-center items-center bg-cover shadow-lg rounded-b-lg'
         id={HomeSectionIds.banner}
-        overflowHidden
       >
         <div className='w-full px-2 py-4'>
           <TitleText content='Projects' />
@@ -133,7 +131,9 @@ export const Projects = () => {
               <div className='z-40'>
                 <Animates.RippleButton className='w-32 h-16 flex flex-col items-center justify-center cursor-pointer text-red-500' id="project-section-btn"
                   onClick={() => {
-                    setPrepareQuit(true);
+                    if (animationRef && animationRef.current) {
+                      animationRef.current.triggerQuitAnimate("animate-disappear_slide");
+                    }
                     setTimeout(() => {
                       homeDispatcher &&
                         homeDispatcher({
@@ -142,7 +142,7 @@ export const Projects = () => {
                             value: HomeSectionIds.banner,
                           },
                         })
-                    }, 1000)
+                    }, 700)
                   }}
                 >
                   {t("Home")}

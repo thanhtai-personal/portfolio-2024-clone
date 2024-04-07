@@ -1,5 +1,5 @@
-import { ReactNode } from 'react';
-import { useDelayedDisplay } from "@/hooks/index"
+import { ReactNode, forwardRef } from 'react';
+import { useDelayedDisplay, useAnimationWrapperRef, AnimationRef } from "@/hooks/index"
 
 export interface IAnimationView {
   children: ReactNode;
@@ -8,57 +8,74 @@ export interface IAnimationView {
   duration?: number;
   delay?: number;
   disabled?: boolean;
-  quitAnimate?: string;
 }
 
 export namespace AnimationView {
-  export const FadeInRTL = ({ children, className, id, delay }: IAnimationView) => {
+  export const FadeInRTL = forwardRef<AnimationRef, IAnimationView>(({ children, className, id, delay }: IAnimationView, ref) => {
     const isDisplay = useDelayedDisplay(delay);
-    return <div id={id} className={`${isDisplay ? "animate-fade_in_rtl" : "hidden"} ${!isDisplay && "hidden"} ${className}`}>{children}</div>;
-  };
+    const wrapperRef = useAnimationWrapperRef(ref);
+    return <div id={id} ref={wrapperRef} className={`${isDisplay ? "animate-fade_in_rtl" : "hidden"} ${!isDisplay && "hidden"} ${className}`}>{children}</div>;
+  });
 
-  export const FadeIn = ({ children, className, id, delay }: IAnimationView) => {
+  export const FadeIn = forwardRef<AnimationRef, IAnimationView>(({ children, className, id, delay }: IAnimationView, ref) => {
     const isDisplay = useDelayedDisplay(delay);
-    return <div id={id} className={`${isDisplay ? "animate-fade_in" : "hidden"} ${className}`}>{children}</div>;
-  };
+    const wrapperRef = useAnimationWrapperRef(ref);
+    return <div id={id} ref={wrapperRef} className={`${isDisplay ? "animate-fade_in" : "hidden"} ${className}`}>{children}</div>;
+  });
 
-  export const FadeInLTR = ({ children, className, id, delay }: IAnimationView) => {
+  export const FadeInLTR = forwardRef<AnimationRef, IAnimationView>(({ children, className, id, delay }: IAnimationView, ref) => {
     const isDisplay = useDelayedDisplay(delay);
-    return <div id={id} className={`${isDisplay ? "animate-fade_in_ltr" : "hidden"} ${className}`}>{children}</div>;
-  };
+    const wrapperRef = useAnimationWrapperRef(ref);
+    return <div id={id} ref={wrapperRef} className={`${isDisplay ? "animate-fade_in_ltr" : "hidden"} ${className}`}>{children}</div>;
+  });
 
-  export const SlideIn = ({ children, className, id, delay }: IAnimationView) => {
+  export const SlideIn = forwardRef<AnimationRef, IAnimationView>(({ children, className, id, delay }: IAnimationView, ref) => {
     const isDisplay = useDelayedDisplay(delay);
-    return <div id={id} className={`${isDisplay ? "animate-slide_in" : "hidden"} ${className}`}>{children}</div>;
-  };
+    const wrapperRef = useAnimationWrapperRef(ref);
+    return <div id={id} ref={wrapperRef} className={`${isDisplay ? "animate-slide_in" : "hidden"} ${className}`}>{children}</div>;
+  });
 
-  export const SlideLTR = ({ children, className, id, delay }: IAnimationView) => {
+  export const SlideLTR = forwardRef<AnimationRef, IAnimationView>(({ children, className, id, delay }: IAnimationView, ref) => {
     const isDisplay = useDelayedDisplay(delay);
-    return <div id={id} className={` ${isDisplay ? "animate-slide_ltr" : "hidden"} ${className}`}>{children}</div>;
-  };
+    const wrapperRef = useAnimationWrapperRef(ref);
+    return <div id={id} ref={wrapperRef} className={` ${isDisplay ? "animate-slide_ltr" : "hidden"} ${className}`}>{children}</div>;
+  });
 
-  export const SlideDown = ({ children, className, id, delay }: IAnimationView) => {
+  export const SlideDown = forwardRef<AnimationRef, IAnimationView>(({ children, className, id, delay }: IAnimationView, ref) => {
     const isDisplay = useDelayedDisplay(delay);
-    return <div id={id} className={` ${isDisplay ? "animate-slide_down" : "hidden"} ${className}`}>{children}</div>;
-  };
+    const wrapperRef = useAnimationWrapperRef(ref);
+    return <div id={id} ref={wrapperRef} className={` ${isDisplay ? "animate-slide_down" : "hidden"} ${className}`}>{children}</div>;
+  });
 
-  export const SlideUp = ({ children, className, id, delay, quitAnimate }: IAnimationView) => {
+  export const SlideUp = forwardRef<AnimationRef, IAnimationView>(({ children, className = '', id = '', delay = 0 }, ref) => {
     const isDisplay = useDelayedDisplay(delay);
-    return <div id={id} className={` ${!!quitAnimate ? quitAnimate : isDisplay ? `animate-slide_up ${className}` : "hidden"}`}>{children}</div>;
-  };
+    const wrapperRef = useAnimationWrapperRef(ref);
+    return (
+      <div
+        id={id}
+        ref={wrapperRef}
+        className={` ${isDisplay ? `animate-slide_up ${className}` : 'hidden'}`}
+      >
+        {children}
+      </div>
+    );
+  });
 
-  export const Bird = ({ children, className, id, disabled, delay }: IAnimationView) => {
+  export const Bird = forwardRef<AnimationRef, IAnimationView>(({ children, className, id, disabled, delay }: IAnimationView, ref) => {
     const isDisplay = useDelayedDisplay(delay);
-    return <div id={id} className={`${isDisplay && !disabled ? `animate-bird ${className}` : "hidden"} `}>{children}</div>;
-  };
+    const wrapperRef = useAnimationWrapperRef(ref);
+    return <div id={id} ref={wrapperRef} className={`${isDisplay && !disabled ? `animate-bird ${className}` : "hidden"} `}>{children}</div>;
+  });
 
-  export const TextAppearance = ({ children, className, id, disabled, delay }: IAnimationView) => {
+  export const TextAppearance = forwardRef<AnimationRef, IAnimationView>(({ children, className, id, disabled, delay }: IAnimationView, ref) => {
     const isDisplay = useDelayedDisplay(delay);
-    return <div id={id} className={`${isDisplay && !disabled ? "animate-text_appear" : "hidden"} ${className}`}>{children}</div>;
-  };
+    const wrapperRef = useAnimationWrapperRef(ref);
+    return <div id={id} ref={wrapperRef} className={`${isDisplay && !disabled ? "animate-text_appear" : "hidden"} ${className}`}>{children}</div>;
+  });
 
-  export const SpaceAppear = ({ children, className, id, disabled, delay }: IAnimationView) => {
+  export const SpaceAppear = forwardRef<AnimationRef, IAnimationView>(({ children, className, id, disabled, delay }: IAnimationView, ref) => {
     const isDisplay = useDelayedDisplay(delay);
-    return <div id={id} className={`${isDisplay && !disabled ? "animate-space_appear" : "hidden"} ${className}`}>{children}</div>;
-  };
+    const wrapperRef = useAnimationWrapperRef(ref);
+    return <div id={id} ref={wrapperRef} className={`${isDisplay && !disabled ? "animate-space_appear" : "hidden"} ${className}`}>{children}</div>;
+  });
 }

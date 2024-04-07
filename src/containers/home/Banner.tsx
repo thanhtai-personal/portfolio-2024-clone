@@ -147,7 +147,6 @@ export const Banner = () => {
     <ScreenSection
       className='flex flex-row justify-center items-center bg-cover shadow-lg rounded-b-lg'
       id={HomeSectionIds.banner}
-      overflowHidden
     >
       {themeData?.theme?.key != "dark" ? <VideoBackground
         id='banner-background'

@@ -329,11 +329,9 @@ module.exports = {
         disappear_slide: {
           "0%": {
             transform: "translateY(0)",
-            // opacity: 1,
           },
           "100%": {
-            // opacity: 0,
-            transform: "translateY(100vh)"
+            transform: "translateY(100%)"
           },
         },
         space_appear: {
@@ -377,7 +375,7 @@ module.exports = {
         slide_down_vh: "slide_down_vh .5s ease-in-out",
         rotate: "rotate .5s ease-in-out",
         space_appear: "space_appear 1s ease-in-out",
-        disappear_slide: "disappear_slide .7s forwards ease-in-out",
+        disappear_slide: "disappear_slide .7s forwards ease-out",
       },
       backgroundImage: {
         "bg-gradient": "var(--gradient)"
