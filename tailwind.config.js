@@ -371,7 +371,7 @@ module.exports = {
         sub_text_appear: "sub_text_appear 1.2s ease-in-out",
         slide_down: "slide_down 2s ease-in-out",
         slide_up: "slide_up 1s ease-in-out",
-        slide_ltr: "slide_ltr 2s ease-in-out",
+        slide_ltr: "slide_ltr 2.5s ease-in-out",
         slide_down_vh: "slide_down_vh .5s ease-in-out",
         rotate: "rotate .5s ease-in-out",
         space_appear: "space_appear 1s ease-in-out",

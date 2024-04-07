@@ -9,7 +9,7 @@ import backgroundVideoLight from '@/assets/video/background.mp4';
 import { DevelopmentIcons } from './DevelopmentIcons';
 import { BannerAvartar } from './BannerAvartar';
 import { LanguageSetting } from './LanguageSetting';
-import { Animates, EczarText, ThemeSettingBoard } from '@/components/index';
+import { Animates, ThemeSettingBoard } from '@/components/index';
 import { UserInfo } from './UserInfo';
 import { ThemeContext } from '@/context/theme';
 import { useTranslate } from '@/hooks/useTranslate';
@@ -112,9 +112,9 @@ export const Banner = () => {
 
             <div className='bg-transparent'>
               <div className='bg-transparent hidden lg:flex justify-start items-end p-2'>
-                <AnimationView.FadeInLTR delay={3000}>
+                {/* <AnimationView.FadeInLTR delay={3000}>
                   <UserInfo />
-                </AnimationView.FadeInLTR>
+                </AnimationView.FadeInLTR> */}
               </div>
             </div>
 

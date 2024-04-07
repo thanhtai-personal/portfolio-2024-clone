@@ -19,7 +19,7 @@ export const SocialIcons = ({
     <div className={`${classes?.container} relative`}>
       <AnimationView.Bird
         disabled={disabledAnimation}
-        delay={2000}
+        delay={2600}
         className={`m-4 animate-duration-[1.5s]`}
       >
         <a
