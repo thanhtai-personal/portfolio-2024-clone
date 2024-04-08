@@ -51,6 +51,11 @@ export const BannerAvartar = ({ classes, image }: {
                     className='text-[0.5px] md:text-[1px] -translate-y-[15px] md:-translate-y-[70px] lg:-translate-y-[90px]'
                     id='banner-page'
                   />
+                  <Animates.WaterText
+                    content='Tài Trần Thanh'
+                    className='text-center'
+                    textClass='flex lg:hidden text-lg sm:text-[2xl] lg:text-[3rem] font-bold mt-20 sm:mt-4'
+                  />
                 </div>
               </div>
             </div>

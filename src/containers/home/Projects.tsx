@@ -118,7 +118,7 @@ export const Projects = () => {
               <div></div>
               <div className=' col-span-2 flex justify-center items-start'>
                 <div className='mt-16'>
-                  <TitleText content='Projects' />
+                  <TitleText content='My Projects' />
                 </div>
               </div>
               <div className='bg-transparent flex flex-row justify-end items-start pr-2'>

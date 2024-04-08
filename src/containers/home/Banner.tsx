@@ -36,15 +36,26 @@ export const Banner = () => {
               container: 'h-screen',
             }}
           >
-            <div className='bg-transparent p-2 flex flex-col'>
-              <SocialIcons
-                classes={{
-                  container:
-                    'w-full hidden lg:flex flex-row justify-start items-start',
-                }}
-              />
+            <div className='relative overflow-visible'>
+              <div className='absolute'>
+                <div className='bg-transparent p-2 flex flex-col'>
+                  <SocialIcons
+                    classes={{
+                      container:
+                        'w-full hidden lg:flex flex-col justify-start items-start',
+                    }}
+                  />
+                </div>
+              </div>
             </div>
-            <div className='w-full justify-center col-span-2'>
+            <div className='w-full justify-center items-center col-span-2'>
+              <AnimationView.FadeIn delay={3000} className='mt-14 hidden lg:block'>
+                <Animates.WaterText
+                  content='Tài Trần Thanh'
+                  className='text-center'
+                  textClass=' text-[2xl] lg:text-[3rem] font-bold'
+                />
+              </AnimationView.FadeIn>
             </div>
             <div className='bg-transparent flex flex-row justify-end items-start pr-2'>
               <div className='flex flex-row w-fit'>
@@ -55,34 +66,30 @@ export const Banner = () => {
                   <ThemeSettingBoard classes={{ container: 'flex relative my-2 items-start' }} />
                 </div>
               </div>
+
             </div>
 
-            <div className='bg-transparent'></div>
-            <div className='bg-transparent flex justify-center items-start lg:items-center col-span-2'>
+            <div className='row-span-12 bg-transparent'></div>
+            <div className='row-span-12 bg-transparent flex justify-center items-start col-span-2'>
               <div className='bg-transparent p-2 flex flex-col justify-start items-center'>
                 <BannerAvartar classes={{ container: ' flex lg:hidden' }} />
                 <AnimationView.TextAppearance delay={3000}>
-                  <Animates.WaterText
-                    content='Sr. Full stack JS developer'
-                    className='hidden sm:flex text-center mb-8'
-                    textClass=' text-[2xl] lg:text-[3rem] font-bold'
-                  />
-                  <Animates.WaterText
-                    content='Sr. JS developer'
-                    className='flex sm:hidden text-center mb-8'
-                    textClass=' text-[2xl] lg:text-[3rem] font-bold'
-                  />
-                  <div className='text-text text-1xl lg:text-2xl whitespace-normal text-wrap text-center mt-4 lg:mr-6'>
+                  <div className='text-text text-lg lg:text-xl whitespace-normal text-wrap text-center mt-4 lg:mr-6'>
                     {t(
-                      'I am passionate about crafting robust and scalable products, employing top-tier software architecture principles'
+                      "I'm a web application developer who's passionate about creating and building applications on the web platform. Outside of work, I enjoy reading fantasy novels and history. The worlds of martial arts fiction and historical stories are major sources of inspiration for me, helping me relax and learn about significant periods in human history."
                     )}
                   </div>
 
+                  <div className='text-text text-lg lg:text-xl whitespace-normal text-wrap text-center mt-4 lg:mr-6'>
+                    {t(
+                      "I'm excited to connect and share more about my interests and work with everyone!"
+                    )}
+                  </div>
                   <div className='w-full mt-6 lg:hidden'>
                     <DevelopmentIconsMobile />
                   </div>
                   <div className='flex flex-row justify-center items-center mt-6 w-full'>
-                    <div className='text-text text-1xl lg:text-2xl whitespace-nowrap mr-2'>
+                    <div className='text-text text-lg lg:text-xl whitespace-nowrap mr-2'>
                       {t(
                         'Find me at'
                       )}
@@ -105,7 +112,7 @@ export const Banner = () => {
                 </AnimationView.TextAppearance>
               </div>
             </div>
-            <div className='bg-transparent'>
+            <div className='row-span-12 bg-transparent'>
               <BannerAvartar classes={{ container: ' hidden lg:flex' }} />
             </div>
 

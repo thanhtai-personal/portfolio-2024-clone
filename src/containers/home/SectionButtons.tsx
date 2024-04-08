@@ -93,7 +93,7 @@ export const SectionButtons = ({ vertical }: { vertical?: boolean }) => {
             })
           }
         >
-          {t('Projects')}
+          {t('My Projects')}
         </Button>
       </ButtonGroup>
     </div>
