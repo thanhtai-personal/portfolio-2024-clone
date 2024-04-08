@@ -36,7 +36,7 @@ export const MultiLanguageButton = ({ }: IMultiLanguageButton) => {
             className={` cursor-pointer rounded-lg min-w-fit min-h-fit overflow-hidden hover:border-none active:border-none enabled:border-none ${key === appData?.language ? "" : "hidden"}`}
             onClick={handleChangeLanguage(getNextLanguage(key as LanguageKey))}
           >
-            <img alt={key} className=' rounded-lg' src={key === LanguageKey.vi ? vi : en} />
+            <img alt={key} className='rounded-lg w-8 h-8 lg:w-12 lg:h-12' src={key === LanguageKey.vi ? vi : en} />
           </div>
         ))}
       </div>

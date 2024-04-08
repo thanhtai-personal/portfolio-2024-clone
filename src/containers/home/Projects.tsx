@@ -4,17 +4,13 @@ import {
   ContentSection,
   GridView,
   IListItem,
-  LazyLoadImage,
   ListView,
-  ScreenSection,
   ThemeSettingBoard,
   TitleText,
-  VideoBackground,
 } from '@/components/index';
 import { AnimationRef, useTranslate } from '@/hooks/index';
-import { SkillItem, Skills, skillData } from './Skills';
+import { SkillItem, skillData } from './Skills';
 import { ReactNode, useMemo, useRef } from 'react';
-import preloadImage from '@/assets/images/preload-image.jpg';
 import { HomeActionType, HomeContext, HomeSectionIds } from '@/context/home';
 import { BsCaretUpFill } from 'react-icons/bs';
 import { LanguageSetting } from './LanguageSetting';
@@ -94,19 +90,7 @@ export const Projects = () => {
     <AnimationView.SlideUp ref={animationRef} className={`
       absolute z-[70] w-screen h-auto top-0 left-0
     `}>
-      {/* {themeData?.theme?.key === "dark" && <Animates.CursorShadow />} */}
       <div className='w-full h-screen bg-background'>
-        <VideoBackground
-          id='page-background'
-          classes={{
-            container: 'opacity-30',
-          }}
-          preloadSrc={preloadImage}
-          src='https://video.wixstatic.com/video/d47472_58cce06729c54ccb935886c4b3647274/1080p/mp4/file.mp4'
-          className='flex justify-center w-full h-full'
-        >
-          <div></div>
-        </VideoBackground>
         <div className='absolute top-0 left-0 bg-transparent w-screen h-screen overflow-auto'>
           <ContentSection
             className='flex flex-row justify-center items-center bg-cover shadow-lg rounded-b-lg'

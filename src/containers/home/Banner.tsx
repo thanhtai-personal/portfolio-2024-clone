@@ -13,7 +13,6 @@ import { Animates, LoadingPageAnim, ThemeSettingBoard } from '@/components/index
 import { ThemeContext } from '@/context/theme';
 import { useTranslate } from '@/hooks/useTranslate';
 import { SocialIcons } from './SocialIcons';
-import preloadImage from "@/assets/images/preload-image.jpg"
 import { HomeActionType, HomeContext, HomeSectionIds } from "@/context/home";
 import { FaDownload } from 'react-icons/fa';
 import { BsCaretDownFill } from 'react-icons/bs';
@@ -157,7 +156,7 @@ export const Banner = () => {
       {themeData?.theme?.key != "dark" ? <VideoBackground
         id='banner-background'
         src={backgroundVideoLight}
-        preloadSrc={preloadImage}
+        preloadSrc={""}
         className='bg-cover relative'
       >
         {content}

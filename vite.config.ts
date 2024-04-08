@@ -13,6 +13,7 @@ export default defineConfig({
   build: {
     outDir: "release/www",
     chunkSizeWarningLimit: 10240,
+    sourcemap: true,
     // modulePreload: { polyfill: true }
   },
   // server: {
