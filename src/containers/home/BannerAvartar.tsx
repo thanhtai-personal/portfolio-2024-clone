@@ -20,15 +20,15 @@ export const BannerAvartar = ({ classes, image }: {
           <div className='space-rotate-x'>
             <div
               className={`${'animate-spin_4'
-                } p-1 border-solid border-2 border-b-0 border-t-0  border-danger-200 rounded-full shadow-inner`}
+                } p-1 border-solid border-2 border-b-0 border-t-0  border-danger-200 rounded-full`}
             >
               <div
                 className={`${'animate-spin_3'
-                  } p-2 border-solid border-2 border-b-0 border-t-0  border-danger-200 rounded-full shadow-inner`}
+                  } p-2 border-solid border-2 border-b-0 border-t-0  border-danger-200 rounded-full`}
               >
                 <div
                   className={`${'animate-spin_2'
-                    } p-4 border-solid border-2 border-b-0 border-t-0  border-danger-200 rounded-full shadow-inner`}
+                    } p-4 border-solid border-2 border-b-0 border-t-0  border-danger-200 rounded-full`}
                 >
                   <div className='w-16 h-16 md:w-36 md:h-36 lg:w-48 lg:h-48 rounded-full' />
                 </div>
@@ -36,9 +36,9 @@ export const BannerAvartar = ({ classes, image }: {
             </div>
           </div>
           <div
-            className='absolute flex flex-row flex-wrap shadow-xl'
+            className='absolute flex flex-row flex-wrap'
           >
-            <div className='relative shadow-inner flex bg-transparent justify-center items-center w-16 h-16 md:w-36 md:h-36 lg:w-48 lg:h-48 rounded-full'>
+            <div className='relative flex bg-transparent justify-center items-center w-16 h-16 md:w-36 md:h-36 lg:w-48 lg:h-48 rounded-full'>
               <Animates.BlackHole className="space-rotate-x w-16 h-16 md:w-36 md:h-36 lg:w-48 lg:h-48 rounded-full" />
               <div className='absolute bg-transparent w-16 h-16 md:w-36 md:h-36 lg:w-48 lg:h-48 rounded-full'>
                 <div className='relative bg-transparent w-16 h-16 md:w-36 md:h-36 lg:w-48 lg:h-48 rounded-full -translate-y-10'>

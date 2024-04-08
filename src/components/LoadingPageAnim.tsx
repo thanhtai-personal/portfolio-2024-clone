@@ -36,24 +36,24 @@ export const LoadingPageAnim = ({ classes, image, alive }: {
           <div className='flex w-full h-full flex-row justify-center items-center'>
             <div
               className={`${'animate-spin_4'
-                } p-1 border-solid border-2 border-b-0 border-t-0  border-danger-200 rounded-full shadow-inner`}
+                } p-1 border-solid border-2 border-b-0 border-t-0  border-danger-200 rounded-full`}
             >
               <div
                 className={`${'animate-spin_3'
-                  } p-2 border-solid border-2 border-b-0 border-t-0  border-danger-200 rounded-full shadow-inner`}
+                  } p-2 border-solid border-2 border-b-0 border-t-0  border-danger-200 rounded-full`}
               >
                 <div
                   className={`${'animate-spin_2'
-                    } p-4 border-solid border-2 border-b-0 border-t-0  border-danger-200 rounded-full shadow-inner`}
+                    } p-4 border-solid border-2 border-b-0 border-t-0  border-danger-200 rounded-full`}
                 >
                   <div className='w-16 h-16 md:w-36 md:h-36 lg:w-48 lg:h-48 rounded-full' />
                 </div>
               </div>
             </div>
             <div
-              className='absolute flex flex-row flex-wrap shadow-xl'
+              className='absolute flex flex-row flex-wrap'
             >
-              <div className='relative shadow-inner flex bg-[#fff] dark:bg-[#000] justify-center items-center w-16 h-16 md:w-36 md:h-36 lg:w-48 lg:h-48 rounded-full overflow-hidden'>
+              <div className='relative flex bg-[#fff] dark:bg-[#000] justify-center items-center w-16 h-16 md:w-36 md:h-36 lg:w-48 lg:h-48 rounded-full overflow-hidden'>
                 <Animates.BlackHole className="w-16 h-16 md:w-36 md:h-36 lg:w-48 lg:h-48 rounded-full" />
                 <div className='absolute bg-transparent w-16 h-16 md:w-36 md:h-36 lg:w-48 lg:h-48 rounded-full'>
                   <div className='relative bg-transparent w-16 h-16 md:w-36 md:h-36 lg:w-48 lg:h-48 rounded-full'>
