@@ -9,6 +9,7 @@ import { BlackHole as BlackHoleComponent } from "./BlackHole";
 import { SpaceIn as SpaceInComponent } from "./SpaceIn";
 import { WaterText as WaterTextComponent } from "./WaterText";
 import { BubbleWrapper as BubbleWrapperComponent } from "./BubbleWrapper";
+import { PlasmaBall as PlasmaBallComponent } from "./PlasmaBall";
 
 export namespace Animates {
   export const GlowingJumpAnim = GlowingJump
@@ -22,4 +23,5 @@ export namespace Animates {
   export const SpaceIn = SpaceInComponent
   export const WaterText = WaterTextComponent
   export const BubbleWrapper = BubbleWrapperComponent
+  export const PlasmaBall = PlasmaBallComponent
 }

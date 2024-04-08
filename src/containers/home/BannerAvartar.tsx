@@ -41,11 +41,15 @@ export const BannerAvartar = ({ classes, image }: {
             <div className='relative flex bg-transparent justify-center items-center w-16 h-16 md:w-36 md:h-36 lg:w-48 lg:h-48 rounded-full'>
               <Animates.BlackHole className="space-rotate-x w-16 h-16 md:w-36 md:h-36 lg:w-48 lg:h-48 rounded-full" />
               <div className='absolute bg-transparent w-16 h-16 md:w-36 md:h-36 lg:w-48 lg:h-48 rounded-full'>
-                <div className='relative bg-transparent w-16 h-16 md:w-36 md:h-36 lg:w-48 lg:h-48 rounded-full -translate-y-10'>
+                <div className='relative bg-transparent w-16 h-16 md:w-36 md:h-36 lg:w-48 lg:h-48 -translate-y-10 rounded-full'>
                   <LazyLoadImage
-                    imageClass='w-16 h-16 md:w-36 md:h-36 lg:w-48 lg:h-48 rounded-full'
+                    imageClass='w-24 h-24 md:w-36 md:h-36 lg:w-48 lg:h-48'
                     src={image || avartarImage}
                     alt='avatar'
+                  />
+                  <Animates.PlasmaBall
+                    className='text-[0.5px] md:text-[1px] -translate-y-[15px] md:-translate-y-[70px] lg:-translate-y-[90px]'
+                    id='banner-page'
                   />
                 </div>
               </div>

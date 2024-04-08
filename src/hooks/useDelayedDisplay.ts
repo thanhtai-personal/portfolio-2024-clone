@@ -5,9 +5,13 @@ export const useDelayedDisplay = (delayTime?: number) => {
 
   useEffect(() => {
     if (delayTime && delayTime > 0) {
-      setTimeout(() => {
+      const timeout = setTimeout(() => {
         setIsDisplay(true);
       }, delayTime)
+
+      return () => {
+        clearTimeout(timeout);
+      }
     }
   }, [delayTime])
 

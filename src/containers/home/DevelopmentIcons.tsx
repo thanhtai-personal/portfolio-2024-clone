@@ -42,7 +42,7 @@ export const DevelopmentIcons = ({ className }: { className?: string }) => {
             className='flex flex-col justify-center items-center m-2 md:m-4 rounded-full hover:scale-110 hover:text-text-active my-2'
           >
             <TbBrandJavascript color="var(--text-color)" className='w-4 h-4 md:w-8 md:h-8' />
-            <div className='text-text-active text-nowrap text-xs'>Javascript</div>
+            <div className='text-text-active text-nowrap text-xs'>HTML/CSS/JS</div>
           </a>
         </Animates.BubbleWrapper>
       </Animates.SpaceIn>
