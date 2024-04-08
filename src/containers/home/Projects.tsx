@@ -150,7 +150,7 @@ export const Projects = () => {
               <AnimationView.FadeIn delay={100}>
                 <div className='flex w-full h-full justify-center items-start'>
                   <div className='z-40'>
-                    <Animates.RippleButton className=' pointer-events-auto w-32 h-16 mb-4 flex flex-col items-center justify-center cursor-pointer' id="project-section-btn"
+                    <Animates.RippleButton className=' pointer-events-auto mb-4 flex flex-col items-center justify-center cursor-pointer' id="project-section-btn"
                       onClick={() => {
                         if (animationRef && animationRef.current) {
                           animationRef.current.triggerQuitAnimate("animate-disappear_slide");
@@ -167,7 +167,6 @@ export const Projects = () => {
                       }}
                     >
                       <BsCaretUpFill className='w-4 h-4' />
-                      {t("Home")}
                     </Animates.RippleButton>
                   </div>
                 </div>

@@ -1,6 +1,5 @@
 const colors = require("tailwindcss/colors");
 const plugin = require('tailwindcss/plugin');
-const { transform } = require("typescript");
 
 /** @type {import("tailwindcss").Config} */
 module.exports = {
@@ -262,6 +261,10 @@ module.exports = {
           "0%": { transform: "translateY(100vh)" },
           "100%": {}
         },
+        slide_item: {
+          "0%": { transform: "translateX(100vw) translateY(-40vh)", opacity: 0 },
+          "100%": {}
+        },
         slide_down_vh: {
           "0%": { transform: "translateY(-100vh)" },
           "100%": {}
@@ -269,6 +272,12 @@ module.exports = {
         slide_ltr: {
           "0%": { transform: "translateX(-100vw)" },
           "100%": {}
+        },
+        loading_page: {
+          "0%": { transform: "translateX(-5px) translateY(0)", opacity: 0.7},
+          "25%": { transform: "translateX(0px) translateY(-5px)" },
+          "75%": { transform: "translateX(5px) translateY(0)", opacity: 0.7},
+          "100%": { transform: "translateX(0px) translateY(5px)" },
         },
         expand: {
           "0%": { height: 0 },
@@ -371,7 +380,9 @@ module.exports = {
         sub_text_appear: "sub_text_appear 1.2s ease-in-out",
         slide_down: "slide_down 2s ease-in-out",
         slide_up: "slide_up 1s ease-in-out",
+        slide_item: "slide_item 1s ease-in-out",
         slide_ltr: "slide_ltr 2.5s ease-in-out",
+        loading_page: "loading_page 1s linear infinite",
         slide_down_vh: "slide_down_vh .5s ease-in-out",
         rotate: "rotate .5s ease-in-out",
         space_appear: "space_appear 1s ease-in-out",

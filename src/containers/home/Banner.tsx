@@ -6,11 +6,10 @@ import {
   AnimationView,
 } from '@/components/viewFrame';
 import backgroundVideoLight from '@/assets/video/background.mp4';
-import { DevelopmentIcons } from './DevelopmentIcons';
+import { DevelopmentIconsMobile } from './DevelopmentIconsMobile';
 import { BannerAvartar } from './BannerAvartar';
 import { LanguageSetting } from './LanguageSetting';
-import { Animates, ThemeSettingBoard } from '@/components/index';
-import { UserInfo } from './UserInfo';
+import { Animates, LoadingPageAnim, ThemeSettingBoard } from '@/components/index';
 import { ThemeContext } from '@/context/theme';
 import { useTranslate } from '@/hooks/useTranslate';
 import { SocialIcons } from './SocialIcons';
@@ -79,8 +78,8 @@ export const Banner = () => {
                     )}
                   </div>
 
-                  <div className='w-full mt-6'>
-                    <DevelopmentIcons />
+                  <div className='w-full mt-6 lg:hidden'>
+                    <DevelopmentIconsMobile />
                   </div>
                   <div className='flex flex-row justify-center items-center mt-6 w-full'>
                     <div className='text-text text-1xl lg:text-2xl whitespace-nowrap mr-2'>
@@ -112,9 +111,6 @@ export const Banner = () => {
 
             <div className='bg-transparent'>
               <div className='bg-transparent hidden lg:flex justify-start items-end p-2'>
-                {/* <AnimationView.FadeInLTR delay={3000}>
-                  <UserInfo />
-                </AnimationView.FadeInLTR> */}
               </div>
             </div>
 
@@ -122,7 +118,7 @@ export const Banner = () => {
               <AnimationView.FadeIn delay={4000}>
                 <div className='flex w-full h-full justify-center items-end'>
                   <div className='z-40'>
-                    <Animates.RippleButton className='w-32 h-16 mb-4 flex flex-col items-center justify-center cursor-pointer' id="project-section-btn"
+                    <Animates.RippleButton className='mb-4 flex flex-col items-center justify-center cursor-pointer' id="project-section-btn"
                       onClick={() => homeDispatcher &&
                         homeDispatcher({
                           type: HomeActionType.updateActiveSection,
@@ -131,7 +127,6 @@ export const Banner = () => {
                           },
                         })}
                     >
-                      {t("Projects")}
                       <BsCaretDownFill className='w-4 h-4' />
                     </Animates.RippleButton>
                   </div>
@@ -151,6 +146,7 @@ export const Banner = () => {
       id={HomeSectionIds.banner}
       overflowHidden
     >
+      <LoadingPageAnim alive={1950} />
       {themeData?.theme?.key != "dark" ? <VideoBackground
         id='banner-background'
         src={backgroundVideoLight}

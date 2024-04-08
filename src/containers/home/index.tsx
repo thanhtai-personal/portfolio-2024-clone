@@ -1,8 +1,8 @@
 import {
-  Animates,
+  // Animates,
   AnimationView,
-  ContentSection,
-  IntersectionObserverView,
+  // ContentSection,
+  // IntersectionObserverView,
   VideoBackground,
 } from '@/components/index';
 import { Banner } from './Banner';
@@ -16,7 +16,7 @@ import { Projects } from './Projects';
 import preloadImage from '@/assets/images/preload-image.jpg';
 import { HomeContext, HomeSectionIds } from '@/context/index';
 import { useMouseWaveClicker } from '@/hooks/useMouseWaveClicker';
-import { ThemeContext } from '@/context/theme';
+// import { ThemeContext } from '@/context/theme';
 
 export interface IHomePage { }
 

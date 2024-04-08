@@ -6,7 +6,9 @@ import { RippleButton as RippleButtonComponent } from "./RippleButton";
 import { CursorCustom as CursorCustomComponent } from "./CursorCustom";
 import { CursorShadow as CursorShadowComponent } from "./CursorShadow";
 import { BlackHole as BlackHoleComponent } from "./BlackHole";
+import { SpaceIn as SpaceInComponent } from "./SpaceIn";
 import { WaterText as WaterTextComponent } from "./WaterText";
+import { BubbleWrapper as BubbleWrapperComponent } from "./BubbleWrapper";
 
 export namespace Animates {
   export const GlowingJumpAnim = GlowingJump
@@ -17,5 +19,7 @@ export namespace Animates {
   export const CursorCustom = CursorCustomComponent
   export const CursorShadow = CursorShadowComponent
   export const BlackHole = BlackHoleComponent
+  export const SpaceIn = SpaceInComponent
   export const WaterText = WaterTextComponent
+  export const BubbleWrapper = BubbleWrapperComponent
 }

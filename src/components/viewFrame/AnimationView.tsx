@@ -61,6 +61,20 @@ export namespace AnimationView {
     );
   });
 
+  export const ItemSlide = forwardRef<AnimationRef, IAnimationView>(({ children, className = '', id = '', delay = 0 }, ref) => {
+    const isDisplay = useDelayedDisplay(delay);
+    const wrapperRef = useAnimationWrapperRef(ref);
+    return (
+      <div
+        id={id}
+        ref={wrapperRef}
+        className={` ${isDisplay ? `animate-slide_item ${className}` : 'hidden'}`}
+      >
+        {children}
+      </div>
+    );
+  });
+
   export const Bird = forwardRef<AnimationRef, IAnimationView>(({ children, className, id, disabled, delay }: IAnimationView, ref) => {
     const isDisplay = useDelayedDisplay(delay);
     const wrapperRef = useAnimationWrapperRef(ref);
@@ -77,5 +91,11 @@ export namespace AnimationView {
     const isDisplay = useDelayedDisplay(delay);
     const wrapperRef = useAnimationWrapperRef(ref);
     return <div id={id} ref={wrapperRef} className={`${isDisplay && !disabled ? "animate-space_appear" : "hidden"} ${className}`}>{children}</div>;
+  });
+
+  export const LoadingPage = forwardRef<AnimationRef, IAnimationView>(({ children, className, id, delay }: IAnimationView, ref) => {
+    const isDisplay = useDelayedDisplay(delay);
+    const wrapperRef = useAnimationWrapperRef(ref);
+    return <div id={id} ref={wrapperRef} className={` ${isDisplay ? "animate-loading_page" : "hidden"} ${className}`}>{children}</div>;
   });
 }
