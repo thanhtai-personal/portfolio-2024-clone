@@ -51,7 +51,7 @@ export const Banner = () => {
             <div className='w-full justify-center items-center col-span-2'>
               <AnimationView.FadeIn delay={3000} className='mt-14 hidden lg:block'>
                 <Animates.WaterText
-                  content='Tài Trần Thanh'
+                  content='Tài Trần'
                   className='text-center'
                   textClass=' text-[2xl] lg:text-[3rem] font-bold'
                 />

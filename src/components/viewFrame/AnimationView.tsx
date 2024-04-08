@@ -20,7 +20,7 @@ export namespace AnimationView {
   export const FadeIn = forwardRef<AnimationRef, IAnimationView>(({ children, className, id, delay }: IAnimationView, ref) => {
     const isDisplay = useDelayedDisplay(delay);
     const wrapperRef = useAnimationWrapperRef(ref);
-    return <div id={id} ref={wrapperRef} className={`${isDisplay ? "animate-fade_in" : "hidden"} ${className}`}>{children}</div>;
+    return <div id={id} ref={wrapperRef} className={`${isDisplay ? `animate-fade_in ${className}` : "hidden"}`}>{children}</div>;
   });
 
   export const FadeInLTR = forwardRef<AnimationRef, IAnimationView>(({ children, className, id, delay }: IAnimationView, ref) => {
