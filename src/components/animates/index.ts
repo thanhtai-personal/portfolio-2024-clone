@@ -10,6 +10,7 @@ import { SpaceIn as SpaceInComponent } from "./SpaceIn";
 import { WaterText as WaterTextComponent } from "./WaterText";
 import { BubbleWrapper as BubbleWrapperComponent } from "./BubbleWrapper";
 import { PlasmaBall as PlasmaBallComponent } from "./PlasmaBall";
+import { TypeWriter as TypeWriterComponent } from "./TypeWriter";
 
 export namespace Animates {
   export const GlowingJumpAnim = GlowingJump
@@ -24,4 +25,5 @@ export namespace Animates {
   export const WaterText = WaterTextComponent
   export const BubbleWrapper = BubbleWrapperComponent
   export const PlasmaBall = PlasmaBallComponent
+  export const TypeWriter = TypeWriterComponent
 }

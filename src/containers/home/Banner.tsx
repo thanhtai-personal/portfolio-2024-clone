@@ -71,22 +71,40 @@ const BannerContent = () => {
             <div className='bg-transparent p-2 flex flex-col justify-start items-center'>
               <BannerAvartar classes={{ container: ' flex lg:hidden' }} />
               <AnimationView.TextAppearance delay={3000}>
-                <div className='text-text text-lg lg:text-xl whitespace-normal text-wrap text-center mt-4 lg:mr-6'>
+                <div
+                  className='text-text text-lg lg:text-xl whitespace-normal text-wrap text-center mt-4 lg:mr-6'
+                >
                   {t(
-                    "I'm a web application developer who's passionate about creating and building applications on the web platform. Outside of work, I enjoy reading fantasy novels and history. The worlds of martial arts fiction and historical stories are major sources of inspiration for me, helping me relax and learn about significant periods in human history."
+                    "I am an experienced full-stack web developer with a passion for building and developing comprehensive web applications. Apart from programming, I enjoy reading martial arts fiction and Vietnamese history."
                   )}
                 </div>
+              </AnimationView.TextAppearance>
 
-                <div className='text-text text-lg lg:text-xl whitespace-normal text-wrap text-center mt-4 lg:mr-6'>
+              <AnimationView.TextAppearance delay={3000}>
+                <div
+                  className='text-text text-lg lg:text-xl whitespace-normal text-wrap text-center mt-4 lg:mr-6'
+                >
                   {t(
                     "I'm excited to connect and share more about my interests and work with everyone!"
                   )}
                 </div>
+              </AnimationView.TextAppearance>
+
+              <AnimationView.TextAppearance delay={3000}>
                 <div className='w-full mt-6 lg:hidden'>
                   <DevelopmentIconsMobile />
                 </div>
+              </AnimationView.TextAppearance>
+
+              <AnimationView.TextAppearance delay={3000}>
                 <div className='flex flex-row justify-center items-center mt-6 w-full'>
-                  <div className='text-text text-lg lg:text-xl whitespace-nowrap mr-2'>
+                  <Animates.TypeWriter id="find-me-at"
+                    className='text-text hidden md:flex text-lg lg:text-xl whitespace-nowrap mr-2'
+                    content={t(
+                      'Find me at'
+                    )}
+                  />
+                  <div className='text-text flex md:hidden text-lg lg:text-xl whitespace-nowrap mr-2'>
                     {t(
                       'Find me at'
                     )}
