@@ -1,7 +1,5 @@
 import { Animates } from '@/components/animates';
-import { LazyLoadImage } from '@/components/index';
 import { useTimedDisplay } from '@/hooks/index';
-import wolfHunterImage from "@/assets/images/wolfhunter.png";
 
 export const LoadingPageAnim = ({ classes, alive }: {
   classes?: {
@@ -43,11 +41,8 @@ export const LoadingPageAnim = ({ classes, alive }: {
               <Animates.BlackHole className="space-rotate-x w-16 h-16 md:w-36 md:h-36 lg:w-48 lg:h-48 rounded-full" />
               <div className='absolute bg-transparent w-16 h-16 md:w-36 md:h-36 lg:w-48 lg:h-48 rounded-full'>
                 <div className='relative bg-transparent w-16 h-16 md:w-36 md:h-36 lg:w-48 lg:h-48 -translate-y-10 rounded-full'>
-                  <div className='relative'>
-                    <LazyLoadImage className='absolute -translate-y-14 -translate-x-10 scale-125' alt="wolf-hunt" src={wolfHunterImage} />
-                  </div>
                   <Animates.PlasmaBall
-                    className='text-[2px] -translate-y-40'
+                    className='text-[6px]'
                     id='loading-page'
                   />
                 </div>
