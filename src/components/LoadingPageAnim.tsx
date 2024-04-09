@@ -42,7 +42,7 @@ export const LoadingPageAnim = ({ classes, alive }: {
               <div className='absolute bg-transparent w-16 h-16 md:w-36 md:h-36 lg:w-48 lg:h-48 rounded-full'>
                 <div className='relative bg-transparent w-16 h-16 md:w-36 md:h-36 lg:w-48 lg:h-48 -translate-y-10 rounded-full'>
                   <Animates.PlasmaBall
-                    className='text-[6px]'
+                    className='text-[3px] lg:text-[6px] lg:translate-y-0'
                     id='loading-page'
                   />
                 </div>
