@@ -1,9 +1,9 @@
 import { AnimationView } from '@/components/viewFrame';
 import {
-  SlSocialSkype,
   SlSocialLinkedin,
   SlSocialTwitter,
   SlSocialFacebook,
+  SlSocialGithub
 } from 'react-icons/sl';
 
 export const SocialIcons = ({
@@ -37,10 +37,10 @@ export const SocialIcons = ({
       >
         <a
           target='_blank'
-          href='https://join.skype.com/invite/gTOdyRdTjN2f'
+          href='https://github.com/thanhtai-personal'
           className=' rounded-full hover:scale-110 text-text hover:text-text-active'
         >
-          <SlSocialSkype className='w-8 h-8' />
+          <SlSocialGithub className='w-8 h-8' />
         </a>
       </AnimationView.Bird>
       <AnimationView.Bird
