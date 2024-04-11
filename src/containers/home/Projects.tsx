@@ -12,8 +12,8 @@ import { AnimationRef, useTranslate } from '@/hooks/index';
 import { SkillItem, skillData } from './Skills';
 import { ReactNode, useMemo, useRef } from 'react';
 import { HomeActionType, HomeContext, HomeSectionIds } from '@/context/home';
-import { BsCaretUpFill } from 'react-icons/bs';
 import { LanguageSetting } from './LanguageSetting';
+import { GoHome } from 'react-icons/go';
 
 export interface Project {
   id: number;
@@ -150,7 +150,7 @@ export const Projects = () => {
                         }, 700)
                       }}
                     >
-                      <BsCaretUpFill className='w-4 h-4' />
+                      <GoHome className='w-4 h-4' />
                     </Animates.RippleButton>
                   </div>
                 </div>

@@ -15,7 +15,7 @@ import { useTranslate } from '@/hooks/useTranslate';
 import { SocialIcons } from './SocialIcons';
 import { HomeActionType, HomeContext, HomeSectionIds } from "@/context/home";
 import { FaDownload } from 'react-icons/fa';
-import { BsCaretDownFill } from 'react-icons/bs';
+import { SiBlogger } from 'react-icons/si';
 
 const BannerContent = () => {
   const { t } = useTranslate();
@@ -149,7 +149,7 @@ const BannerContent = () => {
                         },
                       })}
                   >
-                    <BsCaretDownFill className='w-4 h-4' />
+                    <SiBlogger className='w-4 h-4' />
                   </Animates.RippleButton>
                 </div>
               </div>

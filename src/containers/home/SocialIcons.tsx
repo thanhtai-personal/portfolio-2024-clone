@@ -1,9 +1,9 @@
 import { AnimationView } from '@/components/viewFrame';
+import { BsGithub } from 'react-icons/bs';
 import {
   SlSocialLinkedin,
   SlSocialTwitter,
   SlSocialFacebook,
-  SlSocialGithub
 } from 'react-icons/sl';
 
 export const SocialIcons = ({
@@ -40,7 +40,7 @@ export const SocialIcons = ({
           href='https://github.com/thanhtai-personal'
           className=' rounded-full hover:scale-110 text-text hover:text-text-active'
         >
-          <SlSocialGithub className='w-8 h-8' />
+          <BsGithub className='w-8 h-8' />
         </a>
       </AnimationView.Bird>
       <AnimationView.Bird
