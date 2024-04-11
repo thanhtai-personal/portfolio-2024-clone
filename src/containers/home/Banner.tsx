@@ -140,7 +140,7 @@ const BannerContent = () => {
             <AnimationView.FadeIn delay={4000}>
               <div className='flex w-full h-full justify-center items-end'>
                 <div className='z-40'>
-                  <Animates.RippleButton className='mb-8 lg:mb-4 flex flex-col items-center justify-center cursor-pointer' id="project-section-btn"
+                  <Animates.RippleButton className='mb-12 lg:mb-2 flex flex-col items-center justify-center cursor-pointer' id="project-section-btn"
                     onClick={() => homeDispatcher &&
                       homeDispatcher({
                         type: HomeActionType.updateActiveSection,
