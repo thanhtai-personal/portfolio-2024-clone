@@ -40,10 +40,10 @@ importers:
         specifier: ^0.5.7
         version: 0.5.7(tailwindcss@3.4.3)
       '@ttt-utils/react-hooks':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../modules/utils/react-hooks
       '@ttt/react-core':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../modules/cores/react-core
       flowbite-react:
         specifier: ^0.7.5
