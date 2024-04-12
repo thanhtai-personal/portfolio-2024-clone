@@ -1,0 +1,21 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "env": [],
+      "outputs": ["dist/**"]
+    },
+    "web#build": {
+      "dependsOn": ["^build"],
+      "env": [],
+      "outputs": [".release/www/**", "!.release/www/cache/**"]
+    }
+  },
+  "globalEnv": [
+    "GITHUB_TOKEN"
+  ],
+  "globalDependencies": [
+    "tsconfig.json"
+  ]
+}
