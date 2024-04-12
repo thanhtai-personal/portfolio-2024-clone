@@ -9,8 +9,7 @@
     { "src": "modules/core/react-core/package.json", "use": "@vercel/node" },
     { "src": "modules/utils/react-hooks/package.json", "use": "@vercel/node" },
     { "src": "modules/utils/api-client/package.json", "use": "@vercel/node" },
-    { "src": "modules/core/sdk-core/package.json", "use": "@vercel/node" },
-    { "src": "apps/introduce/package.json", "use": "@vercel/node"}
+    { "src": "modules/core/sdk-core/package.json", "use": "@vercel/node" }
   ],
   "outputDirectory": "apps/introduce/release/www"
 }
