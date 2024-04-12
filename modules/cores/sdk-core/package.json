@@ -1,0 +1,27 @@
+{
+  "name": "@ttt-sdk/core",
+  "version": "0.0.0",
+  "main": "./src/index.ts",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --build",
+    "docs": "typedoc --out docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "@ttt/utils-helpers": "workspace:*",
+    "@ttt-ui/api-client": "workspace:^"
+  },
+  "devDependencies": {
+    "@ttt-config/eslint-plugin": "workspace:*",
+    "@ttt-config/release": "workspace:*",
+    "@ttt-config/tsconfig": "workspace:*",
+    "@ttt-config/typedoc": "workspace:*",
+    "@ttt/utils-helpers": "workspace:*",
+    "typescript": "^5.3.2"
+  },
+  "dependencies": {
+    "urlcat": "^3.1.0"
+  }
+}

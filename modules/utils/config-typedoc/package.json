@@ -1,0 +1,14 @@
+{
+  "name": "@ttt-config/typedoc",
+  "main": "./base.json",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@ttt-config/release": "workspace:*",
+    "semantic-release": "^23.0.2"
+  }
+}

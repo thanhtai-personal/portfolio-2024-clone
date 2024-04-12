@@ -1,0 +1,21 @@
+image: node:latest
+
+variables:
+  NODE_TLS_REJECT_UNAUTHORIZED: 0
+  PNPM_VERSION: 8.6.12
+
+stages:
+  - build
+  - test
+  - deploy
+
+# TODO: this should be run only if the package has changed
+release:
+  stage: deploy
+  tags:
+    - runner
+  before_script:
+    - npm config set @ttt:registry=https://registry.npmjs.org/
+    # - npm install
+  script:
+    - echo "Do nothing for now"
