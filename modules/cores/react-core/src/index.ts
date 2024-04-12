@@ -1,2 +1,2 @@
-export * from "./dom/index.js"
-export * from "./appRoute/index.jsx"
+export * from "./dom"
+export * from "./appRoute"

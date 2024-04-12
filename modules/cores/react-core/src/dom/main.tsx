@@ -8,7 +8,7 @@ export interface IAppProvider {
 export interface IReactApp {
   rootId?: string;
   renderedApp: JSX.Element;
-  providers?: React.FC[];
+  providers?: React.FC<IAppProvider>[];
   strictMode?: boolean;
 }
 

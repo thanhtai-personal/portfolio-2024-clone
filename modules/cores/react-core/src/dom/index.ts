@@ -1,1 +1,1 @@
-export * from "./main.jsx"
+export * from "./main"
