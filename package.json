@@ -6,6 +6,10 @@
   "scripts": {
     "prepare": "husky",
     "docs": "typedoc",
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "bash:build:introduce": "bash ./build-introduce.bat",
     "sh:build:introduce": "bash ./build-introduce.sh"
   },
@@ -25,5 +29,6 @@
   },
   "dependencies": {
     "turbo": "^1.13.2"
-  }
+  },
+  "packageManager": "pnpm@8.15.4"
 }
