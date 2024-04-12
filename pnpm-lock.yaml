@@ -201,7 +201,7 @@ importers:
   modules/cores/sdk-core:
     dependencies:
       '@ttt-ui/api-client':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../utils/api-client
       urlcat:
         specifier: ^3.1.0
