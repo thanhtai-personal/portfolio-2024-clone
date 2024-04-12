@@ -1,13 +1,13 @@
 {
   "version": 2,
   "builds": [
-    { "src": "modules/core/react-core/package.json", "use": "@vercel/vite" },
-    { "src": "modules/utils/config-eslint/package.json", "use": "@vercel/vite" },
-    { "src": "modules/utils/config-tsconfig/package.json", "use": "@vercel/vite" },
-    { "src": "modules/utils/config-typedoc/package.json", "use": "@vercel/vite" },
-    { "src": "modules/utils/config-release/package.json", "use": "@vercel/vite" },
-    { "src": "modules/utils/helpers/package.json", "use": "@vercel/vite" },
-    { "src": "modules/utils/react-hooks/package.json", "use": "@vercel/vite" },
-    { "src": "app/introduce/package.json", "use": "@vercel/vite" }
+    { "src": "modules/core/react-core/package.json", "use": "@vercel/node" },
+    { "src": "modules/utils/config-eslint/package.json", "use": "@vercel/node" },
+    { "src": "modules/utils/config-tsconfig/package.json", "use": "@vercel/node" },
+    { "src": "modules/utils/config-typedoc/package.json", "use": "@vercel/node" },
+    { "src": "modules/utils/config-release/package.json", "use": "@vercel/node" },
+    { "src": "modules/utils/helpers/package.json", "use": "@vercel/node" },
+    { "src": "modules/utils/react-hooks/package.json", "use": "@vercel/node" },
+    { "src": "app/introduce/package.json", "use": "@vercel/node" }
   ]
 }
