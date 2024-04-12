@@ -11,7 +11,7 @@
   },
   "peerDependencies": {
     "@ttt/utils-helpers": "workspace:*",
-    "@ttt-ui/api-client": "workspace:^"
+    "@ttt-ui/api-client": "workspace:*"
   },
   "devDependencies": {
     "@ttt-config/eslint-plugin": "workspace:*",
