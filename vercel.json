@@ -8,6 +8,6 @@
     { "src": "modules/utils/config-release/package.json", "use": "@vercel/node" },
     { "src": "modules/utils/helpers/package.json", "use": "@vercel/node" },
     { "src": "modules/utils/react-hooks/package.json", "use": "@vercel/node" },
-    { "src": "app/introduce/package.json", "use": "@vercel/node" }
+    { "src": "app/introduce/package.json", "use": "@vercel/node", "output": "release/www" }
   ]
 }
