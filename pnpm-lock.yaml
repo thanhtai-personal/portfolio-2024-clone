@@ -145,9 +145,6 @@ importers:
 
   modules/cores/react-core:
     dependencies:
-      '@types/node':
-        specifier: ^20.11.24
-        version: 20.12.7
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -173,6 +170,9 @@ importers:
       '@ttt/utils-helpers':
         specifier: workspace:*
         version: link:../../utils/helpers
+      '@types/node':
+        specifier: ^20.11.24
+        version: 20.12.7
       '@types/react':
         specifier: ^18.2.66
         version: 18.2.77
@@ -203,6 +203,9 @@ importers:
       '@ttt-ui/api-client':
         specifier: workspace:*
         version: link:../../utils/api-client
+      '@ttt/utils-helpers':
+        specifier: workspace:*
+        version: link:../../utils/helpers
       urlcat:
         specifier: ^3.1.0
         version: 3.1.0
@@ -219,15 +222,15 @@ importers:
       '@ttt-config/typedoc':
         specifier: workspace:*
         version: link:../../utils/config-typedoc
-      '@ttt/utils-helpers':
-        specifier: workspace:*
-        version: link:../../utils/helpers
       typescript:
         specifier: ^5.3.2
         version: 5.4.5
 
   modules/utils/api-client:
     dependencies:
+      '@ttt/utils-helpers':
+        specifier: workspace:*
+        version: link:../helpers
       axios:
         specifier: ^1.6.5
         version: 1.6.8
@@ -247,9 +250,6 @@ importers:
       '@ttt-config/typedoc':
         specifier: workspace:*
         version: link:../config-typedoc
-      '@ttt/utils-helpers':
-        specifier: workspace:*
-        version: link:../helpers
       tslib:
         specifier: ^2.6.2
         version: 2.6.2
@@ -1990,6 +1990,7 @@ packages:
     resolution: {integrity: sha512-wq0cICSkRLVaf3UGLMGItu/PtdY7oaXaI/RVU+xliKVOtRna3PRY57ZDfztpDL0n11vfymMUnXv8QwYCO7L1wg==}
     dependencies:
       undici-types: 5.26.5
+    dev: true
 
   /@types/normalize-package-data@2.4.4:
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -6474,6 +6475,7 @@ packages:
 
   /undici-types@5.26.5:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
+    dev: true
 
   /unicode-emoji-modifier-base@1.0.0:
     resolution: {integrity: sha512-yLSH4py7oFH3oG/9K+XWrz1pSi3dfUrWEnInbxMfArOfc1+33BlGPQtLsOYwvdMy11AwUBetYuaRxSPqgkq+8g==}

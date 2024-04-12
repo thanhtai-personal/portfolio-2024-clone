@@ -9,10 +9,6 @@
     "docs": "typedoc --out docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "peerDependencies": {
-    "@ttt/utils-helpers": "workspace:*",
-    "@ttt-ui/api-client": "workspace:*"
-  },
   "devDependencies": {
     "@ttt-config/eslint-plugin": "workspace:*",
     "@ttt-config/release": "workspace:*",
@@ -22,6 +18,8 @@
     "typescript": "^5.3.2"
   },
   "dependencies": {
-    "urlcat": "^3.1.0"
+    "urlcat": "^3.1.0",
+    "@ttt/utils-helpers": "workspace:*",
+    "@ttt-ui/api-client": "workspace:*"
   }
 }
