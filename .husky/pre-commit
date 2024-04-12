@@ -13,7 +13,7 @@ fi
 # npm run docs
 
 # Stage generated documentation files
-git add public/docs
+# git add public/docs
 
 # Continue with the commit process
 exit 0

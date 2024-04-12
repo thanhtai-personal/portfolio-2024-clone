@@ -1,5 +1,5 @@
 import { setOfThemes } from "@/utils/constants";
-import { makeContext } from "../makeContext";
+import { makeContext } from "@ttt/react-core";
 import { initialData } from "./initialData";
 import {
   ThemeActionType,

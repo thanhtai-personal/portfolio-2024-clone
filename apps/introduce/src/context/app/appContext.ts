@@ -1,5 +1,5 @@
 import { getLanguageCode } from "@/utils/index";
-import { makeContext } from "../makeContext";
+import { makeContext } from "@ttt/react-core";
 import { initialData } from "./initialData";
 import {
   AppActionType,
