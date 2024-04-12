@@ -1,4 +1,4 @@
-import { useKeyboardControll } from '@/hooks/useKeyboardControll';
+import { useKeyboardControll } from '@ttt-utils/react-hooks';
 import { useCallback, useState } from 'react';
 import { FaArrowAltCircleDown, FaArrowAltCircleUp } from 'react-icons/fa';
 

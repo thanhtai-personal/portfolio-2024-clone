@@ -1,4 +1,4 @@
-import { useReducerWithLogger } from "@/hooks/useReducerWithLogger";
+import { useReducerWithLogger } from "@ttt-utils/react-hooks";
 import React, { createContext, useContext, ReactNode, Dispatch, Reducer } from "react";
 
 interface ContextProviderProps {

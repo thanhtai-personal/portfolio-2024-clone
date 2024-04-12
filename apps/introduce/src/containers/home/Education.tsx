@@ -1,5 +1,4 @@
 import {
-  Accordion,
   Card,
   GridView,
   LazyLoadImage,

@@ -1,4 +1,4 @@
-import { useDragableElement } from '@/hooks/useDragableElement';
+import { useDragableElement } from '@ttt-utils/react-hooks';
 import { useEffect, useState } from 'react';
 
 export interface IGlowingBall {

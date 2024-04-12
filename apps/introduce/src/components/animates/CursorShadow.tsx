@@ -1,4 +1,4 @@
-import { useCustomCursor } from "@/hooks/index";
+import { useCustomCursor } from "@ttt-utils/react-hooks";
 import { ReactNode } from "react";
 
 export const CursorShadow = ({ className, children }: { className?: string, children?: ReactNode }) => {

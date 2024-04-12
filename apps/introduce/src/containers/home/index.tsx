@@ -5,7 +5,7 @@ import {
 import { Banner } from './Banner';
 import { Projects } from './Projects';
 import { HomeContext, HomeSectionIds } from '@/context/index';
-import { useMouseWaveClicker } from '@/hooks/useMouseWaveClicker';
+import { useMouseWaveClicker } from '@ttt-utils/react-hooks';
 
 export interface IHomePage { }
 

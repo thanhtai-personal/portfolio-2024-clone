@@ -1,4 +1,4 @@
-import { useDragableElement } from '@/hooks/useDragableElement';
+import { useDragableElement } from '@ttt-utils/react-hooks';
 
 export interface IGlowingLine {
   className?: string;

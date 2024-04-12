@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.5.7",
+    "@ttt-utils/react-hooks": "workspace:^",
     "@ttt/react-core": "workspace:^",
     "flowbite-react": "^0.7.5",
     "gsap": "^3.12.5",

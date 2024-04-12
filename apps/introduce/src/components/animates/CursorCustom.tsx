@@ -1,4 +1,4 @@
-import { useCustomCursor } from "@/hooks/index";
+import { useCustomCursor } from "@ttt-utils/react-hooks";
 import { useEffect } from "react";
 import { FaHandPointUp } from "react-icons/fa";
 

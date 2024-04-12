@@ -1,4 +1,4 @@
-import { useDragableElement } from "@/hooks/index";
+import { useDragableElement } from "@ttt-utils/react-hooks";
 import { ReactNode } from "react";
 
 export const BubbleWrapper = ({
