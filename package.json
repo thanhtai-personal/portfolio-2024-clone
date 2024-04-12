@@ -22,5 +22,8 @@
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
     "typedoc": "^0.25.11"
+  },
+  "dependencies": {
+    "turbo": "^1.13.2"
   }
 }
