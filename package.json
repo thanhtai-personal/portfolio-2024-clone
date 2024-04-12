@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "prepare": "husky",
-    "docs": "typedoc"
+    "docs": "typedoc",
+    "bash:build:introduce": "bash ./build-introduce.bat",
+    "sh:build:introduce": "bash ./build-introduce.sh"
   },
   "publishConfig": {
     "@web:registry": "https://registry.npmjs.org/"
