@@ -10,6 +10,6 @@
     { "src": "modules/utils/react-hooks/package.json", "use": "@vercel/node" },
     { "src": "modules/utils/api-client/package.json", "use": "@vercel/node" },
     { "src": "modules/core/sdk-core/package.json", "use": "@vercel/node" },
-    { "src": "app/introduce/package.json", "use": "@vercel/node", "output": "release/www" }
+    { "src": "app/introduce/package.json", "use": "@vercel/node", "outputDirectory": "release/www" }
   ]
 }
