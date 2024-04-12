@@ -7,7 +7,7 @@ import axios, {
   RawAxiosResponseHeaders,
   isAxiosError,
 } from "axios";
-import { HttpErrorCode, TokenMethod, authorizationKey } from "./consts.js";
+import { HttpErrorCode, TokenMethod, authorizationKey } from "./consts";
 
 export interface APIResult<T> {
   abort: () => void;

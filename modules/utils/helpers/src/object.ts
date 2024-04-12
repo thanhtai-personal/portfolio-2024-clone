@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Path, PathValue, Primitive } from "./internal/object.js";
+import { Path, PathValue, Primitive } from "./internal/object";
 
-export type { Path, PathValue, Primitive } from "./internal/object.js";
+export type { Path, PathValue, Primitive } from "./internal/object";
 
 export const hasOwn = (object: object, key: string) => {
   return object != null && Object.hasOwnProperty.call(object, key);

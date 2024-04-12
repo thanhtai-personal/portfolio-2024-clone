@@ -1,7 +1,6 @@
-// import { IAbstractService } from "./IAbstractService.js";
-import { TokenMethod } from "@ttt-ui/api-client/src/index.js";
-import { Pagination } from "./Pagination.js";
-import { IErrorResponse } from "./IErrorResponse.js";
+import { TokenMethod } from "@ttt-ui/api-client";
+import { Pagination } from "./Pagination";
+import { IErrorResponse } from "./IErrorResponse";
 
 export interface IBaseControl<ICreationRequest, IUpdatingRequest, IDataResponse, IFilterRequest> {
   create: (createData: ICreationRequest) => Promise<IDataResponse | IErrorResponse>;

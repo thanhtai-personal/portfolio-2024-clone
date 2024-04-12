@@ -1,6 +1,6 @@
-import { APIResult } from "@ttt-ui/api-client/src/API.js";
-import { IResponse } from "./IResponse.js";
-import { Pagination } from "./Pagination.js";
+import { APIResult } from "@ttt-ui/api-client";
+import { IResponse } from "./IResponse";
+import { Pagination } from "./Pagination";
 
 export interface IAbstractService<ICreactionRequest, IUpdatingRequest, IDataResponse, IFilterRequest> {
   create: (createData: ICreactionRequest) => Promise<APIResult<IResponse<IDataResponse>>>;

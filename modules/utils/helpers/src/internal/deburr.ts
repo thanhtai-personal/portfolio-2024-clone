@@ -1,4 +1,4 @@
-import { hasOwn } from "../object.js";
+import { hasOwn } from "../object";
 
 const deburredLetters = {
   // Latin-1 Supplement block.

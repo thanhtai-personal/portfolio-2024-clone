@@ -1,5 +1,5 @@
-import { HttpErrorCode } from "@ttt-ui/api-client/src/index.js";
-import { IErrorResponse } from "./IErrorResponse.js";
+import { HttpErrorCode } from "@ttt-ui/api-client";
+import { IErrorResponse } from "./IErrorResponse";
 
 export interface IResponse<IDataResponse> {
   code?: HttpErrorCode | 200;

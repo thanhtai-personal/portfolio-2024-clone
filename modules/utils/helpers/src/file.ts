@@ -14,8 +14,8 @@ import {
   powerPointExtMap,
   videoExtMap,
   wordExtMap,
-} from "./internal/file.js";
-import { SupportedUnit, formatToUnit } from "./number.js";
+} from "./internal/file";
+import { SupportedUnit, formatToUnit } from "./number";
 
 export {
   isCsv,

@@ -1,4 +1,4 @@
-import { APIResult, ClientApi, CreateApiConfig, HttpErrorCode, TokenMethod, createApi } from "@ttt-ui/api-client/src/index.js";
+import { APIResult, ClientApi, CreateApiConfig, HttpErrorCode, TokenMethod, createApi } from "@ttt-ui/api-client";
 import {
   IAbstractService,
   IBaseControl,
@@ -6,7 +6,7 @@ import {
   IResponse,
   Pagination,
   IErrorResponse
-} from "./types/index.js";
+} from "./types";
 
 
 export abstract class BaseSDK implements IBaseSDK {

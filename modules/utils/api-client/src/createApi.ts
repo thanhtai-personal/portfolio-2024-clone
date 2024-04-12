@@ -1,8 +1,8 @@
 import { AxiosRequestConfig } from "axios";
-import { API, APIResult } from "./API.js";
-import { TokenMethod } from "./consts.js";
-import { Body, Params, PathsWithMethod, SuccessResponse } from "./types.js";
-import { apiUrl, downloadUrl, saveAs } from "./utils.js";
+import { API, APIResult } from "./API";
+import { TokenMethod } from "./consts";
+import { Body, Params, PathsWithMethod, SuccessResponse } from "./types";
+import { apiUrl, downloadUrl, saveAs } from "./utils";
 
 export interface CreateApiConfig {
   apiEndpoint: string;

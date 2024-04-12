@@ -1,5 +1,5 @@
-import { deburr } from "./internal/deburr.js";
-import { getVal } from "./object.js";
+import { deburr } from "./internal/deburr";
+import { getVal } from "./object";
 
 export { nanoid } from "nanoid";
 

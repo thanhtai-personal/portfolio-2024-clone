@@ -1,4 +1,4 @@
-import { ensure } from "./ensure.js";
+import { ensure } from "./ensure";
 
 export const maskEmail = (email: string, mask = "•", visibleChars = 1) => {
   const [name, domain] = email.split("@");
