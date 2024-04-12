@@ -32,9 +32,6 @@ importers:
 
   modules/cores/react-core:
     dependencies:
-      '@ttt-utils/react-hooks':
-        specifier: workspace:^
-        version: link:../../utils/react-hooks
       '@types/node':
         specifier: ^20.11.24
         version: 20.12.7
