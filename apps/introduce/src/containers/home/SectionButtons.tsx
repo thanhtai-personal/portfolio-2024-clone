@@ -1,5 +1,5 @@
 import { HomeActionType, HomeContext, HomeSectionIds } from '@/context/home';
-import { useTranslate } from '@/hooks/useTranslate';
+import { useTranslate } from '@ttt-logic/multilanguage';
 import { ButtonGroup, Button } from 'flowbite-react';
 
 export const SectionButtons = ({ vertical }: { vertical?: boolean }) => {

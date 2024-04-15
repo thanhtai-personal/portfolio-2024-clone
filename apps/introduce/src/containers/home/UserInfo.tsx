@@ -1,4 +1,4 @@
-import { useTranslate } from '@/hooks/useTranslate';
+import { useTranslate } from '@ttt-logic/multilanguage';
 
 export const UserInfo = () => {
   const { t } = useTranslate();

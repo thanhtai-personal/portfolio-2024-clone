@@ -1,4 +1,4 @@
-import { makeContext } from "@ttt/react-core";
+import { makeContext } from "@ttt-core/react";
 import { initialData } from "./initialData";
 import {
   HomeActionType,

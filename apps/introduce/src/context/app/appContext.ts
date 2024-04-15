@@ -1,27 +1,15 @@
-import { getLanguageCode } from "@/utils/index";
-import { makeContext } from "@ttt/react-core";
+import { makeContext } from "@ttt-core/react";
 import { initialData } from "./initialData";
 import {
   AppActionType,
   IAppContext,
   IAction,
-  UpdateLanguagePayload
 } from "./interfaces";
-import i18n from "../../i18n";
-
-type AppActionPayload = UpdateLanguagePayload // | {}
+type AppActionPayload = {}
 
 // Define the reducer function
 const reducer = (state: IAppContext, action: IAction<AppActionType, AppActionPayload>): IAppContext => {
-
   switch (action.type) {
-    case AppActionType.updateLanguage:
-      i18n.changeLanguage(action.payload.language);
-      return {
-        ...state,
-        language: action.payload.language,
-        languageCode: getLanguageCode(action.payload.language),
-      }
     default:
       return state;
   }

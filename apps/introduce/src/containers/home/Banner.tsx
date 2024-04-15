@@ -11,7 +11,7 @@ import { BannerAvartar } from './BannerAvartar';
 import { LanguageSetting } from './LanguageSetting';
 import { Animates, LoadingPageAnim, ThemeSettingBoard } from '@/components/index';
 import { ThemeContext } from '@/context/theme';
-import { useTranslate } from '@/hooks/useTranslate';
+import { useTranslate } from '@ttt-logic/multilanguage';
 import { SocialIcons } from './SocialIcons';
 import { HomeActionType, HomeContext, HomeSectionIds } from "@/context/home";
 import { FaDownload } from 'react-icons/fa';

@@ -8,7 +8,8 @@ import {
   ThemeSettingBoard,
   TitleText,
 } from '@/components/index';
-import { AnimationRef, useTranslate } from '@/hooks/index';
+import { useTranslate } from "@ttt-logic/multilanguage"
+import { AnimationRef } from '@/hooks/index';
 import { SkillItem, skillData } from './Skills';
 import { ReactNode, useMemo, useRef } from 'react';
 import { HomeActionType, HomeContext, HomeSectionIds } from '@/context/home';

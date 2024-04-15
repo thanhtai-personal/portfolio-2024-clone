@@ -2,16 +2,14 @@
   "name": "@web/core",
   "version": "1.0.2",
   "description": "",
-  "main": "index.js",
+  "main": "apps/introduce/dist/index.js",
   "scripts": {
     "prepare": "husky",
-    "docs": "typedoc",
     "build": "turbo build",
     "dev": "turbo dev",
+    "docs": "turbo docs",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "bash:build:introduce": "bash ./build-introduce.bat",
-    "sh:build:introduce": "bash ./build-introduce.sh"
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "publishConfig": {
     "@web:registry": "https://registry.npmjs.org/"

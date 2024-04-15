@@ -1,5 +1,5 @@
 import { TitleText } from "@/components/TitleText";
-import { useTranslate } from "@/hooks/index"
+import { useTranslate } from "@ttt-logic/multilanguage"
 
 export const Summary = () => {
   const { t } = useTranslate();

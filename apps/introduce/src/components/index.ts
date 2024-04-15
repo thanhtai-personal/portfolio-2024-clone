@@ -1,5 +1,4 @@
 export * from "./themes"
-export * from "./languages"
 export * from "./viewFrame"
 export * from "./charts"
 export * from "./form"

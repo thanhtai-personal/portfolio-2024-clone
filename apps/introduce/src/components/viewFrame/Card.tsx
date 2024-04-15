@@ -1,4 +1,4 @@
-import { useTranslate } from '@/hooks/useTranslate';
+import { useTranslate } from '@ttt-logic/multilanguage';
 import { CardProps, Card as FlowBiteCard, Tooltip } from 'flowbite-react';
 import { ReactNode, useState } from 'react';
 import { LazyLoadImage } from "..";

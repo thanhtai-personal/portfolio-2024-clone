@@ -4,7 +4,7 @@ import {
   ListView,
   TitleText,
 } from '@/components/index';
-import { useTranslate } from '@/hooks/index';
+import { useTranslate } from "@ttt-logic/multilanguage";
 import { SkillItem, skillData } from './Skills';
 import { ReactNode, useMemo } from 'react';
 import defaultImage from '@/assets/images/default_image.jpg';

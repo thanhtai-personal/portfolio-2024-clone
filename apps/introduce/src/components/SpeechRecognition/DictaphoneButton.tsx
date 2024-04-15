@@ -6,7 +6,7 @@ import SpeechRecognition, {
 } from 'react-speech-recognition';
 import 'regenerator-runtime';
 import { AppContext } from "@/context/app";
-import { useTranslate } from "@/hooks/useTranslate";
+import { useTranslate } from "@ttt-logic/multilanguage";
 
 export interface IDictaphoneButton {
   setTranscript: (transcript: string) => void;

@@ -1,5 +1,5 @@
 {
-  "name": "@ttt/utils-helpers",
+  "name": "@ttt-utils/utils-helpers",
   "version": "0.0.0",
   "private": true,
   "main": "./dist/index.js",

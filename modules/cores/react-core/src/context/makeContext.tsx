@@ -1,11 +1,11 @@
 import React, { createContext, useContext, ReactNode, Dispatch, Reducer } from "react";
 import { useReducerWithLogger } from "../hooks";
 
-interface ContextProviderProps {
+export interface ContextProviderProps {
   children: ReactNode;
 }
 
-interface ContextData<T, Action> {
+export interface ContextData<T, Action> {
   Provider: React.FC<ContextProviderProps>;
   useDataContext: () => T | null;
   useDataDispatchContext: () => Dispatch<Action> | null;

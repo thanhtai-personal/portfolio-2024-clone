@@ -1,4 +1,4 @@
-import { useTranslate } from "@/hooks/index"
+import { useTranslate } from "@ttt-logic/multilanguage"
 
 export const TitleText = ({ content }: { content: string }) => {
   const { t } = useTranslate();

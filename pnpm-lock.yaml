@@ -39,12 +39,18 @@ importers:
       '@tailwindcss/forms':
         specifier: ^0.5.7
         version: 0.5.7(tailwindcss@3.4.3)
+      '@ttt-core/react':
+        specifier: workspace:*
+        version: link:../../modules/cores/react-core
+      '@ttt-logic/multilanguage':
+        specifier: workspace:*
+        version: link:../../modules/logic/multilanguage
+      '@ttt-ui/react-multilanguage-flowbite':
+        specifier: workspace:*
+        version: link:../../modules/ui/multilanguage
       '@ttt-utils/react-hooks':
         specifier: workspace:*
         version: link:../../modules/utils/react-hooks
-      '@ttt/react-core':
-        specifier: workspace:*
-        version: link:../../modules/cores/react-core
       flowbite-react:
         specifier: ^0.7.5
         version: 0.7.8(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.3)
@@ -167,7 +173,7 @@ importers:
       '@ttt-config/typedoc':
         specifier: workspace:*
         version: link:../../utils/config-typedoc
-      '@ttt/utils-helpers':
+      '@ttt-utils/utils-helpers':
         specifier: workspace:*
         version: link:../../utils/helpers
       '@types/node':
@@ -203,7 +209,7 @@ importers:
       '@ttt-ui/api-client':
         specifier: workspace:*
         version: link:../../utils/api-client
-      '@ttt/utils-helpers':
+      '@ttt-utils/utils-helpers':
         specifier: workspace:*
         version: link:../../utils/helpers
       urlcat:
@@ -226,9 +232,74 @@ importers:
         specifier: ^5.3.2
         version: 5.4.5
 
+  modules/logic/multilanguage:
+    dependencies:
+      '@ttt-core/react':
+        specifier: workspace:*
+        version: link:../../cores/react-core
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+    devDependencies:
+      '@ttt-config/eslint-plugin':
+        specifier: workspace:*
+        version: link:../../utils/config-eslint
+      '@ttt-config/release':
+        specifier: workspace:*
+        version: link:../../utils/config-release
+      '@ttt-config/tsconfig':
+        specifier: workspace:*
+        version: link:../../utils/config-tsconfig
+      '@ttt-config/typedoc':
+        specifier: workspace:*
+        version: link:../../utils/config-typedoc
+      '@ttt-utils/utils-helpers':
+        specifier: workspace:*
+        version: link:../../utils/helpers
+      typescript:
+        specifier: ^5.3.2
+        version: 5.4.5
+
+  modules/ui/multilanguage:
+    dependencies:
+      '@ttt-core/react':
+        specifier: workspace:*
+        version: link:../../cores/react-core
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+    devDependencies:
+      '@ttt-config/eslint-plugin':
+        specifier: workspace:*
+        version: link:../../utils/config-eslint
+      '@ttt-config/release':
+        specifier: workspace:*
+        version: link:../../utils/config-release
+      '@ttt-config/tsconfig':
+        specifier: workspace:*
+        version: link:../../utils/config-tsconfig
+      '@ttt-config/typedoc':
+        specifier: workspace:*
+        version: link:../../utils/config-typedoc
+      '@ttt-logic/multilanguage':
+        specifier: workspace:*
+        version: link:../../logic/multilanguage
+      '@ttt-utils/utils-helpers':
+        specifier: workspace:*
+        version: link:../../utils/helpers
+      typescript:
+        specifier: ^5.3.2
+        version: 5.4.5
+
   modules/utils/api-client:
     dependencies:
-      '@ttt/utils-helpers':
+      '@ttt-utils/utils-helpers':
         specifier: workspace:*
         version: link:../helpers
       axios:
@@ -406,7 +477,7 @@ importers:
       '@ttt-config/typedoc':
         specifier: workspace:*
         version: link:../config-typedoc
-      '@ttt/utils-helpers':
+      '@ttt-utils/utils-helpers':
         specifier: workspace:*
         version: link:../helpers
       '@types/node':

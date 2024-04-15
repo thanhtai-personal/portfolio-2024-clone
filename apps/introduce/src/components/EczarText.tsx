@@ -1,4 +1,4 @@
-import { useTranslate } from "@/hooks/useTranslate"
+import { useTranslate } from "@ttt-logic/multilanguage"
 
 export const EczarText = ({ content, className }: { content: string, className?: string }) => {
   const { t } = useTranslate();
