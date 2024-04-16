@@ -11,6 +11,7 @@ import { WaterText as WaterTextComponent } from "./WaterText";
 import { BubbleWrapper as BubbleWrapperComponent } from "./BubbleWrapper";
 import { PlasmaBall as PlasmaBallComponent } from "./PlasmaBall";
 import { TypeWriter as TypeWriterComponent } from "./TypeWriter";
+import { LoadingBlock as LoadingBlockComponent } from "./LoadingBlock";
 
 export namespace Animates {
   export const GlowingJumpAnim = GlowingJump
@@ -26,4 +27,5 @@ export namespace Animates {
   export const BubbleWrapper = BubbleWrapperComponent
   export const PlasmaBall = PlasmaBallComponent
   export const TypeWriter = TypeWriterComponent
+  export const LoadingBlock = LoadingBlockComponent
 }

@@ -1,19 +1,28 @@
 import { Suspense, lazy } from "react";
 import { LoadingComponent } from "@/components/index";
 
-const HomePage = lazy(() => import("@/containers/home/index"));
+const HomePage = lazy(() => import("@/containers/home"));
+const PortfolioPage = lazy(() => import("@/containers/portfolio"));
 
 export const router = [
   {
     path: "/",
     element: (
       <Suspense fallback={<LoadingComponent loadingPage />}>
-        <HomePage />
+        <PortfolioPage />
       </Suspense>
     ),
   },
   {
-    path: "/home",
+    path: "/portfolio",
+    element: (
+      <Suspense fallback={<LoadingComponent loadingPage />}>
+        <PortfolioPage />
+      </Suspense>
+    ),
+  },
+  {
+    path: "/my-favorite",
     element: (
       <Suspense fallback={<LoadingComponent loadingPage />}>
         <HomePage />

@@ -1553,3 +1553,27 @@ a {
   50% { border-color: orange }
 }
 /* Type write -- */
+
+/* loading-block */
+.loading-block {
+  animation: moment_spin 1.5s forwards infinite;
+}
+
+@keyframes moment_spin {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  75% {
+    transform: rotateZ(720deg);
+  }
+  86% {
+    transform: rotateZ(600deg);
+  }
+  88% {
+    transform: rotateZ(600deg);
+  }
+  100% {
+    transform: rotateZ(720deg);
+  }
+}
+/* loading-block--- */
