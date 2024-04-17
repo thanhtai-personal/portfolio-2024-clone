@@ -1,4 +1,5 @@
-import { Animates, AnimationView, LoadingComponent } from "@/components/index";
+import { Animates } from "@ttt-ui/react-animates";
+import { AnimationView, LoadingComponent } from "@/components/index";
 import { PortfolioActionType, PortfolioContext } from "@/context/index";
 import { useMouseWaveClicker } from "@ttt-utils/react-hooks";
 import { useEffect } from "react";
@@ -14,7 +15,7 @@ const PortfolioContent = () => {
       portfolioDispatcher &&
         portfolioDispatcher({
           type: PortfolioActionType.updateLoading,
-          payload: { loading: false },
+          payload: { loading: true },
         });
     }, 1800);
   }, [portfolioDispatcher]);
@@ -35,7 +36,6 @@ const PortfolioContent = () => {
 
 const PortfolioContainer = ({}: IPortfolioContainer) => {
   useMouseWaveClicker();
-
   return (
     <PortfolioContext.Provider>
       <div className="w-screen h-screen bg-bg-gradient">

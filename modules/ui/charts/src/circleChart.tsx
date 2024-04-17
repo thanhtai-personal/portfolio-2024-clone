@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Cell, Pie, PieChart, ResponsiveContainer, Sector } from 'recharts';
-import { formatMoney } from '@/utils/index';
+import { formatMoney } from '@ttt-utils/utils-helpers';
 
 export interface CircleChartItem {
   name: string;
@@ -59,7 +59,7 @@ const renderActiveShape = (props: any) => {
   );
 };
 
-export const CircleChart = ({ data, title }: ICircleChart) => {
+export const CircleChart = ({ data }: ICircleChart) => {
   const [state, setState] = useState({
     activeIndex: 0
   });

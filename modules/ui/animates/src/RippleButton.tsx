@@ -1,4 +1,5 @@
 import { ReactNode } from "react"
+import "./rippleButton.style.css"
 
 export const RippleButton = ({ children, className, onClick, id, style }: {
   children: ReactNode;

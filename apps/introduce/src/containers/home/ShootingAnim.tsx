@@ -1,4 +1,4 @@
-import { Animates } from "@/components/index"
+import { Animates } from "@ttt-ui/react-animates";
 import { ThemeContext } from "@/context/theme"
 
 export const ShootingAnim = () => {

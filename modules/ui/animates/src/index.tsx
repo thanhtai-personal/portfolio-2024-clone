@@ -12,6 +12,7 @@ import { BubbleWrapper as BubbleWrapperComponent } from "./BubbleWrapper";
 import { PlasmaBall as PlasmaBallComponent } from "./PlasmaBall";
 import { TypeWriter as TypeWriterComponent } from "./TypeWriter";
 import { LoadingBlock as LoadingBlockComponent } from "./LoadingBlock";
+import "./tailwind.css"
 
 export namespace Animates {
   export const GlowingJumpAnim = GlowingJump

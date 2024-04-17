@@ -1,3 +1,4 @@
+import { Animates } from "@ttt-ui/react-animates";
 import {
   ScreenSection,
   VideoBackground,
@@ -9,7 +10,7 @@ import backgroundVideoLight from '@/assets/video/background.mp4';
 import { DevelopmentIconsMobile } from './DevelopmentIconsMobile';
 import { BannerAvartar } from './BannerAvartar';
 import { LanguageSetting } from './LanguageSetting';
-import { Animates, LoadingPageAnim, ThemeSettingBoard } from '@/components/index';
+import { LoadingPageAnim, ThemeSettingBoard } from '@/components/index';
 import { ThemeContext } from '@/context/theme';
 import { useTranslate } from '@ttt-logic/multilanguage';
 import { SocialIcons } from './SocialIcons';

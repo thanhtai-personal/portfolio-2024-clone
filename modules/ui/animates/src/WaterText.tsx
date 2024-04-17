@@ -1,3 +1,5 @@
+import "./waterText.style.css"
+
 export const WaterText = ({ content, className, textClass }
   : { content: string, className?: string, textClass?: string }) => {
 

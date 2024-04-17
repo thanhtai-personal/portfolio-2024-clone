@@ -1,5 +1,6 @@
 import { TimelineMax, Linear, Power1 } from "gsap";
 import { useEffect } from 'react';
+import "./glowingJump.style.css"
 
 export const GlowingJump = ({ id }: { id: string }) => {
   useEffect(() => {
@@ -14,8 +15,8 @@ export const GlowingJump = ({ id }: { id: string }) => {
       elem.style.filter = path;
       elem.style.webkitFilter = path;
     };
-    let loaderContainer = document.querySelector(`#${id}.anim-container`),
-      loaderSVG = document.querySelector(`#${id} .loader`) as HTMLElement,
+    // let loaderContainer = document.querySelector(`#${id}.anim-container`),
+    let loaderSVG = document.querySelector(`#${id} .loader`) as HTMLElement,
       circleL = document.querySelector(`#${id} .circleL`) as HTMLElement,
       circleR = document.querySelector(`#${id} .circleR`) as HTMLElement,
       jumpArc = document.querySelector(`#${id} .jump`) as HTMLElement,

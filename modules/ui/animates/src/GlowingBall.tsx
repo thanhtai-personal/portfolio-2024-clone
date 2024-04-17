@@ -1,5 +1,6 @@
 import { useDragableElement } from '@ttt-utils/react-hooks';
 import { useEffect, useState } from 'react';
+import "./glowingBall.style.css"
 
 export interface IGlowingBall {
   className?: string;

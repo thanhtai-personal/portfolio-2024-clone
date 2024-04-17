@@ -1,3 +1,5 @@
+import "./plasmaBall.style.css"
+
 export const PlasmaBall = ({ id, className }: {
   id: string;
   className?: string;

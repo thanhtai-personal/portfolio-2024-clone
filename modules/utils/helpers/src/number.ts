@@ -137,3 +137,30 @@ Number.prototype.formatUnit = function (
 ) {
   return formatToUnit(this.valueOf(), unit, display);
 };
+
+const billion = 1000000000;
+const million = 1000000;
+
+
+export const formatMoney = (amount: number, isShort?: boolean) => {
+  // Create a number formatter instance
+  const formatter = new Intl.NumberFormat('vi-VN', {
+    // style: 'currency',
+    currency: 'VND', // Change currency as needed
+    minimumFractionDigits: 0,
+  });
+  let usingAmount = amount;
+  if (isShort) {
+    if (amount > billion) {
+      usingAmount = amount / billion
+    } else if (amount > million) {
+      usingAmount = amount / million
+    }
+  }
+
+  let amountString = formatter.format(usingAmount);
+
+  // Format the amount as currency
+  return `${amountString} ${isShort ? amount >= billion ? "tỷ " : amount >= million ? "triệu" : "" : ""}`;
+};
+

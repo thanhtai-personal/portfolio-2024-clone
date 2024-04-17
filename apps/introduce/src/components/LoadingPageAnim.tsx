@@ -1,4 +1,4 @@
-import { Animates } from '@/components/animates';
+import { Animates } from "@ttt-ui/react-animates";
 import { useTimedDisplay } from '@ttt-utils/react-hooks';
 
 export const LoadingPageAnim = ({ classes, alive }: {

@@ -1,4 +1,5 @@
 import { useDragableElement } from '@ttt-utils/react-hooks';
+import "./glowingLight.style.css"
 
 export interface IGlowingLine {
   className?: string;

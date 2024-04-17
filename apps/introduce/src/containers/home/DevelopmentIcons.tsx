@@ -1,14 +1,12 @@
 import { FaReact, FaGithub, FaNodeJs } from 'react-icons/fa';
 import { TbBrandTypescript, TbBrandJavascript } from 'react-icons/tb';
 import { SiDotnet, SiTailwindcss } from "react-icons/si";
-import { Animates } from '@/components/index';
-
+import { Animates } from "@ttt-ui/react-animates";
 
 export const DevelopmentIcons = ({ className }: { className?: string }) => {
   return (
     <div className={`relative ${className}`}>
       <Animates.SpaceIn id="react"
-        delay={1800}
         className='absolute -translate-x-[150px] translate-y-[280px] duration-200'
       >
         <Animates.BubbleWrapper id="react">
@@ -22,7 +20,7 @@ export const DevelopmentIcons = ({ className }: { className?: string }) => {
           </a>
         </Animates.BubbleWrapper>
       </Animates.SpaceIn>
-      <Animates.SpaceIn id="nodejs" delay={2000} className='absolute -translate-x-[280px] translate-y-[280px] duration-[250ms]'>
+      <Animates.SpaceIn id="nodejs" className='absolute -translate-x-[280px] translate-y-[280px] duration-[250ms]'>
         <Animates.BubbleWrapper id="nodejs">
           <a
             target='_blank'
@@ -34,7 +32,7 @@ export const DevelopmentIcons = ({ className }: { className?: string }) => {
           </a>
         </Animates.BubbleWrapper>
       </Animates.SpaceIn>
-      <Animates.SpaceIn id="JS" delay={2200} className='absolute -translate-x-[400px] translate-y-[280px] duration-[300ms]'>
+      <Animates.SpaceIn id="JS" className='absolute -translate-x-[400px] translate-y-[280px] duration-[300ms]'>
         <Animates.BubbleWrapper id="JS">
           <a
             target='_blank'
@@ -46,7 +44,7 @@ export const DevelopmentIcons = ({ className }: { className?: string }) => {
           </a>
         </Animates.BubbleWrapper>
       </Animates.SpaceIn>
-      <Animates.SpaceIn id="TS" delay={2300} className='absolute -translate-x-[520px] translate-y-[280px] duration-[350ms]'>
+      <Animates.SpaceIn id="TS" className='absolute -translate-x-[520px] translate-y-[280px] duration-[350ms]'>
         <Animates.BubbleWrapper id="TS">
           <a
             target='_blank'
@@ -58,7 +56,7 @@ export const DevelopmentIcons = ({ className }: { className?: string }) => {
           </a>
         </Animates.BubbleWrapper>
       </Animates.SpaceIn>
-      <Animates.SpaceIn id="Tailwindcss" delay={2500} className='absolute -translate-x-[640px] translate-y-[280px] duration-[350ms]'>
+      <Animates.SpaceIn id="Tailwindcss"  className='absolute -translate-x-[640px] translate-y-[280px] duration-[350ms]'>
         <Animates.BubbleWrapper id="Tailwindcss">
           <a
             target='_blank'
@@ -70,7 +68,7 @@ export const DevelopmentIcons = ({ className }: { className?: string }) => {
           </a>
         </Animates.BubbleWrapper>
       </Animates.SpaceIn>
-      <Animates.SpaceIn id="dotnet" delay={2700} className='absolute -translate-x-[780px] translate-y-[280px] duration-[350ms]'>
+      <Animates.SpaceIn id="dotnet" className='absolute -translate-x-[780px] translate-y-[280px] duration-[350ms]'>
         <Animates.BubbleWrapper id="dotnet">
           <a
             target='_blank'
@@ -82,7 +80,7 @@ export const DevelopmentIcons = ({ className }: { className?: string }) => {
           </a>
         </Animates.BubbleWrapper>
       </Animates.SpaceIn>
-      <Animates.SpaceIn id="git" delay={2900} className='absolute -translate-x-[900px] translate-y-[280px] duration-[350ms]'>
+      <Animates.SpaceIn id="git" className='absolute -translate-x-[900px] translate-y-[280px] duration-[350ms]'>
         <Animates.BubbleWrapper id="git">
           <a
             target='_blank'

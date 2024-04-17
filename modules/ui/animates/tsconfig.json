@@ -1,17 +1,18 @@
 {
+  "extends": "@ttt-config/tsconfig/react.json",
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "outDir": "./dist",
 
     /* Bundler mode */
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
+    "noEmit": false,
     "jsx": "react-jsx",
 
     /* Linting */
@@ -20,18 +21,11 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
-    /* Alias path */
     "baseUrl": "./",
     "paths": {
-      "@/components/*": ["src/components/*"],
-      "@/containers/*": ["src/containers/*"],
-      "@/assets/*": ["src/assets/*"],
-      "@/hooks/*": ["src/hooks/*"],
-      "@/appRoute/*": ["src/appRoute/*"],
-      "@/utils/*": ["src/utils/*"],
-      "@/context/*": ["src/context/*"],
+      "@/*": ["src/*"]
     }
   },
   "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "exclude": ["node_modules", "dist", "docs"]
 }

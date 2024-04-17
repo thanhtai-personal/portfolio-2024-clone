@@ -8,3 +8,4 @@ export * from "./object";
 export * from "./secret";
 export * from "./string";
 export * from "./url";
+export * from "./date";

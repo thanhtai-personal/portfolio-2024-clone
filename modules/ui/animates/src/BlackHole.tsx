@@ -1,3 +1,5 @@
+import "./blackhole.style.css"
+
 export const BlackHole = ({ className }: { className?: string }) => {
 
   return (

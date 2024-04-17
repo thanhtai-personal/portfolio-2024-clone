@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { IReactApp, ReactApp } from "../dom";
+import { IAppProvider, IReactApp, ReactApp } from "../dom";
 
 export interface IAppWithRoute extends Omit<IReactApp, "App"> {
   router: IRouter[];
@@ -9,6 +9,7 @@ export interface IAppWithRoute extends Omit<IReactApp, "App"> {
 export interface IRouter {
   path: string;
   element: ReactNode;
+  providers?: React.FC<IAppProvider>;
 }
 
 export interface IAppRouteProps {

@@ -1,16 +1,15 @@
 import { ReactNode } from "react";
+import "./spaceIn.style.css"
 
 export const SpaceIn = ({
   className,
   id,
   children,
-  delay,
   classes
 }: {
   id: string;
   children?: ReactNode;
   className?: string;
-  delay?: number;
   classes?: {
     space?: string;
   }

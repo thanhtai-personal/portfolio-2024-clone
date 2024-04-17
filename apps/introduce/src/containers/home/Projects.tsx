@@ -1,5 +1,4 @@
 import {
-  Animates,
   AnimationView,
   ContentSection,
   GridView,
@@ -8,6 +7,7 @@ import {
   ThemeSettingBoard,
   TitleText,
 } from '@/components/index';
+import { Animates } from "@ttt-ui/react-animates";
 import { useTranslate } from "@ttt-logic/multilanguage"
 import { AnimationRef } from '@/hooks/index';
 import { SkillItem, skillData } from './Skills';

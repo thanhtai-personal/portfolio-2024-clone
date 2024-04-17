@@ -1,4 +1,5 @@
 import { ReactNode } from "react"
+import "./drawingBorderButton.style.css"
 
 export const DrawingBorderButton = ({ children, className, onClick }: {
   children: ReactNode;

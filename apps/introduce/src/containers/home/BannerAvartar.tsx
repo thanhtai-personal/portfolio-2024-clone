@@ -1,6 +1,6 @@
 import avartarImage from '@/assets/images/avt.png';
 import { LazyLoadImage } from '@/components/LazyImage';
-import { Animates } from '@/components/animates';
+import { Animates } from "@ttt-ui/react-animates";
 import { AnimationView } from '@/components/index';
 import { DevelopmentIcons } from './DevelopmentIcons';
 
