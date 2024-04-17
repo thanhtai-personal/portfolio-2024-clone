@@ -5,9 +5,10 @@
   "main": "apps/introduce/dist/index.js",
   "scripts": {
     "prepare": "husky",
+    "clean:cache": "node ./scripts/cleanup-cache.js",
     "clean:build": "node ./scripts/cleanup.js",
     "clean:modules": "node ./scripts/cleanup-modules.js",
-    "build": "pnpm run clean:build && turbo build",
+    "build": "pnpm run clean:build && pnpm run clean:cache && turbo build",
     "build:dev": "turbo build",
     "dev": "turbo dev",
     "docs": "turbo docs",
