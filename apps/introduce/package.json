@@ -12,9 +12,11 @@
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.5.7",
+    "@ttt-ui/react-lazyload": "workspace:*",
     "@ttt-utils/react-hooks": "workspace:*",
     "@ttt-core/react": "workspace:*",
     "@ttt-ui/react-animates": "workspace:*",
+    "@ttt-ui/react-viewframe": "workspace:*",
     "@ttt-ui/react-multilanguage-flowbite": "workspace:*",
     "@ttt-logic/multilanguage": "workspace:*",
     "flowbite-react": "^0.7.5",

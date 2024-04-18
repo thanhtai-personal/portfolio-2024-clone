@@ -51,9 +51,15 @@ importers:
       '@ttt-ui/react-animates':
         specifier: workspace:*
         version: link:../../modules/ui/animates
+      '@ttt-ui/react-lazyload':
+        specifier: workspace:*
+        version: link:../../modules/ui/lazyload
       '@ttt-ui/react-multilanguage-flowbite':
         specifier: workspace:*
         version: link:../../modules/ui/multilanguage
+      '@ttt-ui/react-viewframe':
+        specifier: workspace:*
+        version: link:../../modules/ui/viewFrames
       '@ttt-utils/react-hooks':
         specifier: workspace:*
         version: link:../../modules/utils/react-hooks
@@ -406,6 +412,76 @@ importers:
         specifier: ^2.0.0
         version: 2.0.1(vite@5.2.8)
 
+  modules/ui/lazyload:
+    dependencies:
+      '@tailwindcss/forms':
+        specifier: ^0.5.7
+        version: 0.5.7(tailwindcss@3.4.3)
+      '@ttt-logic/multilanguage':
+        specifier: workspace:*
+        version: link:../../logic/multilanguage
+      '@ttt-utils/react-hooks':
+        specifier: workspace:*
+        version: link:../../utils/react-hooks
+      '@ttt-utils/utils-helpers':
+        specifier: workspace:*
+        version: link:../../utils/helpers
+      autoprefixer:
+        specifier: ^10.4.18
+        version: 10.4.19(postcss@8.4.38)
+      gsap:
+        specifier: ^3.12.5
+        version: 3.12.5
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+      react-icons:
+        specifier: ^5.0.1
+        version: 5.0.1(react@18.2.0)
+      rollup-plugin-postcss:
+        specifier: ^4.0.2
+        version: 4.0.2(postcss@8.4.38)
+    devDependencies:
+      '@ttt-config/eslint-plugin':
+        specifier: workspace:*
+        version: link:../../utils/config-eslint
+      '@ttt-config/release':
+        specifier: workspace:*
+        version: link:../../utils/config-release
+      '@ttt-config/tsconfig':
+        specifier: workspace:*
+        version: link:../../utils/config-tsconfig
+      '@ttt-config/typedoc':
+        specifier: workspace:*
+        version: link:../../utils/config-typedoc
+      '@types/node':
+        specifier: ^20.11.24
+        version: 20.12.7
+      '@types/react':
+        specifier: ^18.2.56
+        version: 18.2.77
+      '@types/react-dom':
+        specifier: ^18.2.19
+        version: 18.2.25
+      copyfiles:
+        specifier: ^2.4.1
+        version: 2.4.1
+      postcss:
+        specifier: ^8.4.38
+        version: 8.4.38
+      tailwindcss:
+        specifier: ^3.4.3
+        version: 3.4.3
+      typescript:
+        specifier: ^5.3.2
+        version: 5.4.5
+      vite-plugin-lib-inject-css:
+        specifier: ^2.0.0
+        version: 2.0.1(vite@5.2.8)
+
   modules/ui/multilanguage:
     dependencies:
       '@ttt-core/react':
@@ -442,6 +518,79 @@ importers:
       typescript:
         specifier: ^5.3.2
         version: 5.4.5
+
+  modules/ui/viewFrames:
+    dependencies:
+      '@tailwindcss/forms':
+        specifier: ^0.5.7
+        version: 0.5.7(tailwindcss@3.4.3)
+      '@ttt-logic/multilanguage':
+        specifier: workspace:*
+        version: link:../../logic/multilanguage
+      '@ttt-ui/react-lazyload':
+        specifier: workspace:*
+        version: link:../lazyload
+      '@ttt-utils/react-hooks':
+        specifier: workspace:*
+        version: link:../../utils/react-hooks
+      '@ttt-utils/utils-helpers':
+        specifier: workspace:*
+        version: link:../../utils/helpers
+      autoprefixer:
+        specifier: ^10.4.18
+        version: 10.4.19(postcss@8.4.38)
+      gsap:
+        specifier: ^3.12.5
+        version: 3.12.5
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+      react-icons:
+        specifier: ^5.0.1
+        version: 5.0.1(react@18.2.0)
+      rollup-plugin-postcss:
+        specifier: ^4.0.2
+        version: 4.0.2(postcss@8.4.38)
+    devDependencies:
+      '@ttt-config/eslint-plugin':
+        specifier: workspace:*
+        version: link:../../utils/config-eslint
+      '@ttt-config/release':
+        specifier: workspace:*
+        version: link:../../utils/config-release
+      '@ttt-config/tsconfig':
+        specifier: workspace:*
+        version: link:../../utils/config-tsconfig
+      '@ttt-config/typedoc':
+        specifier: workspace:*
+        version: link:../../utils/config-typedoc
+      '@types/node':
+        specifier: ^20.11.24
+        version: 20.12.7
+      '@types/react':
+        specifier: ^18.2.56
+        version: 18.2.77
+      '@types/react-dom':
+        specifier: ^18.2.19
+        version: 18.2.25
+      copyfiles:
+        specifier: ^2.4.1
+        version: 2.4.1
+      postcss:
+        specifier: ^8.4.38
+        version: 8.4.38
+      tailwindcss:
+        specifier: ^3.4.3
+        version: 3.4.3
+      typescript:
+        specifier: ^5.3.2
+        version: 5.4.5
+      vite-plugin-lib-inject-css:
+        specifier: ^2.0.0
+        version: 2.0.1(vite@5.2.8)
 
   modules/utils/api-client:
     dependencies:

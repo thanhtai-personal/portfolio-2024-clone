@@ -1,8 +1,9 @@
 import { Animates } from "@ttt-ui/react-animates";
-import { AnimationView, LoadingComponent } from "@/components/index";
+import { LoadingComponent } from "@/components/index";
 import { PortfolioActionType, PortfolioContext } from "@/context/index";
 import { useMouseWaveClicker } from "@ttt-utils/react-hooks";
 import { useEffect } from "react";
+import { AnimationView } from "@ttt-ui/react-viewframe";
 
 export interface IPortfolioContainer {}
 

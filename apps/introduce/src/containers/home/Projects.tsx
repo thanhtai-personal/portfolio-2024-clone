@@ -1,15 +1,10 @@
 import {
-  AnimationView,
-  ContentSection,
-  GridView,
-  IListItem,
-  ListView,
   ThemeSettingBoard,
   TitleText,
 } from '@/components/index';
+import { AnimationRef, AnimationView, ContentSection, GridView, IListItem, ListView } from '@ttt-ui/react-viewframe';
 import { Animates } from "@ttt-ui/react-animates";
 import { useTranslate } from "@ttt-logic/multilanguage"
-import { AnimationRef } from '@/hooks/index';
 import { SkillItem, skillData } from './Skills';
 import { ReactNode, useMemo, useRef } from 'react';
 import { HomeActionType, HomeContext, HomeSectionIds } from '@/context/home';

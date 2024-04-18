@@ -4,7 +4,7 @@ import "./index.css";
 import { ThemeProvider } from "@/components/index";
 import { ThemeContext } from "./context/theme";
 import { AppWithRoute, IAppProvider, IAppWithRoute } from "@ttt-core/react";
-import { LanguageKey, MultilanguageContext, getResourceBundle } from "@ttt-logic/multilanguage";
+import { LanguageKey, MultilanguageContext } from "@ttt-logic/multilanguage";
 import { addResource } from "@ttt-logic/multilanguage";
 import vi from "./lang/vi";
 import en from "./lang/en";

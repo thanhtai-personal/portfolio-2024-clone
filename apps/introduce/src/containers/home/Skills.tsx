@@ -1,5 +1,6 @@
-import { GridView, SelectList, Card, TitleText } from '@/components/index';
+import { TitleText } from '@/components/index';
 import { useTranslate } from '@ttt-logic/multilanguage';
+import { Card, GridView } from '@ttt-ui/react-viewframe';
 import { Button, ButtonGroup, Tooltip } from 'flowbite-react';
 import { ReactNode, useState } from 'react';
 import { AiOutlineAudit } from 'react-icons/ai';

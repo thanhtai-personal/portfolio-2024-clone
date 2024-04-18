@@ -1,7 +1,4 @@
-import {
-  AnimationView,
-  VideoBackground,
-} from '@/components/index';
+import { AnimationView, VideoBackground } from '@ttt-ui/react-viewframe';
 import { Banner } from './Banner';
 import { Projects } from './Projects';
 import { HomeContext, HomeSectionIds } from '@/context/index';

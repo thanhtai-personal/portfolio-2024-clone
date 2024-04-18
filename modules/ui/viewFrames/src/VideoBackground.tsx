@@ -1,5 +1,5 @@
 import { ReactNode, useEffect, useState } from 'react';
-import { LazyLoadVideo } from "../LazyLoadVideo";
+import { LazyLoadVideo } from "@ttt-ui/react-lazyload"
 
 export interface IVideoBackground {
   children: ReactNode;

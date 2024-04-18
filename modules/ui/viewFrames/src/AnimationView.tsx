@@ -1,6 +1,6 @@
 import { ReactNode, forwardRef } from "react";
-import { useAnimationWrapperRef, AnimationRef } from "@/hooks/index";
 import { useDelayedDisplay } from "@ttt-utils/react-hooks";
+import { AnimationRef, useAnimationWrapperRef } from "./hooks/useAnimationWrapperRef";
 
 export interface IAnimationView {
   children: ReactNode;

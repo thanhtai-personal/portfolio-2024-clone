@@ -1,9 +1,8 @@
-import { Button } from 'flowbite-react';
 import { useState } from 'react';
-import { AnimationView, GridView } from '..';
 import { setOfThemes } from '@/utils/constants';
 import { ThemeActionType, ThemeContext } from '@/context/theme';
 import { FaGear } from 'react-icons/fa6';
+import { AnimationView, GridView } from '@ttt-ui/react-viewframe';
 
 export interface IThemeSettingBoard {
   classes?: {

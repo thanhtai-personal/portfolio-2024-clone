@@ -1,11 +1,4 @@
 import { Animates } from "@ttt-ui/react-animates";
-import {
-  ScreenSection,
-  VideoBackground,
-  ContentSection,
-  GridView,
-  AnimationView,
-} from '@/components/viewFrame';
 import backgroundVideoLight from '@/assets/video/background.mp4';
 import { DevelopmentIconsMobile } from './DevelopmentIconsMobile';
 import { BannerAvartar } from './BannerAvartar';
@@ -17,6 +10,7 @@ import { SocialIcons } from './SocialIcons';
 import { HomeActionType, HomeContext, HomeSectionIds } from "@/context/home";
 import { FaDownload } from 'react-icons/fa';
 import { SiBlogger } from 'react-icons/si';
+import { AnimationView, ContentSection, GridView, ScreenSection, VideoBackground } from "@ttt-ui/react-viewframe";
 
 const BannerContent = () => {
   const { t } = useTranslate();

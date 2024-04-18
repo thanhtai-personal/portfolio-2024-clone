@@ -1,8 +1,8 @@
 import avartarImage from '@/assets/images/avt.png';
-import { LazyLoadImage } from '@/components/LazyImage';
 import { Animates } from "@ttt-ui/react-animates";
-import { AnimationView } from '@/components/index';
 import { DevelopmentIcons } from './DevelopmentIcons';
+import { AnimationView } from '@ttt-ui/react-viewframe';
+import { LazyLoadImage } from '@ttt-ui/react-lazyload';
 
 export const BannerAvartar = ({ classes, image }: {
   classes?: {

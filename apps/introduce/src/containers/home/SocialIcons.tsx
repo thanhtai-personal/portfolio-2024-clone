@@ -1,4 +1,4 @@
-import { AnimationView } from '@/components/viewFrame';
+import { AnimationView } from '@ttt-ui/react-viewframe';
 import { BsGithub } from 'react-icons/bs';
 import {
   SlSocialLinkedin,

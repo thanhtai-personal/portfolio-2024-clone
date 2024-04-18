@@ -1,7 +1,7 @@
 import { useTranslate } from '@ttt-logic/multilanguage';
+import { LazyLoadImage } from '@ttt-ui/react-lazyload';
 import { CardProps, Card as FlowBiteCard, Tooltip } from 'flowbite-react';
 import { ReactNode, useState } from 'react';
-import { LazyLoadImage } from "..";
 
 export type ICard = CardProps & {
   title?: ReactNode | string;

@@ -1,9 +1,9 @@
-import { useState, useEffect, ImgHTMLAttributes } from "react";
-import { LoadingComponent } from ".";
+import { useState, useEffect, ImgHTMLAttributes, ReactNode } from "react";
 
 export interface ILazyLoadImage extends ImgHTMLAttributes<HTMLImageElement> {
   imageClass?: string;
   preloadSrc?: string;
+  loadingComponent?: ReactNode;
 }
 
 export const LazyLoadImage = ({
@@ -11,6 +11,7 @@ export const LazyLoadImage = ({
   alt,
   className = "",
   imageClass = "",
+  loadingComponent,
   preloadSrc,
   ...restProps
 }: ILazyLoadImage) => {
@@ -47,7 +48,7 @@ export const LazyLoadImage = ({
               src={src}
               alt={alt}
               {...restProps}
-            /> : <LoadingComponent />}
+            /> : loadingComponent || <div>loading</div>}
         </div>
       )}
       <img

@@ -22,7 +22,7 @@ export const router = [
     ),
   },
   {
-    path: "/my-favorite",
+    path: "/universe",
     element: (
       <Suspense fallback={<LoadingComponent loadingPage />}>
         <HomePage />
