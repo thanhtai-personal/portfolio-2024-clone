@@ -10,7 +10,7 @@ if [ -z "$CHANGED_FILES" ]; then
 fi
 
 # Optionally, run other tasks (e.g., generating documentation)
-# npm run docs
+# npm run docs:all
 
 # Stage generated documentation files
 # git add public/docs

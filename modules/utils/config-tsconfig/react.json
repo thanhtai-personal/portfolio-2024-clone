@@ -3,7 +3,19 @@
   "display": "React Library",
   "extends": "./base.json",
   "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "useDefineForClassFields": true,
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "lib": ["dom", "esnext", "DOM.Iterable"],
+    
+    "resolveJsonModule": true,
+    "noEmit": false,
     "jsx": "react-jsx",
-    "lib": ["dom", "esnext", "DOM.Iterable"]
+
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
   }
 }

@@ -1,26 +1,7 @@
 {
+  "extends": "@ttt-config/tsconfig/react.json",
   "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "skipLibCheck": true,
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
-
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-
-    /* Alias path */
+    "outDir": "./dist",
     "baseUrl": "./",
     "paths": {
       "@/components/*": ["src/components/*"],
@@ -32,6 +13,6 @@
       "@/context/*": ["src/context/*"],
     }
   },
-  "include": ["src", "../../modules/ui/viewFrames/src/hooks/useAnimationWrapperRef.ts"],
+  "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

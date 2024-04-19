@@ -88,6 +88,18 @@ importers:
         specifier: ^0.14.1
         version: 0.14.1
     devDependencies:
+      '@ttt-config/eslint-plugin':
+        specifier: workspace:*
+        version: link:../../modules/utils/config-eslint
+      '@ttt-config/release':
+        specifier: workspace:*
+        version: link:../../modules/utils/config-release
+      '@ttt-config/tsconfig':
+        specifier: workspace:*
+        version: link:../../modules/utils/config-tsconfig
+      '@ttt-config/typedoc':
+        specifier: workspace:*
+        version: link:../../modules/utils/config-typedoc
       '@types/node':
         specifier: ^20.11.24
         version: 20.12.7
@@ -539,6 +551,9 @@ importers:
       autoprefixer:
         specifier: ^10.4.18
         version: 10.4.19(postcss@8.4.38)
+      flowbite-react:
+        specifier: ^0.7.5
+        version: 0.7.8(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.3)
       gsap:
         specifier: ^3.12.5
         version: 3.12.5

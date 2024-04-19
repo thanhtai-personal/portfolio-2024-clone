@@ -1,6 +1,6 @@
 {
-  "entryPoints": ["modules/*/*"],
-  "name": "TTT Core project",
+  "entryPoints": ["modules/**"],
+  "name": "TTT project",
   "entryPointStrategy": "packages",
   "includeVersion": false,
   "out": "./public/docs"
