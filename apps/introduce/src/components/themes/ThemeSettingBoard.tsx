@@ -47,10 +47,10 @@ export const ThemeSettingBoard = ({ classes }: IThemeSettingBoard) => {
                     }}
                   >
                     <div
-                      style={{ background: theme.color }}
+                      style={{ background: theme?.color }}
                       className='w-4 h-4 rounded-full'
                     ></div>
-                    <div className='text-text text-sm'>{theme.name}</div>
+                    <div className='text-text text-sm'>{theme?.name}</div>
                   </div>
                 );
               })}

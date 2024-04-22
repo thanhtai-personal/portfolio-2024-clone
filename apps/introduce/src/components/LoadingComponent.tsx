@@ -1,4 +1,3 @@
-import { Spinner } from "flowbite-react"
 import { ReactNode } from "react";
 
 export interface ILoadingComponent {
@@ -9,6 +8,6 @@ export interface ILoadingComponent {
 export const LoadingComponent = ({ loadingPage, children }: ILoadingComponent) => {
 
   return <div className={`flex justify-center items-center ${loadingPage ? "w-screen h-screen" : "w-full h-full"}`}>
-    {children || <Spinner className="text-text" />}
+    {children}
   </div>
 }

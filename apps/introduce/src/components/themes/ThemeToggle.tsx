@@ -1,4 +1,3 @@
-import { DarkThemeToggle, Flowbite } from 'flowbite-react';
 import { ReactNode, useEffect } from 'react';
 import { ThemeSettingBoard } from "./ThemeSettingBoard"
 import { ThemeActionType, ThemeContext } from '@/context/theme';
@@ -12,7 +11,6 @@ export interface IThemeProvider {
 }
 
 export function ThemeProvider({
-  useToggle = false,
   useSettingBoard = false,
   defaultTheme = "dark",
   children
@@ -29,10 +27,9 @@ export function ThemeProvider({
   }, [defaultTheme])
 
   return (
-    <Flowbite>
+    <div>
       {children}
-      {useToggle && <DarkThemeToggle />}
       {useSettingBoard && <ThemeSettingBoard />}
-    </Flowbite>
+    </div>
   );
 }

@@ -1,13 +1,11 @@
 import { AnimationView, VideoBackground } from '@ttt-ui/react-viewframe';
 import { Banner } from './Banner';
-import { Projects } from './Projects';
-import { HomeContext, HomeSectionIds } from '@/context/index';
+import { HomeContext } from '@/context/index';
 import { useMouseWaveClicker } from '@ttt-utils/react-hooks';
 
 export interface IHomePage { }
 
 const HomePageContent = () => {
-  const homeData = HomeContext.useDataContext();
 
   return (
     <AnimationView.FadeIn
@@ -15,7 +13,6 @@ const HomePageContent = () => {
       className='bg-transparent relative w-screen h-screen m-0 p-0 overflow-x-hidden'
     >
       <Banner />
-      {homeData?.activeSection === HomeSectionIds.projects && <Projects />}
     </AnimationView.FadeIn>
   );
 };

@@ -1,4 +1,3 @@
-import { List } from 'flowbite-react';
 import { ReactNode } from 'react';
 
 export interface IListItem {
@@ -21,53 +20,9 @@ export interface IListView {
   horizontal?: boolean;
 }
 
-export const ListView = ({
-  items = [],
-  classes,
-  nested,
-  ordered,
-  unstyled,
-  horizontal,
-}: IListView) => {
-  const handleClickItem = (item: IListItem) => () => {
-    item.onClick && item.onClick(item);
-  };
-
-  const handleHoverItem = (item: IListItem) => () => {
-    item.onHover && item.onHover(item);
-  };
+export const ListView = ({ }: IListView) => {
 
   return (
-    <List
-      ordered={ordered}
-      horizontal={horizontal}
-      unstyled={unstyled}
-      nested={nested}
-      className={`${classes?.container}`}
-    >
-      {items.map((item, index) => (
-        <List.Item key={item.key || `key-missing-${index}`}>
-          {unstyled ? (
-            <div
-              className={`w-full h-full p-2 ${
-                item.className
-              } ${item.isActive && 'bg-[wheat]'}`}
-              onClick={handleClickItem(item)}
-              onMouseEnter={handleHoverItem(item)}
-            >
-              {item.content}
-            </div>
-          ) : (
-            <span
-              className={`p-2 ${item.className}`}
-              onClick={handleClickItem(item)}
-              onMouseEnter={handleHoverItem(item)}
-            >
-              {item.content}
-            </span>
-          )}
-        </List.Item>
-      ))}
-    </List>
+    <ul><li><div></div></li></ul>
   );
 };

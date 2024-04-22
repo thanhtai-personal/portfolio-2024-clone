@@ -11,7 +11,6 @@ import defaultImage from '@/assets/images/default_image.jpg';
 import fujinet from '@/assets/images/fujinet.png';
 import gameLoft from '@/assets/images/gameloft.png';
 import titan from '@/assets/images/titan.png';
-import { Tooltip } from 'flowbite-react';
 
 export interface Project {
   id: number;

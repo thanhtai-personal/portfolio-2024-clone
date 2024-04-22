@@ -1,7 +1,4 @@
 export * from "./themes"
-export * from "./form"
-export * from "./input"
-export * from "./SpeechRecognition"
 export * from "./LoadingComponent"
 export * from "./EczarText"
 export * from "./TitleText"

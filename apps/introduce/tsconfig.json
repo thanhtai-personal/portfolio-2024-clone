@@ -1,6 +1,7 @@
 {
   "extends": "@ttt-config/tsconfig/react.json",
   "compilerOptions": {
+    "jsx": "react-jsx",
     "outDir": "./dist",
     "baseUrl": "./",
     "paths": {

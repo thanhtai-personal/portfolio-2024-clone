@@ -12,8 +12,7 @@
   "peerDependencies": {
     "@ttt-core/react": "workspace:*",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "flowbite-react": "^0.7.5"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@ttt-config/eslint-plugin": "workspace:*",
