@@ -4,17 +4,17 @@
     "build": {
       "dependsOn": ["^build"],
       "outputs": ["dist/**"],
-      "cache": false
+      "cache": true
     },
     "docs": {
       "dependsOn": ["^docs"],
       "outputs": ["docs/**"],
-      "cache": false
+      "cache": true
     },
     "lint": {},
     "dev": {
       "dependsOn": ["^dev"],
-      "cache": false,
+      "cache": true,
       "persistent": true
     },
     "release": {

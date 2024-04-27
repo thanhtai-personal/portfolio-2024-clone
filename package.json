@@ -13,7 +13,8 @@
     "clean:lock": "node ./scripts/cleanup-packagelock.js",
     "docs": "turbo docs",
     "docs:all": "typedoc",
-    "build": "pnpm run clean:modules && pnpm run clean:cache && pnpm run clean:build && pnpm install && turbo build",
+    "build": "turbo build",
+    "clean": "pnpm run clean:cache && pnpm run clean:modules && pnpm run clean:docs",
     "dev": "turbo dev",
     "lint": "turbo lint",
     "release:all": "turbo release"
