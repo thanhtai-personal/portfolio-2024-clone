@@ -5,6 +5,6 @@ packages:
   - "server/**"
   - "shared/**"
   # all packages in direct subdirs of packages/
-  - "demoApps/**"
+  - "apps/**"
   # exclude packages that are inside test directories
   - "!**/test/**"
