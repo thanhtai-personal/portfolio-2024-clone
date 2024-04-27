@@ -29,7 +29,7 @@ export function defineConfig(
     (): IMikroOrmConfig => ({
       ...config,
       entities: config.entities.map((Entity) =>
-        new Entity().fromTtcToMikroOrm(),
+        new Entity().fromtttToMikroOrm(),
       ),
     }),
   );

@@ -88,7 +88,7 @@ export function Entity(options?: IEntityOptions): ClassDecorator {
       return options?.tableName ?? target.name;
     };
 
-    methods.fromTtcToMikroOrm = function () {
+    methods.fromtttToMikroOrm = function () {
       // Generate Mikro ORM entity JSON schema (ref: https://mikro-orm.io/docs/5.9/entity-schema)
       const properties: Record<string, IMikroOrmPropertyOptions> = {};
       for (const [prop, propOptions] of Object.entries(propsMetadata)) {

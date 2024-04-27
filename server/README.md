@@ -1,4 +1,4 @@
-# TTCore Server
+# TTTore Server
 
 ## Directory structure
 
@@ -77,7 +77,7 @@ Currently following to `Mikro ORM` (read more at https://mikro-orm.io/docs/5.9/u
 - Logging system (for debugging or tracing)
 - Authentication (basic way (username/password), using OAuth2 client (e.g: Google, Facebook)) has NOT been handled
 - Authorization (business logic of **Role/Permission**) has NOT been handled
-- TTCore Unit of Work (currently ref: `Mikro ORM`, read more at https://mikro-orm.io/docs/5.9/unit-of-work)
+- TTTore Unit of Work (currently ref: `Mikro ORM`, read more at https://mikro-orm.io/docs/5.9/unit-of-work)
 - Entity schema generation is manually handled WITHOUT using any 3rd party library. E.g:
 
 ```typescript
@@ -91,5 +91,5 @@ class UserEntity extends ThingEntity {
 
 // generate entity JSON schema
 const entity = new UserEntity();
-console.log(entity.fromTtcToMikroOrm()); // Mikro ORM entity JSON schema (ref: https://mikro-orm.io/docs/5.9/entity-schema)
+console.log(entity.fromtttToMikroOrm()); // Mikro ORM entity JSON schema (ref: https://mikro-orm.io/docs/5.9/entity-schema)
 ```

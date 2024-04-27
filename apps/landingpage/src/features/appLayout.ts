@@ -1,5 +1,5 @@
-import { ReactApplicationManager } from "@ttc-ui/react-core";
-import { LayoutManager } from "@ttc-ui/react-layout-mantine";
+import { ReactApplicationManager } from "@ttt-ui/react-core";
+import { LayoutManager } from "@ttt-ui/react-layout-mantine";
 import avatarDefault from "@/assets/images/avatar.png"
 
 export const injectLayout = (reactApp: ReactApplicationManager) => {

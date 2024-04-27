@@ -9,7 +9,7 @@ export abstract class BaseEntity {
     return "";
   }
 
-  fromTtcToMikroOrm() {
+  fromtttToMikroOrm() {
     return {};
   }
 }

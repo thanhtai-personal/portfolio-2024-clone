@@ -47,7 +47,7 @@ describe("MikroOrmRepository", () => {
       password: "postgres",
       host: "localhost",
       port: 5000,
-      entities: [userEntity.fromTtcToMikroOrm()],
+      entities: [userEntity.fromtttToMikroOrm()],
     });
     await ormRepo.orm.schema.refreshDatabase();
     userRepository = new MikroOrmRepository<UserEntity>();

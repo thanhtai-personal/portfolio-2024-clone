@@ -1,5 +1,5 @@
-import { ReactApplicationManager } from "@ttc-ui/react-core";
-import { UserManagementManager } from "@ttc-ui/react-user-management-mantine";
+import { ReactApplicationManager } from "@ttt-ui/react-core";
+import { UserManagementManager } from "@ttt-ui/react-user-management-mantine";
 
 export const injectUserManagement = (reactApp: ReactApplicationManager) => {
   const usermanagementManager = new UserManagementManager({

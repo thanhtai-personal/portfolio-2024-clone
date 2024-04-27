@@ -1,5 +1,5 @@
-import { TTCMantineProvider } from "@ttc-ui/react-mantine-core";
+import { TTTMantineProvider } from "@ttt-ui/react-mantine-core";
 
 export default [
-  TTCMantineProvider
+  TTTMantineProvider
 ]
