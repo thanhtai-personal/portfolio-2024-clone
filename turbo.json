@@ -6,15 +6,21 @@
       "outputs": ["dist/**"],
       "cache": false
     },
-    "lint": {},
     "docs": {
       "dependsOn": ["^docs"],
       "outputs": ["docs/**"],
       "cache": false
     },
+    "lint": {},
     "dev": {
+      "dependsOn": ["^dev"],
       "cache": false,
       "persistent": true
+    },
+    "release": {
+      "dependsOn": ["^release"],
+      "cache": false,
+      "persistent": false
     }
   }
 }

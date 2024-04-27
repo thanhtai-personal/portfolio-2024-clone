@@ -20,6 +20,11 @@ async function cleanDist(dir) {
           console.log("Error", error)
         }
       }
+    } else {
+      if (entry === 'pnpm-lock.yaml') {
+        console.log('Deleting:', entryPath);
+        await fs.remove(entryPath);
+      }
     }
   }
 }
